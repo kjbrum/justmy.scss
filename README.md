@@ -4,7 +4,7 @@
 
 ## Documentation
 
-http://kylebrumm.com/adding-a-spotify-currently-playing-widget-to-your-website/
+http://kylebrumm.com/sprinkles.css
 
 
 ## To-Do
