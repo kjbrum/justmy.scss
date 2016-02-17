@@ -4,7 +4,7 @@
 
 ## Documentation
 
-http://kylebrumm.com/sprinkles.css
+http://kylebrumm.com/sprinkles.css/
 
 
 ## To-Do
