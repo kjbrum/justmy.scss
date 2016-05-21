@@ -1,0 +1,37 @@
+// Blockquotes
+
+blockquote {
+    display: inline-block;
+    margin: 1.5rem 0;
+    padding: 1rem 1.5rem;
+    border-left: 4px solid $secondary-light;
+
+    &.quotes {
+        position: relative;
+        border: none;
+
+        &:before,
+        &:after {
+            position: absolute;
+            font-family: $font-secondary;
+            font-size: 3rem;
+            line-height: 1;
+        }
+
+        &:before {
+            content: $left-quote;
+            top: 0;
+            left: 0;
+        }
+
+        &:after {
+            content: $right-quote;
+            top: 0;
+            right: 0;
+        }
+    }
+
+    *:last-child {
+        margin-bottom: 0;
+    }
+}

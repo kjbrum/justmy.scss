@@ -5,13 +5,16 @@
 @import "functions";
 @import "variables";
 @import "reset";
+// @import "normalize";
 
-@import "utility";
-@import "main";
+@import "base";
+@import "blockquotes";
+@import "buttons";
+@import "code";
 @import "grid";
 @import "headings";
-@import "buttons";
-
-@import "nav";
-@import "header";
-@import "footer";
+@import "links";
+@import "lists";
+@import "tables";
+@import "typography";
+@import "utility";

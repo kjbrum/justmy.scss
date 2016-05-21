@@ -1,0 +1,12 @@
+// Base
+
+body {
+	font: 100%/1.5 $font;
+	-webkit-text-size-adjust: 100%;
+	color: $black;
+    min-width: $min-width;
+}
+
+img {
+    max-width: 100%;
+}
