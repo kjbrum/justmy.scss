@@ -2,12 +2,15 @@
 
 > A starter CSS framework to make development more enjoyable.
 
+
 ## Documentation
 
 http://kylebrumm.com/sprinkles.css/
 
 
 ## To-Do
+
+- [ ] Include all the features of [Juice](https://github.com/kjbrum/juice)
 
 
 ## License
