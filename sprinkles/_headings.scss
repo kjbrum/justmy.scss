@@ -6,9 +6,11 @@ h3,
 h4,
 h5,
 h6 {
+    margin: 0 0 0.5rem 0;
     font-family: $font-secondary;
     font-weight: 700;
-    margin: 0;
+    line-height: 1.2;
+    letter-spacing: 2px;
 }
 
 h1,

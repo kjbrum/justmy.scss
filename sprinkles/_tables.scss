@@ -3,18 +3,38 @@
 table {
     margin-bottom: 1rem;
 
-    &.table-alt {
-        tbody {
-            tr:nth-of-type(odd) {
-                background: $gray-ultralight;
-            }
-        }
+    tr {
+        transition: background 0.3s ease-in-out;
     }
 
     &.table-hover {
         tbody {
             tr:hover {
-                background: $gray-light;
+                background: $gray-ultralight;
+            }
+        }
+    }
+
+    &.table-alt {
+        tr {
+            border: none;
+        }
+
+        tbody {
+            tr {
+                &:nth-of-type(odd) {
+                    background: $gray-ultralight;
+                }
+            }
+        }
+
+        &.table-hover {
+            tbody {
+                tr {
+                    &:hover {
+                        background: $gray-light;
+                    }
+                }
             }
         }
     }
@@ -24,11 +44,14 @@ table {
     }
 }
 
+tr {
+    border-bottom: 1px solid $gray-ultralight;
+}
+
 th,
 td {
     padding: 0.5rem 1rem;
     text-align: left;
-    border-bottom: 1px solid $gray-ultralight;
 }
 
 th {
