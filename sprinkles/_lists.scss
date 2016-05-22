@@ -2,6 +2,8 @@
 
 ul,
 ol {
+    margin-bottom: 1rem;
+
     li {
         margin-bottom: 0.5rem;
     }
@@ -29,4 +31,17 @@ ol ol,
 ol ul {
     margin: 0.5rem 0 0.5rem 1.5rem;
     font-size: 0.9rem;
+}
+
+dl {
+    margin-bottom: 1rem;
+
+    dt,
+    dd {
+        margin-bottom: 0.5rem;
+    }
+
+    dd {
+        margin-left: 1.5rem;
+    }
 }
