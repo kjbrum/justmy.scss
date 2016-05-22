@@ -1,5 +1,36 @@
 // Tables
 
 table {
+    margin-bottom: 1rem;
 
+    &.table-alt {
+        tbody {
+            tr:nth-of-type(odd) {
+                background: $gray-ultralight;
+            }
+        }
+    }
+
+    &.table-hover {
+        tbody {
+            tr:hover {
+                background: $gray-light;
+            }
+        }
+    }
+
+    &.table-full {
+        width: 100%;
+    }
+}
+
+th,
+td {
+    padding: 0.5rem 1rem;
+    text-align: left;
+    border-bottom: 1px solid $gray-ultralight;
+}
+
+th {
+    font-weight: bold;
 }
