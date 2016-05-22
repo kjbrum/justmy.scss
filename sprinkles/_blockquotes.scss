@@ -1,12 +1,13 @@
 // Blockquotes
 
 blockquote {
-    display: inline-block;
+    display: block;
     margin: 1.5rem 0;
     padding: 1rem 1.5rem;
     border-left: 4px solid $gray-light;
 
     &.quotes {
+        display: inline-block;
         position: relative;
         border: none;
 
@@ -33,15 +34,5 @@ blockquote {
 
     *:last-child {
         margin-bottom: 0;
-    }
-
-    &:before,
-    &:after {
-        content: '';
-        display: table;
-    }
-
-    &:after {
-        clear: both;
     }
 }

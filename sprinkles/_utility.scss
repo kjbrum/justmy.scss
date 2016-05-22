@@ -45,5 +45,13 @@
 	text-align: center;
 }
 .text-left {
-	text-align: left;
+    text-align: left;
+}
+.text-bottom,
+.text-bottom * {
+    vertical-align: bottom;
+}
+.text-top,
+.text-top * {
+    vertical-align: top;
 }
