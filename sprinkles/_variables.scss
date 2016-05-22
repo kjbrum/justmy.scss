@@ -1,12 +1,19 @@
 // Variables
 
 // Colors
-$white : #fff;
-$black : #333333;
-$primary: #8386E6;
-$primary-light: #AEB3E6;
-$secondary: gray;
-$secondary-light: lightgray;
+$white: #ffffff;
+$gray-light: #bbbbbb;
+$gray: #888888;
+$gray-dark: #555555;
+$black: #333333;
+
+$primary: #6B63AB;
+$primary-dark: darken($primary, 10%);
+$primary-light: lighten($primary, 10%);
+
+$secondary: #FF8B86;
+$secondary-dark: darken($secondary, 10%);
+$secondary-light: lighten($secondary, 10%);
 
 // Fonts
 @import url(https://fonts.googleapis.com/css?family=Open+Sans:300,400,700|Slabo+27px);
@@ -72,8 +79,8 @@ $bp-xl-min: map-get(map-get($breakpoints, xl), min);
 $bp-xl-max: map-get(map-get($breakpoints, xl), max);
 
 // Misc
-$left-quote: "\201c";
-$right-quote: "\201d";
-$left-chevron: "&#x3008;";
-$right-chevron: "&#x3009;";
+$quote-left: "\201c";
+$quote-right: "\201d";
+$chevron-left: "&#x3008;";
+$chevron-right: "&#x3009;";
 $close: "&#x2715;";

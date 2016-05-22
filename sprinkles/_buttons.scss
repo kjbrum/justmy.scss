@@ -13,6 +13,7 @@
     font-family: $font;
     cursor: pointer;
     border-radius: 3px;
+    transition: 0.3s ease-in-out;
 
 	&:hover,
 	&:focus {
@@ -23,18 +24,6 @@
 	&.disabled {
 		background: #888;
 		color: #bbb;
-	}
-}
-
-.btn-outline {
-	background: transparent !important;
-	color: $primary;
-	border: 1px solid $primary;
-
-	&:hover,
-	&:focus {
-		color: $primary-light;
-		border-color: $primary-light;
 	}
 }
 
@@ -57,6 +46,19 @@
 		}
 	}
 }
+
+.btn-outline {
+	background: transparent !important;
+	color: $primary;
+	border: 1px solid $primary;
+
+	&:hover,
+	&:focus {
+		color: $primary-light;
+		border-color: $primary-light;
+	}
+}
+
 .btn-small {
 	padding: 0.5rem;
 }

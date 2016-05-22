@@ -9,3 +9,15 @@ b,
 strong {
     font-weight: 700;
 }
+
+small {
+    font-size: 0.8rem;
+}
+
+p {
+    margin-bottom: 1rem;
+
+    &:last-of-type {
+        margin-bottom: 0;
+    }
+}

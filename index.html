@@ -28,6 +28,15 @@
         <meta name="twitter:url" content="/">
         <meta name="twitter:image" content="/img/sprinkles.png"/>
 
+        <style>
+            .section--title {
+                text-transform: uppercase;
+                font-size: 1.5rem;
+                margin: 2rem 0;
+                border-bottom: 1px solid #333333;
+            }
+        </style>
+
         <!-- Google Analytics -->
         <script>
             (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
@@ -69,11 +78,48 @@
                 <p><a href="#">This is a link tag.</a></p>
 
 
+                <!-- Lists -->
+                <div class="section--title">Lists</div>
+                <div class="g g-s-2">
+                    <div class="gi">
+                        <h5>Unordered List</h5>
+                        <ul>
+                            <li>Literally marfa pabst</li>
+                            <li>
+                                This is a nested unordered list
+                                <ul>
+                                    <li>Axe chia selvage sartorial</li>
+                                    <li>Thundercats hella franzen</li>
+                                    <li>Biodiesel slow-carb pitchfork</li>
+                                </ul>
+                            </li>
+                            <li>Wolf moon meh beard fashion</li>
+                        </ul>
+                    </div>
+
+                    <div class="gi">
+                        <h5>Ordered List</h5>
+                        <ol>
+                            <li>8-bit master cleanse brunch</li>
+                            <li>
+                                This is a nested ordered list
+                                <ul>
+                                    <li>Pickled pour-over twee</li>
+                                    <li>Kinfolk flexitarian selfies brunch</li>
+                                    <li>Kickstarter ethical</li>
+                                </ul>
+                            </li>
+                            <li>Bespoke tousled pour-over retro</li>
+                        </ol>
+                    </div>
+                </div>
+
+
                 <!-- Blockquotes -->
                 <div class="section--title">Blockquotes</div>
                 <blockquote>
                     <p>
-                        This is an awesome blockquote with a left border. Doesn't it look nice?
+                        This is an awesome blockquote with a left border. It's so pretty!
                     </p>
                 </blockquote>
                 <blockquote class="quotes">
@@ -85,10 +131,21 @@
 
                 <!-- Buttons -->
                 <div class="section--title">Buttons</div>
-                <a href="#" class="btn">Button</a>
-                <a href="#" class="btn btn-outline">Button Outline</a>
-                <a href="#" class="btn btn-secondary">Button Secondary</a>
-                <a href="#" class="btn btn-secondary btn-outline">Button Secondary Outline</a>
+                <div class="g g-s-3 text-center">
+                    <div class="gi">
+                        <p><a href="#" class="btn btn-small">Button (small)</a></p>
+                        <p><a href="#" class="btn">Button (normal)</a></p>
+                        <p><a href="#" class="btn btn-large">Button (large)</a></p>
+                        <p><a href="#" class="btn btn-outline">Button (outline)</a></p>
+                    </div>
+
+                    <div class="gi">
+                        <p><a href="#" class="btn btn-secondary btn-small">Button Secondary (small)</a></p>
+                        <p><a href="#" class="btn btn-secondary">Button Secondary (normal)</a></p>
+                        <p><a href="#" class="btn btn-secondary btn-large">Button Secondary (large)</a></p>
+                        <p><a href="#" class="btn btn-secondary btn-outline">Button Secondary (outline)</a></p>
+                    </div>
+                </div>
             </div>
         </section>
 

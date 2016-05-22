@@ -4,7 +4,7 @@ blockquote {
     display: inline-block;
     margin: 1.5rem 0;
     padding: 1rem 1.5rem;
-    border-left: 4px solid $secondary-light;
+    border-left: 4px solid $gray-light;
 
     &.quotes {
         position: relative;
@@ -19,13 +19,13 @@ blockquote {
         }
 
         &:before {
-            content: $left-quote;
+            content: $quote-left;
             top: 0;
             left: 0;
         }
 
         &:after {
-            content: $right-quote;
+            content: $quote-right;
             top: 0;
             right: 0;
         }
@@ -33,5 +33,15 @@ blockquote {
 
     *:last-child {
         margin-bottom: 0;
+    }
+
+    &:before,
+    &:after {
+        content: '';
+        display: table;
+    }
+
+    &:after {
+        clear: both;
     }
 }

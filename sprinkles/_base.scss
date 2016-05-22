@@ -1,5 +1,11 @@
 // Base
 
+*,
+*:before,
+*:after {
+    box-sizing: border-box;
+}
+
 body {
 	font: 100%/1.5 $font;
 	-webkit-text-size-adjust: 100%;
