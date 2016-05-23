@@ -8,12 +8,35 @@
 http://kylebrumm.com/sprinkles.css/
 
 
-## To-Do
+## Features
 
-- [ ] Include all the features of [Juice](https://github.com/kjbrum/juice)
+- [x] Typography (Headings, paragraph, bold, italic, font-family)
+- [x] Lists
+- [x] Tables
+- [x] Definition List (dl, dt, dd)
+- [x] Blockquotes
+- [ ] code & pre
+- [x] Buttons
+- [ ] Forms
+- [ ] Colors
+- [ ] Utility classes
+- [ ] Breakpoints
+- [ ] Functions
+- [ ] Mixins
+
+
+## Issues
+
 - [ ] Add `.gi-x-first` & `gi-x-last` to the grid (used for clearing)
 - [ ] Fix issue when using multiple `.list-split-x-x` classes (clearing gets messed up)
+- [ ] Include all the features of [Juice](https://github.com/kjbrum/juice)
 
+
+## Modules/Components
+
+- [ ] Alerts/notifications
+- [ ] Headers
+- [ ] Footers
 
 ## License
 
