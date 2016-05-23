@@ -3,14 +3,18 @@
 // Clearfix
 .cf {
     *zoom: 1;
+
+    &:before,
+    &:after {
+        content: " ";
+        display: table;
+    }
+
+    &:after {
+        clear: both;
+    }
 }
-.cf:before, .cf:after {
-    content: " ";
-    display: table;
-}
-.cf:after {
-    clear: both;
-}
+
 
 // Remove element
 .is-hidden {
@@ -33,6 +37,7 @@
 .right {
 	float: right;
 }
+
 .left {
 	float: left;
 }
@@ -41,17 +46,38 @@
 .text-right {
 	text-align: right;
 }
+
 .text-center {
 	text-align: center;
 }
+
 .text-left {
     text-align: left;
 }
+
+.text-top,
+.text-top * {
+    vertical-align: top;
+}
+
 .text-bottom,
 .text-bottom * {
     vertical-align: bottom;
 }
-.text-top,
-.text-top * {
-    vertical-align: top;
+
+// Text color
+.text-primary {
+    color: $primary;
+}
+
+.text-primary-light {
+    color: $primary-light;
+}
+
+.text-secondary {
+    color: $secondary;
+}
+
+.text-secondary-light {
+    color: $secondary-light;
 }
