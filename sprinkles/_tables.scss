@@ -42,18 +42,19 @@ table {
     &.table-full {
         width: 100%;
     }
+
+    tr {
+        border-bottom: 1px solid $gray-ultralight;
+    }
+
+    th,
+    td {
+        padding: 0.5rem 1rem;
+        text-align: left;
+    }
+
+    th {
+        font-weight: bold;
+    }
 }
 
-tr {
-    border-bottom: 1px solid $gray-ultralight;
-}
-
-th,
-td {
-    padding: 0.5rem 1rem;
-    text-align: left;
-}
-
-th {
-    font-weight: bold;
-}
