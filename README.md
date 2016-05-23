@@ -11,6 +11,7 @@ http://kylebrumm.com/sprinkles.css/
 ## To-Do
 
 - [ ] Include all the features of [Juice](https://github.com/kjbrum/juice)
+- [ ] Add `.gi-x-first` & `gi-x-last` to the grid (used for clearing)
 
 
 ## License
