@@ -5,11 +5,11 @@
     margin: 0 auto;
     padding: 1rem;
 
-    @media all and (min-width: $bp-m) {
+    @media (min-width: $bp-m) {
         padding: 1rem 2rem;
     }
 
-    @media all and (min-width: $bp-l) {
+    @media (min-width: $bp-l) {
         padding: 1rem;
     }
 }
@@ -103,15 +103,7 @@
 
 // Build the grids!
 @each $breakpoint, $widths in $breakpoints {
-    [class*="show-#{$breakpoint}"] {
-        display: none;
-    }
-
-    [class*="hide-#{$breakpoint}"] {
-        // display: block;
-    }
-
-    @media all and (min-width: map-get(map-get($breakpoints, $breakpoint), min)) {
+    @media (min-width: map-get(map-get($breakpoints, $breakpoint), min)) {
         @for $i from 1 through $num-columns {
             $bp-width: percentage($i/$num-columns);
             $fixed-width: ($grid-width/$num-columns);
@@ -224,36 +216,6 @@
                     }
                 }
             }
-        }
-    }
-
-    @media all and (min-width: map-get(map-get($breakpoints, $breakpoint), min)) {
-        .show-#{$breakpoint}-up {
-            display: block !important;
-        }
-
-        .hide-#{$breakpoint}-up {
-            display: none !important;
-        }
-    }
-
-    @media all and (min-width: map-get(map-get($breakpoints, $breakpoint), min)) and (max-width: map-get(map-get($breakpoints, $breakpoint), max)) {
-        .show-#{$breakpoint} {
-            display: block !important;
-        }
-
-        .hide-#{$breakpoint} {
-            display: none !important;
-        }
-    }
-
-    @media all and (max-width: map-get(map-get($breakpoints, $breakpoint), max)) {
-        .show-#{$breakpoint}-down {
-            display: block !important;
-        }
-
-        .hide-#{$breakpoint}-down {
-            display: none !important;
         }
     }
 }

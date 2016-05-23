@@ -15,15 +15,8 @@
     }
 }
 
-
-// Remove element
-.is-hidden {
-    display: none !important;
-    visibility: hidden !important;
-}
-
-// Remove element from flow
-.is-vishidden {
+// Hide elements visually
+.hide-vis {
     position: absolute !important;
     overflow: hidden;
     width: 1px;
@@ -31,6 +24,48 @@
     padding: 0;
     border: 0;
     clip: rect(1px, 1px, 1px, 1px);
+}
+
+// Hide and show elements
+.hide {
+    display: none !important;
+    visibility: hidden !important;
+}
+
+@each $breakpoint, $widths in $breakpoints {
+    [class*="show-#{$breakpoint}"] {
+        display: none;
+    }
+
+    @media (min-width: map-get(map-get($breakpoints, $breakpoint), min)) {
+        .show-#{$breakpoint}-up {
+            display: block !important;
+        }
+
+        .hide-#{$breakpoint}-up {
+            display: none !important;
+        }
+    }
+
+    @media (min-width: map-get(map-get($breakpoints, $breakpoint), min)) and (max-width: map-get(map-get($breakpoints, $breakpoint), max)) {
+        .show-#{$breakpoint} {
+            display: block !important;
+        }
+
+        .hide-#{$breakpoint} {
+            display: none !important;
+        }
+    }
+
+    @media (max-width: map-get(map-get($breakpoints, $breakpoint), max)) {
+        .show-#{$breakpoint}-down {
+            display: block !important;
+        }
+
+        .hide-#{$breakpoint}-down {
+            display: none !important;
+        }
+    }
 }
 
 // Floats
@@ -53,6 +88,10 @@
 
 .text-left {
     text-align: left;
+}
+
+.text-justify {
+    text-align: justify;
 }
 
 .text-top,
