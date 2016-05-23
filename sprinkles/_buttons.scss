@@ -10,30 +10,59 @@ input[type="button"] {
 	line-height: 1;
     font-size: 1rem;
 	font-weight: normal;
+	margin-bottom: 0.5rem;
 	padding: 1rem 1.5rem;
 	text-align: center;
     font-family: $font;
     cursor: pointer;
-	background: $primary;
-	border: 1px solid $primary;
+	background: $black;
+	border: 1px solid $black;
     border-radius: 3px;
     transition: 0.3s ease-in-out;
 
 	&:hover,
 	&:focus {
 		color: $white;
-		background: $primary-light;
-		border-color: $primary-light;
+		background: $gray-dark;
+		border-color: $gray-dark;
 	}
 
-	&.disabled {
-		background: #888;
-		color: #bbb;
+	&.btn-outline {
+		background: transparent !important;
+		color: $black;
+
+		&:hover,
+		&:focus {
+			color: $gray-dark;
+			border-color: $gray-dark;
+		}
+	}
+
+	&.btn-primary {
+		background: $primary;
+		border-color: $primary;
+
+		&:hover,
+		&:focus {
+			background: $primary-light;
+			border-color: $primary-light;
+		}
+
+		&.btn-outline {
+			color: $primary;
+			border-color: $primary;
+
+			&:hover,
+			&:focus {
+				color: $primary-light;
+				border-color: $primary-light;
+			}
+		}
 	}
 
 	&.btn-secondary {
 		background: $secondary;
-		border: 1px solid $secondary;
+		border-color: $secondary;
 
 		&:hover,
 		&:focus {
@@ -43,25 +72,13 @@ input[type="button"] {
 
 		&.btn-outline {
 			color: $secondary;
-			border: 1px solid $secondary;
+			border-color: $secondary;
 
 			&:hover,
 			&:focus {
 				color: $secondary-light;
 				border-color: $secondary-light;
 			}
-		}
-	}
-
-	&.btn-outline {
-		background: transparent !important;
-		color: $primary;
-		border: 1px solid $primary;
-
-		&:hover,
-		&:focus {
-			color: $primary-light;
-			border-color: $primary-light;
 		}
 	}
 
@@ -78,6 +95,11 @@ input[type="button"] {
 	&.btn-full {
 		display: block;
 		width: 100%;
+	}
+
+	&.btn-disabled {
+		background: #888;
+		color: #bbb;
 	}
 }
 
