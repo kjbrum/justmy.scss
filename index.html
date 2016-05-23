@@ -5,27 +5,27 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="shortcut icon" type="image/png" href="favicon.png"/>
-        <title>Sprinkles.css - A starter CSS framework to make development more enjoyable.</title>
+        <title>Sprinkles.css | Another stupid CSS framework.</title>
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
         <link rel="stylesheet" href="http://csshake.surge.sh/csshake.min.css">
         <link href="sprinkles.min.css" rel="stylesheet">
 
         <!-- SEO -->
-        <meta name="description" content="A starter CSS framework to make development more enjoyable.">
+        <meta name="description" content="Another stupid CSS framework.">
         <meta name="keywords" content="css, framework, starter, mixins, sass, kjbrum">
         <meta name="author" content="Kyle Brumm">
 
         <!-- Facebook -->
         <meta property="og:type" content="website">
         <meta property="og:title" content="Sprinkles.css - Enjoy development again">
-        <meta property="og:description" content="A starter CSS framework to make development more enjoyable.">
+        <meta property="og:description" content="Another stupid CSS framework.">
         <meta property="og:url" content="/">
         <meta property="og:image" content="./img/sprinkles.png"/>
 
         <!-- Twitter -->
         <meta name="twitter:card" content="summary_large_image">
         <meta name="twitter:title" content="Sprinkles.css - Enjoy development again">
-        <meta name="twitter:description" content="A starter CSS framework to make development more enjoyable.">
+        <meta name="twitter:description" content="Another stupid CSS framework.">
         <meta name="twitter:url" content="/">
         <meta name="twitter:image" content="./img/sprinkles.png"/>
 
@@ -39,6 +39,11 @@
                 color: #FF8B86;
                 text-transform: uppercase;
                 border-bottom: 1px solid #FF8B86;
+            }
+            h6 code {
+                position: relative;
+                top: -3px;
+                letter-spacing: 0;
             }
         </style>
 
@@ -63,7 +68,7 @@
         <section class="section section--hero">
             <div class="container">
                 <h1 class="text-secondary">Sprinkles.css</h1>
-                <h3>A starter CSS framework<br>to make development more enjoyable.</h3>
+                <h3>Another stupid CSS framework.</h3>
             </div>
         </section>
 
@@ -72,8 +77,10 @@
                 <!-- Typography -->
                 <div class="section--title">Typography</div>
                 <p>The primary font is Open Sans and the secondary font is Slabo 27px. These are served using Google fonts.</p>
+
                 <div class="g g-m-2">
                     <div class="gi">
+                        <h6>Headings</h6>
                         <h1>Heading 1</h1>
                         <h2>Heading 2</h2>
                         <h3>Heading 3</h3>
@@ -83,6 +90,7 @@
                     </div>
 
                     <div class="gi">
+                        <h6>Paragraph Styling</h6>
                         <p>This is a paragraph tag.</p>
                         <p><strong>This is a strong/bold tag.</strong></p>
                         <p><em>This is an emphasis/italic tag.</em></p>
@@ -143,7 +151,7 @@
 
                 <div class="g">
                     <div class="gi">
-                        <h6>Inline List</h6>
+                        <h6>Inline List - <code>.list-inline</code></h6>
                         <ul class="list-inline">
                             <li>Dreamcatcher.</li>
                             <li>Knausgaard.</li>
@@ -156,7 +164,7 @@
                     </div>
 
                     <div class="gi gi-m-4">
-                        <h6>Plain List</h6>
+                        <h6>Plain List - <code>.list-plain</code></h6>
                         <ul class="list-plain">
                             <li>Venmo vice actually tilde.</li>
                             <li>Godard mlkshk 8-bit.</li>
@@ -172,7 +180,7 @@
                     </div>
 
                     <div class="gi gi-m-8">
-                        <h6>Split List</h6>
+                        <h6>Split List - <code>.list-split .list-split-x-x</code></h6>
                         <ul class="list-split list-split-m-2">
                             <li>Venmo vice actually tilde.</li>
                             <li>Godard mlkshk 8-bit.</li>
@@ -193,7 +201,7 @@
                 <div class="section--title">Tables</div>
                 <div class="g">
                     <div class="gi">
-                        <h6>.table-full</h6>
+                        <h6>Full Width Table - <code>.table-full</code></h6>
                         <table class="table-full">
                             <thead>
                                 <tr>
@@ -228,7 +236,7 @@
                     </div>
 
                     <div class="gi">
-                        <h6>.table-alt</h6>
+                        <h6>Alternating Rows Table - <code>.table-alt</code></h6>
                         <table class="table-alt">
                             <thead>
                                 <tr>
@@ -263,7 +271,7 @@
                     </div>
 
                     <div class="gi">
-                        <h6>.table-hover</h6>
+                        <h6>Hover Table - <code>.table-hover</code></h6>
                         <table class="table-hover">
                             <thead>
                                 <tr>
@@ -302,10 +310,12 @@
 
                 <!-- Blockquotes -->
                 <div class="section--title">Blockquotes</div>
+                <h6>Normal Blockquote</h6>
                 <blockquote>
                     This is an awesome blockquote with a left border. It's just so freakin pretty! Truffaut pour-over forage everyday carry, meditation shabby chic ethical tofu flannel. Wolf moon flannel dreamcatcher, four dollar toast biodiesel seitan plaid iPhone chartreuse wayfarers.
                 </blockquote>
 
+                <h6>Quotes Blockquote - <code>.quotes</code></h6>
                 <blockquote class="quotes">
                     This is an awesome blockquote with quotes. Doesn't this look nice as well? Selfies irony gastropub, church-key echo park craft beer tousled. Shoreditch franzen disrupt semiotics. Ugh street art vice messenger bag cliche banh mi. Gluten-free post-ironic ennui yr cliche kogi. Synth polaroid stumptown squid, messenger bag cronut bicycle rights jean shorts.
                 </blockquote>
@@ -315,65 +325,65 @@
                 <div class="section--title">Buttons</div>
                 <div class="g text-bottom">
                     <div class="gi">
-                        <h6>.btn</h6>
+                        <h6>Normal Button - <code>.btn</code></h6>
                         <p>
-                            <a href="#" class="btn btn-large">Large</a>
-                            <a href="#" class="btn">Normal</a>
-                            <a href="#" class="btn btn-outline">Outline</a>
-                            <a href="#" class="btn btn-small">Small</a>
+                            <a href="#" class="btn btn-large">.btn-large</a>
+                            <a href="#" class="btn">.btn</a>
+                            <a href="#" class="btn btn-outline">.btn-outline</a>
+                            <a href="#" class="btn btn-small">.btn-small</a>
                         </p>
 
                         <p>
-                            <input type="button" class="btn" value="Input (button)">
-                            <input type="submit" class="btn" value="Input (submit)">
-                            <button class="btn">Button</button>
-                            <button class="btn" disabled>Disabled</button>
+                            <input type="button" class="btn" value="input[type='button'])">
+                            <input type="submit" class="btn" value="input[type='submit'])">
+                            <button class="btn">button</button>
+                            <button class="btn" disabled>:disabled / .disabled</button>
                         </p>
 
                         <p>
-                            <a href="#" class="btn btn-full">Full</a>
-                        </p>
-                    </div>
-
-                    <div class="gi">
-                        <h6>.btn-primary</h6>
-                        <p>
-                            <a href="#" class="btn btn-primary btn-large">Large</a>
-                            <a href="#" class="btn btn-primary">Normal</a>
-                            <a href="#" class="btn btn-primary btn-outline">Outline</a>
-                            <a href="#" class="btn btn-primary btn-small">Small</a>
-                        </p>
-
-                        <p>
-                            <input type="button" class="btn btn-primary" value="Input (button)">
-                            <input type="submit" class="btn btn-primary" value="Input (submit)">
-                            <button class="btn btn-primary">Button</button>
-                            <button class="btn btn-primary" disabled>Disabled</button>
-                        </p>
-
-                        <p>
-                            <a href="#" class="btn btn-primary btn-full">Full</a>
+                            <a href="#" class="btn btn-full">.btn-full</a>
                         </p>
                     </div>
 
                     <div class="gi">
-                        <h6>.btn-secondary</h6>
+                        <h6>Primary Button - <code>.btn-primary</code></h6>
                         <p>
-                            <a href="#" class="btn btn-secondary btn-large">Large</a>
-                            <a href="#" class="btn btn-secondary">Normal</a>
-                            <a href="#" class="btn btn-secondary btn-outline">Outline</a>
-                            <a href="#" class="btn btn-secondary btn-small">Small</a>
+                            <a href="#" class="btn btn-primary btn-large">.btn-large</a>
+                            <a href="#" class="btn btn-primary">.btn</a>
+                            <a href="#" class="btn btn-primary btn-outline">.btn-outline</a>
+                            <a href="#" class="btn btn-primary btn-small">.btn-small</a>
                         </p>
 
                         <p>
-                            <input type="button" class="btn btn-secondary" value="Input (button)">
-                            <input type="submit" class="btn btn-secondary" value="Input (submit)">
-                            <button class="btn btn-secondary">Button</button>
-                            <button class="btn btn-secondary" disabled>Disabled</button>
+                            <input type="button" class="btn btn-primary" value="input[type='button'])">
+                            <input type="submit" class="btn btn-primary" value="input[type='submit'])">
+                            <button class="btn btn-primary">button</button>
+                            <button class="btn btn-primary" disabled>:disabled / .disabled</button>
                         </p>
 
                         <p>
-                            <a href="#" class="btn btn-secondary btn-full">Full</a>
+                            <a href="#" class="btn btn-primary btn-full">.btn-full</a>
+                        </p>
+                    </div>
+
+                    <div class="gi">
+                        <h6>Secondary Button - <code>.btn-secondary</code></h6>
+                        <p>
+                            <a href="#" class="btn btn-secondary btn-large">.btn-large</a>
+                            <a href="#" class="btn btn-secondary">.btn</a>
+                            <a href="#" class="btn btn-secondary btn-outline">.btn-outline</a>
+                            <a href="#" class="btn btn-secondary btn-small">.btn-small</a>
+                        </p>
+
+                        <p>
+                            <input type="button" class="btn btn-secondary" value="input[type='button'])">
+                            <input type="submit" class="btn btn-secondary" value="input[type='submit'])">
+                            <button class="btn btn-secondary">button</button>
+                            <button class="btn btn-secondary" disabled>:disabled / .disabled</button>
+                        </p>
+
+                        <p>
+                            <a href="#" class="btn btn-secondary btn-full">.btn-full</a>
                         </p>
                     </div>
                 </div>
