@@ -12,6 +12,7 @@ http://kylebrumm.com/sprinkles.css/
 
 - [ ] Include all the features of [Juice](https://github.com/kjbrum/juice)
 - [ ] Add `.gi-x-first` & `gi-x-last` to the grid (used for clearing)
+- [ ] Fix issue when using multiple `.list-split-x-x` classes (clearing gets messed up)
 
 
 ## License

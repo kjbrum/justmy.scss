@@ -47,9 +47,47 @@ dl {
 }
 
 .list-inline {
+    list-style: none;
+
     li {
         display: inline-block;
         margin-bottom: 0;
         padding: 0.5rem;
+    }
+}
+
+.list-split {
+    list-style: none;
+
+    li {
+        display: block;
+        float: left;
+        width: 100%;
+        padding: 0;
+        clear: none;
+    }
+}
+
+@each $breakpoint, $widths in $breakpoints {
+    @media (min-width: map-get(map-get($breakpoints, $breakpoint), min)) {
+        @for $i from 2 through 6 {
+            .list-split-#{$breakpoint}-#{$i} {
+                li {
+                    width: percentage(1 / $i);
+                    padding: 0 0.5rem;
+
+                    &:nth-child(#{$i}n + 1) {
+                        padding-right: 0.5rem;
+                        padding-left: 0;
+                        clear: left;
+                    }
+
+                    &:nth-child(#{$i}n) {
+                        padding-right: 0;
+                        padding-left: 0.5rem;
+                    }
+                }
+            }
+        }
     }
 }
