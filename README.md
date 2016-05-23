@@ -13,9 +13,9 @@ http://kylebrumm.com/sprinkles.css/
 - [x] Typography (Headings, paragraph, bold, italic, font-family)
 - [x] Lists
 - [x] Tables
-- [x] Definition List (dl, dt, dd)
+- [x] Definition list (dl, dt, dd)
 - [x] Blockquotes
-- [ ] code & pre
+- [ ] Code & pre
 - [x] Buttons
 - [ ] Forms
 - [ ] Colors
