@@ -46,11 +46,13 @@ dl {
     }
 }
 
+// Plain list
 .list-plain {
     list-style: none;
     padding: 0;
 }
 
+// Inline list
 .list-inline {
     list-style: none;
 
@@ -61,6 +63,7 @@ dl {
     }
 }
 
+// Split list
 .list-split {
     list-style: none;
 

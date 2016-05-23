@@ -27,9 +27,10 @@ input[type="button"] {
 		border-color: $gray-dark;
 	}
 
+	// Outlined button
 	&.btn-outline {
-		background: transparent !important;
 		color: $black;
+		background: transparent !important;
 
 		&:hover,
 		&:focus {
@@ -38,6 +39,7 @@ input[type="button"] {
 		}
 	}
 
+	// Primary color button
 	&.btn-primary {
 		background: $primary;
 		border-color: $primary;
@@ -60,6 +62,7 @@ input[type="button"] {
 		}
 	}
 
+	// Secondary color button
 	&.btn-secondary {
 		background: $secondary;
 		border-color: $secondary;
@@ -82,24 +85,31 @@ input[type="button"] {
 		}
 	}
 
+	// Small button
 	&.btn-small {
 		padding: 0.5rem 1rem;
 		font-size: 0.8rem;
 	}
 
+	// Large button
 	&.btn-large {
 		padding: 1.5rem 2rem;
 		font-size: 1.4rem;
 	}
 
+	// Full width button
 	&.btn-full {
 		display: block;
 		width: 100%;
 	}
 
-	&.btn-disabled {
-		background: #888;
-		color: #bbb;
+	// Disabled button
+	&.btn-disabled,
+	&:disabled {
+		color: $gray-light !important;
+		background: $gray !important;
+		border-color: $gray !important;
+		pointer-events: none !important;
 	}
 }
 
