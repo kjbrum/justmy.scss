@@ -17,14 +17,14 @@
 
         <!-- Facebook -->
         <meta property="og:type" content="website">
-        <meta property="og:title" content="Sprinkles.css - Enjoy development again">
+        <meta property="og:title" content="Sprinkles.css">
         <meta property="og:description" content="Another stupid CSS framework.">
         <meta property="og:url" content="/">
         <meta property="og:image" content="./img/sprinkles.png"/>
 
         <!-- Twitter -->
         <meta name="twitter:card" content="summary_large_image">
-        <meta name="twitter:title" content="Sprinkles.css - Enjoy development again">
+        <meta name="twitter:title" content="Sprinkles.css">
         <meta name="twitter:description" content="Another stupid CSS framework.">
         <meta name="twitter:url" content="/">
         <meta name="twitter:image" content="./img/sprinkles.png"/>
@@ -33,17 +33,26 @@
             html {
                 background: #fdfdfd;
             }
-            .section--title {
+
+            .section-title {
                 margin: 2rem 0;
                 font-size: 1rem;
                 color: #FF8B86;
                 text-transform: uppercase;
                 border-bottom: 1px solid #FF8B86;
             }
-            h6 code {
+
+            .block-title {
+                font-size: 1rem;
+                border-left: 3px solid #555555;
+                padding-left: 0.5rem;
+            }
+
+            .block-title code {
                 position: relative;
-                top: -3px;
+                top: -2px;
                 letter-spacing: 0;
+                text-decoration: none !important;
             }
         </style>
 
@@ -75,12 +84,13 @@
         <section class="section section--demo">
             <div class="container">
                 <!-- Typography -->
-                <div class="section--title">Typography</div>
+                <div class="section-title">Typography</div>
                 <p>The primary font is Open Sans and the secondary font is Slabo 27px. These are served using Google fonts.</p>
 
                 <div class="g g-m-2">
                     <div class="gi">
-                        <h6>Headings</h6>
+                        <br>
+                        <h6 class="block-title">Headings</h6>
                         <h1>Heading 1</h1>
                         <h2>Heading 2</h2>
                         <h3>Heading 3</h3>
@@ -90,7 +100,8 @@
                     </div>
 
                     <div class="gi">
-                        <h6>Paragraph Styling</h6>
+                        <br>
+                        <h6 class="block-title">Paragraph Styling</h6>
                         <p>This is a paragraph tag.</p>
                         <p><strong>This is a strong/bold tag.</strong></p>
                         <p><em>This is an emphasis/italic tag.</em></p>
@@ -102,10 +113,10 @@
 
 
                 <!-- Lists -->
-                <div class="section--title">Lists</div>
+                <div class="section-title">Lists</div>
                 <div class="g g-m-3">
                     <div class="gi">
-                        <h6>Unordered List</h6>
+                        <h6 class="block-title">Unordered List</h6>
                         <ul>
                             <li>Literally marfa pabst</li>
                             <li>
@@ -121,7 +132,7 @@
                     </div>
 
                     <div class="gi">
-                        <h6>Ordered List</h6>
+                        <h6 class="block-title">Ordered List</h6>
                         <ol>
                             <li>8-bit master cleanse brunch</li>
                             <li>
@@ -137,7 +148,7 @@
                     </div>
 
                     <div class="gi">
-                        <h6>Description List</h6>
+                        <h6 class="block-title">Description List</h6>
                         <dl>
                             <dt>Occupy vegan</dt>
                             <dd>Probably haven't heard of man braid</dd>
@@ -151,7 +162,7 @@
 
                 <div class="g">
                     <div class="gi">
-                        <h6>Inline List - <code>.list-inline</code></h6>
+                        <h6 class="block-title">Inline List - <code>.list-inline</code></h6>
                         <ul class="list-inline">
                             <li>Dreamcatcher.</li>
                             <li>Knausgaard.</li>
@@ -164,7 +175,7 @@
                     </div>
 
                     <div class="gi gi-m-4">
-                        <h6>Plain List - <code>.list-plain</code></h6>
+                        <h6 class="block-title">Plain List - <code>.list-plain</code></h6>
                         <ul class="list-plain">
                             <li>Venmo vice actually tilde.</li>
                             <li>Godard mlkshk 8-bit.</li>
@@ -180,7 +191,7 @@
                     </div>
 
                     <div class="gi gi-m-8">
-                        <h6>Split List - <code>.list-split .list-split-x-x</code></h6>
+                        <h6 class="block-title">Split List - <code>.list-split .list-split-x-x</code></h6>
                         <ul class="list-split list-split-m-2">
                             <li>Venmo vice actually tilde.</li>
                             <li>Godard mlkshk 8-bit.</li>
@@ -198,10 +209,10 @@
 
 
                 <!-- Tables -->
-                <div class="section--title">Tables</div>
+                <div class="section-title">Tables</div>
                 <div class="g">
                     <div class="gi">
-                        <h6>Full Width Table - <code>.table-full</code></h6>
+                        <h6 class="block-title">Full Width Table - <code>.table-full</code></h6>
                         <table class="table-full">
                             <thead>
                                 <tr>
@@ -236,7 +247,7 @@
                     </div>
 
                     <div class="gi">
-                        <h6>Alternating Rows Table - <code>.table-alt</code></h6>
+                        <h6 class="block-title">Alternating Rows Table - <code>.table-alt</code></h6>
                         <table class="table-alt">
                             <thead>
                                 <tr>
@@ -271,7 +282,7 @@
                     </div>
 
                     <div class="gi">
-                        <h6>Hover Table - <code>.table-hover</code></h6>
+                        <h6 class="block-title">Hover Table - <code>.table-hover</code></h6>
                         <table class="table-hover">
                             <thead>
                                 <tr>
@@ -309,23 +320,23 @@
 
 
                 <!-- Blockquotes -->
-                <div class="section--title">Blockquotes</div>
-                <h6>Normal Blockquote</h6>
+                <div class="section-title">Blockquotes</div>
+                <h6 class="block-title">Normal Blockquote</h6>
                 <blockquote>
                     This is an awesome blockquote with a left border. It's just so freakin pretty! Truffaut pour-over forage everyday carry, meditation shabby chic ethical tofu flannel. Wolf moon flannel dreamcatcher, four dollar toast biodiesel seitan plaid iPhone chartreuse wayfarers.
                 </blockquote>
 
-                <h6>Quotes Blockquote - <code>.quotes</code></h6>
+                <h6 class="block-title">Quotes Blockquote - <code>.quotes</code></h6>
                 <blockquote class="quotes">
                     This is an awesome blockquote with quotes. Doesn't this look nice as well? Selfies irony gastropub, church-key echo park craft beer tousled. Shoreditch franzen disrupt semiotics. Ugh street art vice messenger bag cliche banh mi. Gluten-free post-ironic ennui yr cliche kogi. Synth polaroid stumptown squid, messenger bag cronut bicycle rights jean shorts.
                 </blockquote>
 
 
                 <!-- Buttons -->
-                <div class="section--title">Buttons</div>
+                <div class="section-title">Buttons</div>
                 <div class="g text-bottom">
                     <div class="gi">
-                        <h6>Normal Button - <code>.btn</code></h6>
+                        <h6 class="block-title">Normal Button - <code>.btn</code></h6>
                         <p>
                             <a href="#" class="btn btn-large">.btn-large</a>
                             <a href="#" class="btn">.btn</a>
@@ -346,7 +357,7 @@
                     </div>
 
                     <div class="gi">
-                        <h6>Primary Button - <code>.btn-primary</code></h6>
+                        <h6 class="block-title">Primary Button - <code>.btn-primary</code></h6>
                         <p>
                             <a href="#" class="btn btn-primary btn-large">.btn-large</a>
                             <a href="#" class="btn btn-primary">.btn</a>
@@ -367,7 +378,7 @@
                     </div>
 
                     <div class="gi">
-                        <h6>Secondary Button - <code>.btn-secondary</code></h6>
+                        <h6 class="block-title">Secondary Button - <code>.btn-secondary</code></h6>
                         <p>
                             <a href="#" class="btn btn-secondary btn-large">.btn-large</a>
                             <a href="#" class="btn btn-secondary">.btn</a>
