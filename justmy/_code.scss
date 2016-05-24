@@ -22,14 +22,14 @@ xmp {
     border-radius: 3px;
 
     .comment {
-        color: #8C93A0;
+        color: $gray;
     }
 }
 
 pre,
 :not(pre) > xmp {
     padding: 1rem;
-    margin: 0.5rem 0;
+    margin: 2rem 0;
     overflow: auto;
 }
 
