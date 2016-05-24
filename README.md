@@ -1,4 +1,4 @@
-# JustMy.css
+# ![justmy.js](https://raw.githubusercontent.com/kjbrum/justmy.js/master/media/justmy.png)
 
 > Another stupid CSS framework, but it's just mine.
 
