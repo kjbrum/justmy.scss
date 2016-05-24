@@ -1,28 +1,28 @@
 {
-  "name": "Sprinkles.css",
+  "name": "JustMy.css",
   "version": "1.0.0",
-  "description": "A starter CSS framework to make development more enjoyable.",
+  "description": "Another stupid CSS framework, but it's just mine.",
   "scripts": {
-    "browsersync": "browser-sync start --server --files 'sprinkles.min.css, index.html'",
+    "browsersync": "browser-sync start --server --files 'justmy.min.css, index.html'",
     "build": "npm run css:build",
     "css": "npm run css:watch",
-    "css:autoprefix": "postcss --use autoprefixer --output sprinkles.min.css sprinkles.min.css",
+    "css:autoprefix": "postcss --use autoprefixer --output justmy.min.css justmy.min.css",
     "css:build": "npm run css:compile && npm run css:autoprefix",
-    "css:compile": "node-sass --output-style compressed sprinkles/sprinkles.scss sprinkles.min.css",
-    "css:watch": "watch 'npm run css:build' sprinkles",
+    "css:compile": "node-sass --output-style compressed justmy/justmy.scss justmy.min.css",
+    "css:watch": "watch 'npm run css:build' justmy",
     "dev": "parallelshell 'npm run watch' 'npm run browsersync'",
     "watch": "npm run css"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/kjbrum/sprinkles.css.git"
+    "url": "https://github.com/kjbrum/justmy.css.git"
   },
   "author": "Kyle Brumm",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/kjbrum/sprinkles.css/issues"
+    "url": "https://github.com/kjbrum/justmy.css/issues"
   },
-  "homepage": "https://github.com/kjbrum/sprinkles.css#readme",
+  "homepage": "https://github.com/kjbrum/justmy.css#readme",
   "devDependencies": {
     "autoprefixer": "latest",
     "node-sass": "latest",
