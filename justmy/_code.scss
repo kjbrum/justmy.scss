@@ -1,8 +1,7 @@
 // Code
 
 code,
-pre,
-xmp {
+pre {
     margin: 0;
     direction: ltr;
     font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
@@ -26,8 +25,7 @@ xmp {
     }
 }
 
-pre,
-:not(pre) > xmp {
+pre {
     padding: 1rem;
     margin: 2rem 0;
     overflow: auto;
