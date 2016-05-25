@@ -121,6 +121,10 @@
     color: $secondary-light;
 }
 
+.text-white {
+    color: $white;
+}
+
 .text-gray-ultralight {
     color: $gray-ultralight;
 }
@@ -141,6 +145,10 @@
     color: $gray-ultradark;
 }
 
+.text-black {
+    color: $black;
+}
+
 // Background color
 .background-primary {
     background-color: $primary;
@@ -156,6 +164,10 @@
 
 .background-secondary-light {
     background-color: $secondary-light;
+}
+
+.background-white {
+    background-color: $white;
 }
 
 .background-gray-ultralight {
@@ -176,4 +188,8 @@
 
 .background-gray-ultradark {
     background-color: $gray-ultradark;
+}
+
+.background-black {
+    background-color: $black;
 }
