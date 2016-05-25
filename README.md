@@ -11,15 +11,16 @@ http://kylebrumm.com/justmy.css/
 ## Features
 
 - [x] Typography (Headings, paragraph, bold, italic, font-family)
+- [ ] Grids
 - [x] Lists
 - [x] Tables
 - [x] Definition list (dl, dt, dd)
 - [x] Blockquotes
-- [ ] Code & pre
+- [x] Code & pre
 - [x] Buttons
 - [ ] Forms
-- [ ] Colors
-- [ ] Utility classes
+- [x] Colors
+- [x] Utility classes
 - [ ] Breakpoints
 - [ ] Functions
 - [ ] Mixins
@@ -37,6 +38,7 @@ http://kylebrumm.com/justmy.css/
 - [ ] Alerts/notifications
 - [ ] Headers
 - [ ] Footers
+
 
 ## License
 
