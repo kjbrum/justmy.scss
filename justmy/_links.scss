@@ -1,11 +1,11 @@
 // Links
 
 a {
-    text-decoration: none;
-    color: $primary;
+    text-decoration: underline;
+    color: $secondary;
     transition: color 0.3s ease-in-out;
 
     &:hover {
-        color: $primary-light;
+        color: $secondary-light;
     }
 }
