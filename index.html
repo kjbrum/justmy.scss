@@ -48,9 +48,14 @@
             }
 
             .block-title {
-                font-size: 1rem;
-                border-left: 3px solid #666666;
+                margin: 0 0 0.5rem 0;
                 padding-left: 0.5rem;
+                font-family: 'Slabo 27px', Georgia, Times, serif;
+                font-size: 1rem;
+                font-weight: 700;
+                line-height: 1.2;
+                letter-spacing: 1px;
+                border-left: 3px solid #666666;
             }
 
             .block-title code {
@@ -105,7 +110,7 @@
                 <div class="g g-m-2">
                     <div class="gi">
                         <br>
-                        <h6 class="block-title">Headings</h6>
+                        <div class="block-title">Headings</div>
 
                         <h1>Heading 1</h1>
                         <h2>Heading 2</h2>
@@ -117,7 +122,7 @@
 
                     <div class="gi">
                         <br>
-                        <h6 class="block-title">Paragraph Styling</h6>
+                        <div class="block-title">Paragraph Styling</div>
 
                         <p>This is a paragraph tag.</p>
                         <p><strong>This is a strong/bold tag.</strong></p>
@@ -133,7 +138,7 @@
                 <div class="section-title">Lists</div>
                 <div class="g g-m-3">
                     <div class="gi">
-                        <h6 class="block-title">Unordered List</h6>
+                        <div class="block-title">Unordered List</div>
 
                         <ul>
                             <li>Literally marfa pabst</li>
@@ -150,7 +155,7 @@
                     </div>
 
                     <div class="gi">
-                        <h6 class="block-title">Ordered List</h6>
+                        <div class="block-title">Ordered List</div>
 
                         <ol>
                             <li>8-bit master cleanse brunch</li>
@@ -167,7 +172,7 @@
                     </div>
 
                     <div class="gi">
-                        <h6 class="block-title">Description List</h6>
+                        <div class="block-title">Description List</div>
 
                         <dl>
                             <dt>Occupy vegan</dt>
@@ -182,7 +187,7 @@
 
                 <div class="g">
                     <div class="gi">
-                        <h6 class="block-title">Inline List - <code>.list-inline</code></h6>
+                        <div class="block-title">Inline List - <code>.list-inline</code></div>
 
                         <ul class="list-inline">
                             <li>Dreamcatcher.</li>
@@ -196,7 +201,7 @@
                     </div>
 
                     <div class="gi gi-m-4">
-                        <h6 class="block-title">Plain List - <code>.list-plain</code></h6>
+                        <div class="block-title">Plain List - <code>.list-plain</code></div>
 
                         <ul class="list-plain">
                             <li>Venmo vice actually tilde.</li>
@@ -213,7 +218,7 @@
                     </div>
 
                     <div class="gi gi-m-8">
-                        <h6 class="block-title">Split List - <code>.list-split .list-split-x-x</code></h6>
+                        <div class="block-title">Split List - <code>.list-split .list-split-x-x</code></div>
 
                         <ul class="list-split list-split-m-2">
                             <li>Venmo vice actually tilde.</li>
@@ -235,7 +240,7 @@
                 <div class="section-title">Tables</div>
                 <div class="g">
                     <div class="gi">
-                        <h6 class="block-title">Full Width Table - <code>.table-full</code></h6>
+                        <div class="block-title">Full Width Table - <code>.table-full</code></div>
 
                         <table class="table-full">
                             <thead>
@@ -271,7 +276,7 @@
                     </div>
 
                     <div class="gi">
-                        <h6 class="block-title">Alternating Rows Table - <code>.table-alt</code></h6>
+                        <div class="block-title">Alternating Rows Table - <code>.table-alt</code></div>
 
                         <table class="table-alt">
                             <thead>
@@ -307,7 +312,7 @@
                     </div>
 
                     <div class="gi">
-                        <h6 class="block-title">Hover Table - <code>.table-hover</code></h6>
+                        <div class="block-title">Hover Table - <code>.table-hover</code></div>
 
                         <table class="table-hover">
                             <thead>
@@ -346,13 +351,13 @@
 
                 <!-- Blockquotes -->
                 <div class="section-title">Blockquotes</div>
-                <h6 class="block-title">Normal Blockquote</h6>
+                <div class="block-title">Normal Blockquote</div>
 
                 <blockquote>
                     This is an awesome blockquote with a left border. It's just so freakin pretty! Truffaut pour-over forage everyday carry, meditation shabby chic ethical tofu flannel. Wolf moon flannel dreamcatcher, four dollar toast biodiesel seitan plaid iPhone chartreuse wayfarers.
                 </blockquote>
 
-                <h6 class="block-title">Quotes Blockquote - <code>.quotes</code></h6>
+                <div class="block-title">Quotes Blockquote - <code>.quotes</code></div>
 
                 <blockquote class="quotes">
                     This is an awesome blockquote with quotes. Doesn't this look nice as well? Selfies irony gastropub, church-key echo park craft beer tousled. Shoreditch franzen disrupt semiotics. Ugh street art vice messenger bag cliche banh mi. Gluten-free post-ironic ennui yr cliche kogi. Synth polaroid stumptown squid, messenger bag cronut bicycle rights jean shorts.
@@ -361,14 +366,14 @@
 
                 <!-- Code -->
                 <div class="section-title">Code/Pre</div>
-                <h6 class="block-title">Inline Code</h6>
+                <div class="block-title">Inline Code</div>
 
                 <code>.primary { color: #7F7C98; }</code>
                 <br>
                 <br>
                 <br>
 
-                <h6 class="block-title">Block Code</h6>
+                <div class="block-title">Block Code</div>
 
 <pre><span class="comment">// This is a code block</span>
 .secondary {
@@ -380,7 +385,7 @@
                 <div class="section-title">Buttons</div>
                 <div class="g text-bottom">
                     <div class="gi">
-                        <h6 class="block-title">Normal Button - <code>.btn</code></h6>
+                        <div class="block-title">Normal Button - <code>.btn</code></div>
 
                         <p>
                             <a href="#" class="btn btn-large">.btn-large</a>
@@ -402,7 +407,7 @@
                     </div>
 
                     <div class="gi">
-                        <h6 class="block-title">Primary Button - <code>.btn-primary</code></h6>
+                        <div class="block-title">Primary Button - <code>.btn-primary</code></div>
 
                         <p>
                             <a href="#" class="btn btn-primary btn-large">.btn-large</a>
@@ -424,7 +429,7 @@
                     </div>
 
                     <div class="gi">
-                        <h6 class="block-title">Secondary Button - <code>.btn-secondary</code></h6>
+                        <div class="block-title">Secondary Button - <code>.btn-secondary</code></div>
 
                         <p>
                             <a href="#" class="btn btn-secondary btn-large">.btn-large</a>
@@ -451,7 +456,7 @@
 
                 <div class="g">
                     <div class="gi gi-s-6">
-                        <h6 class="block-title">Primary</h6>
+                        <div class="block-title">Primary</div>
 
                         <div class="g g-np g-xxs-3 colors-grid">
                             <div class="gi"><div class="block background-primary-light">Light</div></div>
@@ -461,7 +466,7 @@
                     </div>
 
                     <div class="gi gi-s-6">
-                        <h6 class="block-title">Secondary</h6>
+                        <div class="block-title">Secondary</div>
 
                         <div class="g g-np g-xxs-3 colors-grid">
                             <div class="gi"><div class="block background-secondary-light">Light</div></div>
@@ -471,7 +476,7 @@
                     </div>
 
                     <div class="gi">
-                        <h6 class="block-title">Grays</h6>
+                        <div class="block-title">Grays</div>
 
                         <div class="g g-np g-xxs-3 g-s-5 colors-grid">
                             <div class="gi"><div class="block background-gray-ultralight">Ultralight</div></div>
@@ -483,7 +488,7 @@
                     </div>
 
                     <div class="gi">
-                        <h6 class="block-title">Other</h6>
+                        <div class="block-title">Other</div>
 
                         <div class="g g-np g-xxs-3 g-s-5 colors-grid">
                             <div class="gi"><div class="block background-white">White</div></div>
@@ -493,7 +498,52 @@
                             <div class="gi"><div class="block background-alert">Alert</div></div>
                         </div>
                     </div>
+                </div>
+
+                <!-- Utility Classes -->
+                <div class="section-title">Utility Classes</div>
+
+                <div class="g g-s-2 g-m-3 g-l-4">
+                    <div class="gi">
+                        <div class="block-title">Clearfix</div>
+                        <code>.cf</code>
                     </div>
+
+                    <div class="gi">
+                        <div class="block-title">Hide Elements Visually</div>
+                        <code>.hide-vis</code>
+                    </div>
+
+                    <div class="gi">
+                        <div class="block-title">Show/Hide Elements</div>
+                        <code>.&lt;show|hide&gt;-&lt;bp&gt;&lt;-up|-down&gt;</code>
+                    </div>
+
+                    <div class="gi">
+                        <div class="block-title">Float</div>
+                        <code>.&lt;right|left&gt;</code>
+                    </div>
+
+                    <div class="gi">
+                        <div class="block-title">Text align</div>
+                        <code>.text-&lt;alignment&gt;</code>
+                    </div>
+
+                    <div class="gi">
+                        <div class="block-title">Text Color</div>
+                        <code>.text-&lt;color&gt;</code>
+                    </div>
+
+                    <div class="gi">
+                        <div class="block-title">Background Color</div>
+                        <code>.background-&lt;color&gt;</code>
+                    </div>
+
+                    <div class="gi">
+                        <div class="block-title">Border Color</div>
+                        <code>.border-&lt;color&gt;</code>
+                    </div>
+                </div>
             </div>
         </section>
 
