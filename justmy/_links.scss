@@ -1,8 +1,8 @@
 // Links
 
 a {
-    text-decoration: underline;
     color: $secondary;
+    text-decoration: underline;
     transition: color 0.3s ease-in-out;
 
     &:hover {
