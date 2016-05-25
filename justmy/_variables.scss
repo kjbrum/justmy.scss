@@ -2,7 +2,16 @@
 
 // Colors
 $colors: (
-    white: #fcfcfc,
+    primary: (
+        light: mix(white, #7F7C98, 20%),
+        normal: #7F7C98,
+        dark: mix(black, #7F7C98, 20%)
+    ),
+    secondary: (
+        light: mix(white, #FF8B86, 20%),
+        normal: #FF8B86,
+        dark: mix(black, #FF8B86, 20%)
+    ),
     gray: (
         ultralight: #efefef,
         light: #cccccc,
@@ -10,27 +19,14 @@ $colors: (
         dark: #888888,
         ultradark: #555555
     ),
-    primary: (
-        light: lighten(#7F7C98, 10%),
-        normal: #7F7C98,
-        dark: darken(#7F7C98, 10%)
-    ),
-    secondary: (
-        light: lighten(#FF8B86, 10%),
-        normal: #FF8B86,
-        dark: darken(#FF8B86, 10%)
-    ),
-    black: #333333
+    other: (
+        white: #fcfcfc,
+        black: #333333,
+        success: #92F0A1,
+        warn: #F0E591,
+        alert: #F07F82
+    )
 );
-
-// Grays
-$white: map-get($colors, white);
-$gray-ultralight: map-get(map-get($colors, gray), ultralight);
-$gray-light: map-get(map-get($colors, gray), light);
-$gray: map-get(map-get($colors, gray), normal);
-$gray-dark: map-get(map-get($colors, gray), dark);
-$gray-ultradark: map-get(map-get($colors, gray), ultradark);
-$black: map-get($colors, black);
 
 // Primary
 $primary-light: map-get(map-get($colors, primary), light);
@@ -41,6 +37,20 @@ $primary-dark: map-get(map-get($colors, primary), dark);
 $secondary-light: map-get(map-get($colors, secondary), light);
 $secondary: map-get(map-get($colors, secondary), normal);
 $secondary-dark: map-get(map-get($colors, secondary), dark);
+
+// Gray
+$gray-ultralight: map-get(map-get($colors, gray), ultralight);
+$gray-light: map-get(map-get($colors, gray), light);
+$gray: map-get(map-get($colors, gray), normal);
+$gray-dark: map-get(map-get($colors, gray), dark);
+$gray-ultradark: map-get(map-get($colors, gray), ultradark);
+
+// Other
+$white: map-get(map-get($colors, other), white);
+$black: map-get(map-get($colors, other), black);
+$success: map-get(map-get($colors, other), success);
+$warn: map-get(map-get($colors, other), warn);
+$alert: map-get(map-get($colors, other), alert);
 
 // Fonts
 @import url(https://fonts.googleapis.com/css?family=Open+Sans:300,400,700|Slabo+27px);

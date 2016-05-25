@@ -105,24 +105,28 @@
 }
 
 // Text color
-.text-primary {
-    color: $primary;
-}
-
 .text-primary-light {
     color: $primary-light;
 }
 
-.text-secondary {
-    color: $secondary;
+.text-primary {
+    color: $primary;
+}
+
+.text-primary-dark {
+    color: $primary-dark;
 }
 
 .text-secondary-light {
     color: $secondary-light;
 }
 
-.text-white {
-    color: $white;
+.text-secondary {
+    color: $secondary;
+}
+
+.text-secondary-dark {
+    color: $secondary-dark;
 }
 
 .text-gray-ultralight {
@@ -145,29 +149,49 @@
     color: $gray-ultradark;
 }
 
+.text-white {
+    color: $white;
+}
+
 .text-black {
     color: $black;
 }
 
-// Background color
-.background-primary {
-    background-color: $primary;
+.text-success {
+    color: $success;
 }
 
+.text-warn {
+    color: $warn;
+}
+
+.text-alert {
+    color: $alert;
+}
+
+// Background color
 .background-primary-light {
     background-color: $primary-light;
 }
 
-.background-secondary {
-    background-color: $secondary;
+.background-primary {
+    background-color: $primary;
+}
+
+.background-primary-dark {
+    background-color: $primary-dark;
 }
 
 .background-secondary-light {
     background-color: $secondary-light;
 }
 
-.background-white {
-    background-color: $white;
+.background-secondary {
+    background-color: $secondary;
+}
+
+.background-secondary-dark {
+    background-color: $secondary-dark;
 }
 
 .background-gray-ultralight {
@@ -190,6 +214,22 @@
     background-color: $gray-ultradark;
 }
 
+.background-white {
+    background-color: $white;
+}
+
 .background-black {
     background-color: $black;
+}
+
+.background-success {
+    background-color: $success;
+}
+
+.background-warn {
+    background-color: $warn;
+}
+
+.background-alert {
+    background-color: $alert;
 }

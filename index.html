@@ -43,6 +43,7 @@
                 font-size: 1rem;
                 color: #FF8B86;
                 text-transform: uppercase;
+                letter-spacing: 2px;
                 border-bottom: 1px solid #FF8B86;
             }
 
@@ -66,7 +67,7 @@
             .colors-grid .block {
                 width: 100%;
                 height: 0;
-                padding-bottom: 100%;
+                padding: 0.5rem 0.5rem 92%;
             }
         </style>
 
@@ -448,42 +449,51 @@
                 <!-- Colors -->
                 <div class="section-title">Colors</div>
 
-                <div class="g g-m-2">
-                    <div class="gi">
+                <div class="g">
+                    <div class="gi gi-s-6">
                         <h6 class="block-title">Primary</h6>
 
-                        <div class="g g-np g-xxs-2 g-m-3 colors-grid">
-                            <div class="gi"><div class="block background-primary"></div></div>
-                            <div class="gi"><div class="block background-primary-light"></div></div>
+                        <div class="g g-np g-xxs-3 colors-grid">
+                            <div class="gi"><div class="block background-primary-light">Light</div></div>
+                            <div class="gi"><div class="block background-primary text-white">Normal</div></div>
+                            <div class="gi"><div class="block background-primary-dark text-white">Dark</div></div>
                         </div>
                     </div>
 
-                    <div class="gi">
+                    <div class="gi gi-s-6">
                         <h6 class="block-title">Secondary</h6>
 
-                        <div class="g g-np g-xxs-2 g-m-3 colors-grid">
-                            <div class="gi"><div class="block background-secondary"></div></div>
-                            <div class="gi"><div class="block background-secondary-light"></div></div>
+                        <div class="g g-np g-xxs-3 colors-grid">
+                            <div class="gi"><div class="block background-secondary-light">Light</div></div>
+                            <div class="gi"><div class="block background-secondary text-white">Normal</div></div>
+                            <div class="gi"><div class="block background-secondary-dark text-white">Dark</div></div>
                         </div>
                     </div>
-                </div>
 
-                <div class="g">
                     <div class="gi">
                         <h6 class="block-title">Grays</h6>
 
-                        <div class="g g-np g-xxs-2 g-m-7 colors-grid">
-                            <div class="gi"><div class="block background-white"></div></div>
-                            <div class="gi"><div class="block background-gray-ultralight"></div></div>
-                            <div class="gi"><div class="block background-gray-light"></div></div>
-                            <div class="gi"><div class="block background-gray"></div></div>
-                            <div class="gi"><div class="block background-gray-dark"></div></div>
-                            <div class="gi"><div class="block background-gray-ultradark"></div></div>
-                            <div class="gi"><div class="block background-black"></div></div>
+                        <div class="g g-np g-xxs-3 g-s-5 colors-grid">
+                            <div class="gi"><div class="block background-gray-ultralight">Ultralight</div></div>
+                            <div class="gi"><div class="block background-gray-light">Light</div></div>
+                            <div class="gi"><div class="block background-gray">Normal</div></div>
+                            <div class="gi"><div class="block background-gray-dark text-white">Dark</div></div>
+                            <div class="gi"><div class="block background-gray-ultradark text-white">Ultradark</div></div>
                         </div>
                     </div>
-                </div>
 
+                    <div class="gi">
+                        <h6 class="block-title">Other</h6>
+
+                        <div class="g g-np g-xxs-3 g-s-5 colors-grid">
+                            <div class="gi"><div class="block background-white">White</div></div>
+                            <div class="gi"><div class="block background-black text-white">Black</div></div>
+                            <div class="gi"><div class="block background-success">Success</div></div>
+                            <div class="gi"><div class="block background-warn">Warn</div></div>
+                            <div class="gi"><div class="block background-alert">Alert</div></div>
+                        </div>
+                    </div>
+                    </div>
             </div>
         </section>
 
