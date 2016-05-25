@@ -70,8 +70,20 @@
             }
 
             .grid-grid .gi div {
-                background: #efefef;
+                font-family: 'Slabo 27px', Georgia, Times, serif;
+                font-size: 1rem;
                 line-height: 2.5;
+                background: #efefef;
+            }
+
+            @media (max-width: 641px) {
+                .grid-grid .gi {
+                    padding: 0.25rem 1rem;
+                }
+
+                .grid-grid .gi div {
+                    line-height: 1.5;
+                }
             }
 
             .colors-grid {
@@ -145,66 +157,97 @@
 
                 <!-- Grid -->
                 <div class="section-title">Grid</div>
-                <div class="block-title">Basic Grid</div>
-                <p>The default grid is 12 columns. Substitute <code>&lt;bp&gt;</code> for any of the available breakpoints (this allows for easier responsive layouts).</p>
+                <div class="block-title">Basic Grid - <code>.g > .gi-&lt;bp&gt;-&lt;cols&gt;</code></div>
+                <p>The default grid is 12 columns. You can easily apply different sizes at different breakpoints (bp) for easier responsive layouts).</p>
 
                 <div class="grid-grid">
                     <div class="g">
-                        <div class="gi gi-s-1"><div><code>.gi-&lt;bp&gt;-1</code></div></div>
-                        <div class="gi gi-s-11"><div><code>.gi-&lt;bp&gt;-11</code></div></div>
+                        <div class="gi gi-m-1"><div>1</div></div>
+                        <div class="gi gi-m-11"><div>11</div></div>
                     </div>
 
                     <div class="g">
-                        <div class="gi gi-s-2"><div><code>.gi-&lt;bp&gt;-2</code></div></div>
-                        <div class="gi gi-s-10"><div><code>.gi-&lt;bp&gt;-10</code></div></div>
+                        <div class="gi gi-m-2"><div>2</div></div>
+                        <div class="gi gi-m-10"><div>10</div></div>
                     </div>
 
                     <div class="g">
-                        <div class="gi gi-s-3"><div><code>.gi-&lt;bp&gt;-3</code></div></div>
-                        <div class="gi gi-s-9"><div><code>.gi-&lt;bp&gt;-9</code></div></div>
+                        <div class="gi gi-m-3"><div>3</div></div>
+                        <div class="gi gi-m-9"><div>9</div></div>
                     </div>
 
                     <div class="g">
-                        <div class="gi gi-s-4"><div><code>.gi-&lt;bp&gt;-4</code></div></div>
-                        <div class="gi gi-s-8"><div><code>.gi-&lt;bp&gt;-8</code></div></div>
+                        <div class="gi gi-m-4"><div>4</div></div>
+                        <div class="gi gi-m-8"><div>8</div></div>
                     </div>
 
                     <div class="g">
-                        <div class="gi gi-s-5"><div><code>.gi-&lt;bp&gt;-5</code></div></div>
-                        <div class="gi gi-s-7"><div><code>.gi-&lt;bp&gt;-7</code></div></div>
+                        <div class="gi gi-m-5"><div>5</div></div>
+                        <div class="gi gi-m-7"><div>7</div></div>
                     </div>
 
                     <div class="g">
-                        <div class="gi gi-s-6"><div><code>.gi-&lt;bp&gt;-6</code></div></div>
-                        <div class="gi gi-s-6"><div><code>.gi-&lt;bp&gt;-6</code></div></div>
+                        <div class="gi gi-m-6"><div>6</div></div>
+                        <div class="gi gi-m-6"><div>6</div></div>
                     </div>
 
                     <div class="g">
-                        <div class="gi gi-s-7"><div><code>.gi-&lt;bp&gt;-7</code></div></div>
-                        <div class="gi gi-s-5"><div><code>.gi-&lt;bp&gt;-5</code></div></div>
+                        <div class="gi gi-m-7"><div>7</div></div>
+                        <div class="gi gi-m-5"><div>5</div></div>
                     </div>
 
                     <div class="g">
-                        <div class="gi gi-s-8"><div><code>.gi-&lt;bp&gt;-8</code></div></div>
-                        <div class="gi gi-s-4"><div><code>.gi-&lt;bp&gt;-4</code></div></div>
+                        <div class="gi gi-m-8"><div>8</div></div>
+                        <div class="gi gi-m-4"><div>4</div></div>
                     </div>
 
                     <div class="g">
-                        <div class="gi gi-s-9"><div><code>.gi-&lt;bp&gt;-9</code></div></div>
-                        <div class="gi gi-s-3"><div><code>.gi-&lt;bp&gt;-3</code></div></div>
+                        <div class="gi gi-m-9"><div>9</div></div>
+                        <div class="gi gi-m-3"><div>3</div></div>
                     </div>
 
                     <div class="g">
-                        <div class="gi gi-s-10"><div><code>.gi-&lt;bp&gt;-10</code></div></div>
-                        <div class="gi gi-s-2"><div><code>.gi-&lt;bp&gt;-2</code></div></div>
+                        <div class="gi gi-m-10"><div>10</div></div>
+                        <div class="gi gi-m-2"><div>2</div></div>
                     </div>
 
                     <div class="g">
-                        <div class="gi gi-s-11"><div><code>.gi-&lt;bp&gt;-11</code></div></div>
-                        <div class="gi gi-s-1"><div><code>.gi-&lt;bp&gt;-1</code></div></div>
+                        <div class="gi gi-m-11"><div>11</div></div>
+                        <div class="gi gi-m-1"><div>1</div></div>
+                    </div>
+
+                    <div class="g">
+                        <div class="gi gi-m-12"><div>12</div></div>
                     </div>
                 </div>
 
+                <br>
+                <div class="block-title">Basic Grid Offset - <code>.gi-offset-&lt;bp&gt;-&lt;cols&gt;</code></div>
+                <p>You can add this class to your grid items to give them an offset. This is great for adding some space between items.</p>
+
+                <div class="grid-grid">
+                    <div class="g">
+                        <div class="gi gi-s-5"><div>5</div></div>
+                        <div class="gi gi-s-5 gi-offset-s-2"><div>5 offset 2</div></div>
+                    </div>
+
+                    <div class="g">
+                        <div class="gi gi-s-3 gi-offset-s-1"><div>3 offset 1</div></div>
+                        <div class="gi gi-s-3 gi-offset-s-1"><div>3 offset 1</div></div>
+                        <div class="gi gi-s-3 gi-offset-s-1"><div>3 offset 1</div></div>
+                    </div>
+
+                    <div class="g">
+                        <div class="gi gi-s-4 gi-offset-s-2"><div>4 offset 2</div></div>
+                        <div class="gi gi-s-4 gi-offset-s-2"><div>4 offset 2</div></div>
+                    </div>
+
+                    <div class="g">
+                        <div class="gi gi-s-9 gi-offset-s-3"><div>9 offset 3</div></div>
+                    </div>
+                </div>
+
+                <br>
                 <div class="block-title">Block Grid - <code>.g-&lt;bp&gt;-&lt;cols&gt;</code></div>
                 <p>In addition to the basic grid, you can also use the block grid. This creates equal width columns within the grid container.</p>
 
