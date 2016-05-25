@@ -23,8 +23,8 @@ input[type="button"] {
 	&:hover,
 	&:focus {
 		color: $white;
-		background: $gray-dark;
-		border-color: $gray-dark;
+		background: $gray-ultradark;
+		border-color: $gray-ultradark;
 	}
 
 	// Outlined button
@@ -34,8 +34,8 @@ input[type="button"] {
 
 		&:hover,
 		&:focus {
-			color: $gray-dark;
-			border-color: $gray-dark;
+			color: $gray-ultradark;
+			border-color: $gray-ultradark;
 		}
 	}
 
@@ -106,9 +106,9 @@ input[type="button"] {
 	// Disabled button
 	&.btn-disabled,
 	&:disabled {
-		color: $gray-light !important;
-		background: $gray !important;
-		border-color: $gray !important;
+		color: $gray !important;
+		background: $gray-dark !important;
+		border-color: $gray-dark !important;
 		pointer-events: none !important;
 	}
 }

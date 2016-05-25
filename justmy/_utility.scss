@@ -121,19 +121,59 @@
     color: $secondary-light;
 }
 
+.text-gray-ultralight {
+    color: $gray-ultralight;
+}
+
+.text-gray-light {
+    color: $gray-light;
+}
+
+.text-gray {
+    color: $gray;
+}
+
+.text-gray-dark {
+    color: $gray-dark;
+}
+
+.text-gray-ultradark {
+    color: $gray-ultradark;
+}
+
 // Background color
 .background-primary {
-    background: $primary;
+    background-color: $primary;
 }
 
 .background-primary-light {
-    background: $primary-light;
+    background-color: $primary-light;
 }
 
 .background-secondary {
-    background: $secondary;
+    background-color: $secondary;
 }
 
 .background-secondary-light {
-    background: $secondary-light;
+    background-color: $secondary-light;
+}
+
+.background-gray-ultralight {
+    background-color: $gray-ultralight;
+}
+
+.background-gray-light {
+    background-color: $gray-light;
+}
+
+.background-gray {
+    background-color: $gray;
+}
+
+.background-gray-dark {
+    background-color: $gray-dark;
+}
+
+.background-gray-ultradark {
+    background-color: $gray-ultradark;
 }

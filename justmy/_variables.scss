@@ -1,20 +1,51 @@
 // Variables
 
 // Colors
-$white: #ffffff;
-$gray-ultralight: #efefef;
-$gray-light: #cccccc;
-$gray: #888888;
-$gray-dark: #555555;
-$black: #333333;
+        // ultralight: #efefef,
+        // light: #cccccc,
+        // normal: #888888,
+        // dark: #555555,
+        // ultradark: #333333
+$colors: (
+    white: #fcfcfc,
+    gray: (
+        ultralight: #efefef,
+        light: #cccccc,
+        normal: #aaaaaa,
+        dark: #888888,
+        ultradark: #555555
+    ),
+    primary: (
+        light: lighten(#7F7C98, 10%),
+        normal: #7F7C98,
+        dark: darken(#7F7C98, 10%)
+    ),
+    secondary: (
+        light: lighten(#FF8B86, 10%),
+        normal: #FF8B86,
+        dark: darken(#FF8B86, 10%)
+    ),
+    black: #333333
+);
 
-$primary: #7F7C98;
-$primary-dark: darken($primary, 10%);
-$primary-light: lighten($primary, 10%);
+// Grays
+$white: map-get($colors, white);
+$gray-ultralight: map-get(map-get($colors, gray), ultralight);
+$gray-light: map-get(map-get($colors, gray), light);
+$gray: map-get(map-get($colors, gray), normal);
+$gray-dark: map-get(map-get($colors, gray), dark);
+$gray-ultradark: map-get(map-get($colors, gray), ultradark);
+$black: map-get($colors, black);
 
-$secondary: #FF8B86;
-$secondary-dark: darken($secondary, 10%);
-$secondary-light: lighten($secondary, 10%);
+// Primary
+$primary-light: map-get(map-get($colors, primary), light);
+$primary: map-get(map-get($colors, primary), normal);
+$primary-dark: map-get(map-get($colors, primary), dark);
+
+// Secondary
+$secondary-light: map-get(map-get($colors, secondary), light);
+$secondary: map-get(map-get($colors, secondary), normal);
+$secondary-dark: map-get(map-get($colors, secondary), dark);
 
 // Fonts
 @import url(https://fonts.googleapis.com/css?family=Open+Sans:300,400,700|Slabo+27px);
