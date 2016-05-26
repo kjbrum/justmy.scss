@@ -27,12 +27,16 @@ http://kylebrumm.com/justmy.css/
 - [ ] Add components?
 
 
+## Additions
+
+- [ ] Add custom style for radio/checkbox inputs
+
+
 ## Issues
 
 - [x] Add `.gi-first-x` & `gi-last-x` to the grid (used for clearing)
 - [ ] Fix issue when using multiple `.list-split-x-x` classes (clearing gets messed up)
 - [ ] Include all the features of [Juice](https://github.com/kjbrum/juice)
-
 
 
 ## License

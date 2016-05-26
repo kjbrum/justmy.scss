@@ -65,12 +65,30 @@
                 text-decoration: none !important;
             }
 
-            .grid-grid .gi div {
+            .example-grid .gi div {
                 font-family: 'Slabo 27px', Georgia, Times, serif;
                 font-size: 1rem;
                 line-height: 2.5;
                 text-align: center;
                 background: #efefef;
+                border: 1px solid #333333;
+            }
+
+            .example-form input[type='text'],
+            .example-form input[type='email'],
+            .example-form input[type='tel'],
+            .example-form input[type='number'],
+            .example-form input[type='search'],
+            .example-form input[type='url'],
+            .example-form input[type='password'],
+            .example-form textarea,
+            .example-form select {
+                width: 100%;
+            }
+
+            .example-form .gi {
+                padding-top: 0;
+                padding-bottom: 0;
             }
 
             .colors-grid {
@@ -110,11 +128,11 @@
             }
 
             @media (max-width: 641px) {
-                .grid-grid .gi {
+                .example-grid .gi {
                     padding: 0.25rem 1rem;
                 }
 
-                .grid-grid .gi div {
+                .example-grid .gi div {
                     line-height: 1.5;
                 }
 
@@ -156,629 +174,712 @@
         <section class="section section--demo">
             <div class="container">
                 <!-- Typography -->
-                <div class="section-title">Typography</div>
-                <p>The primary font is Open Sans and the secondary font is Slabo 27px. These are served using Google fonts.</p>
+                <div class="typography">
+                    <div class="section-title">Typography</div>
+                    <p>The primary font is Open Sans and the secondary font is Slabo 27px. These are served using Google fonts.</p>
 
-                <div class="g g-m-2">
-                    <div class="gi">
-                        <br>
-                        <div class="block-title">Headings</div>
+                    <div class="g g-m-2">
+                        <div class="gi">
+                            <br>
+                            <div class="block-title">Headings</div>
 
-                        <h1>Heading 1</h1>
-                        <h2>Heading 2</h2>
-                        <h3>Heading 3</h3>
-                        <h4>Heading 4</h4>
-                        <h5>Heading 5</h5>
-                        <h6>Heading 6</h6>
-                    </div>
+                            <h1>Heading 1</h1>
+                            <h2>Heading 2</h2>
+                            <h3>Heading 3</h3>
+                            <h4>Heading 4</h4>
+                            <h5>Heading 5</h5>
+                            <h6>Heading 6</h6>
+                        </div>
 
-                    <div class="gi">
-                        <br>
-                        <div class="block-title">Paragraph Styling</div>
+                        <div class="gi">
+                            <br>
+                            <div class="block-title">Paragraph Styling</div>
 
-                        <p>This is a paragraph tag.</p>
-                        <p><strong>This is a strong/bold tag.</strong></p>
-                        <p><em>This is an emphasis/italic tag.</em></p>
-                        <p><u>This is an underline tag.</u></p>
-                        <p><small>This is a small tag.</small></p>
-                        <p><a href="#">This is an anchor tag.</a></p>
-                    </div>
-                </div>
-
-
-                <!-- Grid -->
-                <div class="section-title">Grid</div>
-                <p>The default grid is 12 columns. There are additional classes that allow for a 5-column grid as well. You can easily apply different sizes at different breakpoints (bp) for easier responsive layouts).</p>
-
-                <br>
-                <div class="block-title">12-column Grid - <code>.g > .gi-&lt;bp&gt;-&lt;cols&gt;</code></div>
-                <div class="grid-grid">
-                    <div class="g">
-                        <div class="gi gi-m-1"><div>1</div></div>
-                        <div class="gi gi-m-11"><div>11</div></div>
-                    </div>
-
-                    <div class="g">
-                        <div class="gi gi-m-2"><div>2</div></div>
-                        <div class="gi gi-m-10"><div>10</div></div>
-                    </div>
-
-                    <div class="g">
-                        <div class="gi gi-m-3"><div>3</div></div>
-                        <div class="gi gi-m-9"><div>9</div></div>
-                    </div>
-
-                    <div class="g">
-                        <div class="gi gi-m-4"><div>4</div></div>
-                        <div class="gi gi-m-8"><div>8</div></div>
-                    </div>
-
-                    <div class="g">
-                        <div class="gi gi-m-5"><div>5</div></div>
-                        <div class="gi gi-m-7"><div>7</div></div>
-                    </div>
-
-                    <div class="g">
-                        <div class="gi gi-m-6"><div>6</div></div>
-                        <div class="gi gi-m-6"><div>6</div></div>
-                    </div>
-
-                    <div class="g">
-                        <div class="gi gi-m-7"><div>7</div></div>
-                        <div class="gi gi-m-5"><div>5</div></div>
-                    </div>
-
-                    <div class="g">
-                        <div class="gi gi-m-8"><div>8</div></div>
-                        <div class="gi gi-m-4"><div>4</div></div>
-                    </div>
-
-                    <div class="g">
-                        <div class="gi gi-m-9"><div>9</div></div>
-                        <div class="gi gi-m-3"><div>3</div></div>
-                    </div>
-
-                    <div class="g">
-                        <div class="gi gi-m-10"><div>10</div></div>
-                        <div class="gi gi-m-2"><div>2</div></div>
-                    </div>
-
-                    <div class="g">
-                        <div class="gi gi-m-11"><div>11</div></div>
-                        <div class="gi gi-m-1"><div>1</div></div>
-                    </div>
-
-                    <div class="g">
-                        <div class="gi gi-m-12"><div>12</div></div>
+                            <p>This is a paragraph tag.</p>
+                            <p><strong>This is a strong/bold tag.</strong></p>
+                            <p><em>This is an emphasis/italic tag.</em></p>
+                            <p><u>This is an underline tag.</u></p>
+                            <p><small>This is a small tag.</small></p>
+                            <p><a href="#">This is an anchor tag.</a></p>
+                        </div>
                     </div>
                 </div>
 
-                <br>
-                <div class="block-title">5-column Grid - <code>.g > .gi-&lt;bp&gt;-&lt;cols&gt;-5</code></div>
-                <div class="grid-grid">
-                    <div class="g">
-                        <div class="gi gi-m-1-5"><div>1</div></div>
-                        <div class="gi gi-m-4-5"><div>4</div></div>
+
+                <!-- Grids -->
+                <div class="grids">
+                    <div class="section-title">Grids</div>
+                    <p>The default grid is 12 columns. There are additional classes that allow for a 5-column grid as well. You can easily apply different sizes at different breakpoints (bp) for easier responsive layouts).</p>
+
+                    <br>
+                    <div class="block-title">12-column Grid - <code>.g > .gi-&lt;bp&gt;-&lt;cols&gt;</code></div>
+                    <div class="example-grid">
+                        <div class="g">
+                            <div class="gi gi-m-1"><div>1</div></div>
+                            <div class="gi gi-m-11"><div>11</div></div>
+                        </div>
+
+                        <div class="g">
+                            <div class="gi gi-m-2"><div>2</div></div>
+                            <div class="gi gi-m-10"><div>10</div></div>
+                        </div>
+
+                        <div class="g">
+                            <div class="gi gi-m-3"><div>3</div></div>
+                            <div class="gi gi-m-9"><div>9</div></div>
+                        </div>
+
+                        <div class="g">
+                            <div class="gi gi-m-4"><div>4</div></div>
+                            <div class="gi gi-m-8"><div>8</div></div>
+                        </div>
+
+                        <div class="g">
+                            <div class="gi gi-m-5"><div>5</div></div>
+                            <div class="gi gi-m-7"><div>7</div></div>
+                        </div>
+
+                        <div class="g">
+                            <div class="gi gi-m-6"><div>6</div></div>
+                            <div class="gi gi-m-6"><div>6</div></div>
+                        </div>
+
+                        <div class="g">
+                            <div class="gi gi-m-7"><div>7</div></div>
+                            <div class="gi gi-m-5"><div>5</div></div>
+                        </div>
+
+                        <div class="g">
+                            <div class="gi gi-m-8"><div>8</div></div>
+                            <div class="gi gi-m-4"><div>4</div></div>
+                        </div>
+
+                        <div class="g">
+                            <div class="gi gi-m-9"><div>9</div></div>
+                            <div class="gi gi-m-3"><div>3</div></div>
+                        </div>
+
+                        <div class="g">
+                            <div class="gi gi-m-10"><div>10</div></div>
+                            <div class="gi gi-m-2"><div>2</div></div>
+                        </div>
+
+                        <div class="g">
+                            <div class="gi gi-m-11"><div>11</div></div>
+                            <div class="gi gi-m-1"><div>1</div></div>
+                        </div>
+
+                        <div class="g">
+                            <div class="gi gi-m-12"><div>12</div></div>
+                        </div>
                     </div>
 
-                    <div class="g">
-                        <div class="gi gi-m-2-5"><div>2</div></div>
-                        <div class="gi gi-m-3-5"><div>3</div></div>
+                    <br>
+                    <div class="block-title">5-column Grid - <code>.g > .gi-&lt;bp&gt;-&lt;cols&gt;-5</code></div>
+                    <div class="example-grid">
+                        <div class="g">
+                            <div class="gi gi-m-1-5"><div>1</div></div>
+                            <div class="gi gi-m-4-5"><div>4</div></div>
+                        </div>
+
+                        <div class="g">
+                            <div class="gi gi-m-2-5"><div>2</div></div>
+                            <div class="gi gi-m-3-5"><div>3</div></div>
+                        </div>
+
+                        <div class="g">
+                            <div class="gi gi-m-3-5"><div>3</div></div>
+                            <div class="gi gi-m-2-5"><div>2</div></div>
+                        </div>
+
+                        <div class="g">
+                            <div class="gi gi-m-4-5"><div>4</div></div>
+                            <div class="gi gi-m-1-5"><div>1</div></div>
+                        </div>
+
+                        <div class="g">
+                            <div class="gi gi-m-5-5"><div>5</div></div>
+                        </div>
                     </div>
 
-                    <div class="g">
-                        <div class="gi gi-m-3-5"><div>3</div></div>
-                        <div class="gi gi-m-2-5"><div>2</div></div>
+                    <br>
+                    <div class="block-title">Grid Offset - <code>.gi-offset-&lt;bp&gt;-&lt;cols&gt;</code></div>
+                    <p>You can add this class to your grid items to give them an offset. This is great for adding some space between items.</p>
+
+                    <div class="example-grid">
+                        <div class="g">
+                            <div class="gi gi-s-5"><div>5</div></div>
+                            <div class="gi gi-s-5 gi-offset-s-2"><div>5 offset 2</div></div>
+                        </div>
+
+                        <div class="g">
+                            <div class="gi gi-s-1-5 gi-offset-s-1-5"><div>1-5 offset 1</div></div>
+                            <div class="gi gi-s-1-5 gi-offset-s-1-5"><div>1-5 offset 1</div></div>
+                        </div>
+
+                        <div class="g">
+                            <div class="gi gi-s-4 gi-offset-s-2"><div>4 offset 2</div></div>
+                            <div class="gi gi-s-4 gi-offset-s-2"><div>4 offset 2</div></div>
+                        </div>
+
+                        <div class="g">
+                            <div class="gi gi-s-9 gi-offset-s-3"><div>9 offset 3</div></div>
+                        </div>
+
+                        <div class="g">
+                            <div class="gi gi-s-3 gi-offset-s-1"><div>3 offset 1</div></div>
+                            <div class="gi gi-s-3 gi-offset-s-1"><div>3 offset 1</div></div>
+                            <div class="gi gi-s-3 gi-offset-s-1"><div>3 offset 1</div></div>
+                        </div>
+
+                        <div class="g">
+                            <div class="gi gi-s-3-5 gi-offset-s-1-5"><div>3-5 offset 1</div></div>
+                        </div>
                     </div>
 
-                    <div class="g">
-                        <div class="gi gi-m-4-5"><div>4</div></div>
-                        <div class="gi gi-m-1-5"><div>1</div></div>
+                    <br>
+                    <div class="block-title">Grid Push/Pull - <code>.gi-&lt;push|pull&gt;-&lt;bp&gt;-&lt;cols&gt;</code></div>
+                    <p>You can add this class to your grid items to reorganize them. This is great for when you need to have grid items in a different order at different breakpoints. <em>If you resize your browser, you will see the grid items reorganize (1) - (6)</em>.</p>
+
+                    <div class="example-grid">
+                        <div class="g">
+                            <div class="gi gi-m-2 gi-push-m-4"><div>(1) push 4</div></div>
+                            <div class="gi gi-m-2 gi-push-m-6"><div>(2) push 6</div></div>
+                            <div class="gi gi-m-2 gi-push-m-2"><div>(3) push 2</div></div>
+                            <div class="gi gi-m-2 gi-pull-m-6"><div>(4) pull 6</div></div>
+                            <div class="gi gi-m-2 gi-push-m-2"><div>(5) push 2</div></div>
+                            <div class="gi gi-m-2 gi-pull-m-8"><div>(6) pull 8</div></div>
+                        </div>
                     </div>
 
-                    <div class="g">
-                        <div class="gi gi-m-5-5"><div>5</div></div>
+                    <br>
+                    <div class="block-title">Grid Fixed - <code>.g-fixed-&lt;bp&gt;-&lt;cols&gt; & .g-fixed-right-&lt;bp&gt;-&lt;cols&gt; & .g-fill-&lt;bp&gt;-&lt;cols&gt;</code></div>
+                    <p>In addition to the basic grid, you can also use the block grid. This creates equal width columns within the grid container.</p>
+
+                    <div class="example-grid">
+                        <div class="g">
+                            <div class="gi gi-fixed-m-4"><div>fixed 4</div></div>
+                            <div class="gi gi-fill-m-8"><div>fill 8</div></div>
+                        </div>
+
+                        <div class="g">
+                            <div class="gi gi-fixed-right-m-5"><div>fixed right 5</div></div>
+                            <div class="gi gi-fill-m-7"><div>fill 7</div></div>
+                        </div>
                     </div>
+
+                    <br>
+                    <div class="block-title">Block Grid - <code>.g-&lt;bp&gt;-&lt;cols&gt;</code></div>
+                    <p>In addition to the basic grid, you can also use the block grid. This creates equal width columns within the grid container.</p>
+
+                    <div class="example-grid">
+                        <div class="g g-s-2 g-m-3 g-l-4 g-xl-6">
+                            <div class="gi"><div>.gi</div></div>
+                            <div class="gi"><div>.gi</div></div>
+                            <div class="gi"><div>.gi</div></div>
+                            <div class="gi"><div>.gi</div></div>
+                            <div class="gi"><div>.gi</div></div>
+                            <div class="gi"><div>.gi</div></div>
+                        </div>
+                    </div>
+
+                    <br>
+                    <div class="block-title">Additional Grid Classes</div>
+
+                    <ul class="list-plain">
+                        <li><code>.g-center</code> - center the grid items</li>
+                        <li><code>.g-flex</code> - make the grid items equal height</li>
+                        <li><code>.g-np</code> - remove the padding from all the grid items</li>
+                        <li><code>.g-reverse</code> - reverse the order of all the grid items</li>
+                        <li><code>.gi-np</code> - remove the padding from a specific grid items</li>
+                    </ul>
                 </div>
-
-                <br>
-                <div class="block-title">Grid Offset - <code>.gi-offset-&lt;bp&gt;-&lt;cols&gt;</code></div>
-                <p>You can add this class to your grid items to give them an offset. This is great for adding some space between items.</p>
-
-                <div class="grid-grid">
-                    <div class="g">
-                        <div class="gi gi-s-5"><div>5</div></div>
-                        <div class="gi gi-s-5 gi-offset-s-2"><div>5 offset 2</div></div>
-                    </div>
-
-                    <div class="g">
-                        <div class="gi gi-s-1-5 gi-offset-s-1-5"><div>1-5 offset 1</div></div>
-                        <div class="gi gi-s-1-5 gi-offset-s-1-5"><div>1-5 offset 1</div></div>
-                    </div>
-
-                    <div class="g">
-                        <div class="gi gi-s-4 gi-offset-s-2"><div>4 offset 2</div></div>
-                        <div class="gi gi-s-4 gi-offset-s-2"><div>4 offset 2</div></div>
-                    </div>
-
-                    <div class="g">
-                        <div class="gi gi-s-9 gi-offset-s-3"><div>9 offset 3</div></div>
-                    </div>
-
-                    <div class="g">
-                        <div class="gi gi-s-3 gi-offset-s-1"><div>3 offset 1</div></div>
-                        <div class="gi gi-s-3 gi-offset-s-1"><div>3 offset 1</div></div>
-                        <div class="gi gi-s-3 gi-offset-s-1"><div>3 offset 1</div></div>
-                    </div>
-
-                    <div class="g">
-                        <div class="gi gi-s-3-5 gi-offset-s-1-5"><div>3-5 offset 1</div></div>
-                    </div>
-                </div>
-
-                <br>
-                <div class="block-title">Grid Push/Pull - <code>.gi-&lt;push|pull&gt;-&lt;bp&gt;-&lt;cols&gt;</code></div>
-                <p>You can add this class to your grid items to reorganize them. This is great for when you need to have grid items in a different order at different breakpoints.</p>
-
-                <div class="grid-grid">
-                    <div class="g">
-                        <div class="gi gi-m-2 gi-push-m-4"><div>(1) push 4</div></div>
-                        <div class="gi gi-m-2 gi-push-m-6"><div>(2) push 6</div></div>
-                        <div class="gi gi-m-2 gi-push-m-2"><div>(3) push 2</div></div>
-                        <div class="gi gi-m-2 gi-pull-m-6"><div>(4) pull 6</div></div>
-                        <div class="gi gi-m-2 gi-push-m-2"><div>(5) push 2</div></div>
-                        <div class="gi gi-m-2 gi-pull-m-8"><div>(6) pull 8</div></div>
-                    </div>
-                </div>
-
-                <br>
-                <div class="block-title">Grid Fixed - <code>.g-fixed-&lt;bp&gt;-&lt;cols&gt; & .g-fixed-right-&lt;bp&gt;-&lt;cols&gt; & .g-fill-&lt;bp&gt;-&lt;cols&gt;</code></div>
-                <p>In addition to the basic grid, you can also use the block grid. This creates equal width columns within the grid container.</p>
-
-                <div class="grid-grid">
-                    <div class="g">
-                        <div class="gi gi-fixed-m-4"><div>fixed 4</div></div>
-                        <div class="gi gi-fill-m-8"><div>fill 8</div></div>
-                    </div>
-
-                    <div class="g">
-                        <div class="gi gi-fixed-right-m-5"><div>fixed right 5</div></div>
-                        <div class="gi gi-fill-m-7"><div>fill 7</div></div>
-                    </div>
-                </div>
-
-                <br>
-                <div class="block-title">Block Grid - <code>.g-&lt;bp&gt;-&lt;cols&gt;</code></div>
-                <p>In addition to the basic grid, you can also use the block grid. This creates equal width columns within the grid container.</p>
-
-                <div class="grid-grid">
-                    <div class="g g-s-2 g-m-3 g-l-4 g-xl-6">
-                        <div class="gi"><div>.gi</div></div>
-                        <div class="gi"><div>.gi</div></div>
-                        <div class="gi"><div>.gi</div></div>
-                        <div class="gi"><div>.gi</div></div>
-                        <div class="gi"><div>.gi</div></div>
-                        <div class="gi"><div>.gi</div></div>
-                    </div>
-                </div>
-
-                <br>
-                <div class="block-title">Additional Grid Classes</div>
-
-                <ul class="list-plain">
-                    <li><code>.g-center</code> - center the grid items</li>
-                    <li><code>.g-flex</code> - make the grid items equal height</li>
-                    <li><code>.g-np</code> - remove the padding from all the grid items</li>
-                    <li><code>.g-reverse</code> - reverse the order of all the grid items</li>
-                    <li><code>.gi-np</code> - remove the padding from a specific grid items</li>
-                </ul>
 
 
                 <!-- Lists -->
-                <div class="section-title">Lists</div>
-                <div class="g g-m-3">
-                    <div class="gi">
-                        <div class="block-title">Unordered List</div>
+                <div class="lists">
+                    <div class="section-title">Lists</div>
+                    <div class="g g-m-3">
+                        <div class="gi">
+                            <div class="block-title">Unordered List</div>
 
-                        <ul>
-                            <li>Literally marfa pabst</li>
-                            <li>
-                                This is a nested list
-                                <ul>
-                                    <li>Axe chia selvage sartorial</li>
-                                    <li>Thundercats hella franzen</li>
-                                    <li>Biodiesel slow-carb pitchfork</li>
-                                </ul>
-                            </li>
-                            <li>Wolf moon meh beard fashion</li>
-                        </ul>
+                            <ul>
+                                <li>Literally marfa pabst</li>
+                                <li>
+                                    This is a nested list
+                                    <ul>
+                                        <li>Axe chia selvage sartorial</li>
+                                        <li>Thundercats hella franzen</li>
+                                        <li>Biodiesel slow-carb pitchfork</li>
+                                    </ul>
+                                </li>
+                                <li>Wolf moon meh beard fashion</li>
+                            </ul>
+                        </div>
+
+                        <div class="gi">
+                            <div class="block-title">Ordered List</div>
+
+                            <ol>
+                                <li>8-bit master cleanse brunch</li>
+                                <li>
+                                    This is a nested list
+                                    <ul>
+                                        <li>Pickled pour-over twee</li>
+                                        <li>Kinfolk flexitarian selfies brunch</li>
+                                        <li>Kickstarter ethical</li>
+                                    </ul>
+                                </li>
+                                <li>Bespoke tousled pour-over retro</li>
+                            </ol>
+                        </div>
+
+                        <div class="gi">
+                            <div class="block-title">Description List</div>
+
+                            <dl>
+                                <dt>Occupy vegan</dt>
+                                <dd>Probably haven't heard of man braid</dd>
+                                <dt>Sriracha</dt>
+                                <dd>Brooklyn letterpress actually semiotics</dd>
+                                <dt>Flexitarian </dt>
+                                <dd>Next level hella kale</dd>
+                            </dl>
+                        </div>
                     </div>
 
-                    <div class="gi">
-                        <div class="block-title">Ordered List</div>
+                    <div class="g">
+                        <div class="gi">
+                            <div class="block-title">Inline List - <code>.list-inline</code></div>
 
-                        <ol>
-                            <li>8-bit master cleanse brunch</li>
-                            <li>
-                                This is a nested list
-                                <ul>
-                                    <li>Pickled pour-over twee</li>
-                                    <li>Kinfolk flexitarian selfies brunch</li>
-                                    <li>Kickstarter ethical</li>
-                                </ul>
-                            </li>
-                            <li>Bespoke tousled pour-over retro</li>
-                        </ol>
-                    </div>
+                            <ul class="list-inline">
+                                <li>Dreamcatcher.</li>
+                                <li>Knausgaard.</li>
+                                <li>Distillery.</li>
+                                <li>Chillwave.</li>
+                                <li>Vegan.</li>
+                                <li>Flexitarian.</li>
+                                <li>Kickstarter.</li>
+                            </ul>
+                        </div>
 
-                    <div class="gi">
-                        <div class="block-title">Description List</div>
+                        <div class="gi gi-m-4">
+                            <div class="block-title">Plain List - <code>.list-plain</code></div>
 
-                        <dl>
-                            <dt>Occupy vegan</dt>
-                            <dd>Probably haven't heard of man braid</dd>
-                            <dt>Sriracha</dt>
-                            <dd>Brooklyn letterpress actually semiotics</dd>
-                            <dt>Flexitarian </dt>
-                            <dd>Next level hella kale</dd>
-                        </dl>
-                    </div>
-                </div>
+                            <ul class="list-plain">
+                                <li>Venmo vice actually tilde.</li>
+                                <li>Godard mlkshk 8-bit.</li>
+                                <li>Master cleanse schlitz.</li>
+                                <li>Stumptown letterpress health.</li>
+                                <li>Semiotics truffaut yuccie.</li>
+                                <li>Try-hard pop-up art.</li>
+                                <li>Disrupt tote bag cray.</li>
+                                <li>Before they sold out.</li>
+                                <li>Austin polaroid man braid.</li>
+                                <li>Tumblr street art.</li>
+                            </ul>
+                        </div>
 
-                <div class="g">
-                    <div class="gi">
-                        <div class="block-title">Inline List - <code>.list-inline</code></div>
+                        <div class="gi gi-m-8">
+                            <div class="block-title">Split List - <code>.list-split .list-split-&lt;bp&gt;-&lt;cols&gt;</code></div>
 
-                        <ul class="list-inline">
-                            <li>Dreamcatcher.</li>
-                            <li>Knausgaard.</li>
-                            <li>Distillery.</li>
-                            <li>Chillwave.</li>
-                            <li>Vegan.</li>
-                            <li>Flexitarian.</li>
-                            <li>Kickstarter.</li>
-                        </ul>
-                    </div>
-
-                    <div class="gi gi-m-4">
-                        <div class="block-title">Plain List - <code>.list-plain</code></div>
-
-                        <ul class="list-plain">
-                            <li>Venmo vice actually tilde.</li>
-                            <li>Godard mlkshk 8-bit.</li>
-                            <li>Master cleanse schlitz.</li>
-                            <li>Stumptown letterpress health.</li>
-                            <li>Semiotics truffaut yuccie.</li>
-                            <li>Try-hard pop-up art.</li>
-                            <li>Disrupt tote bag cray.</li>
-                            <li>Before they sold out.</li>
-                            <li>Austin polaroid man braid.</li>
-                            <li>Tumblr street art.</li>
-                        </ul>
-                    </div>
-
-                    <div class="gi gi-m-8">
-                        <div class="block-title">Split List - <code>.list-split .list-split-&lt;bp&gt;-&lt;cols&gt;</code></div>
-
-                        <ul class="list-split list-split-m-2">
-                            <li>Brunch thundercats butcher.</li>
-                            <li>Semiotics shabby.</li>
-                            <li>Tilde kale chips letterpress.</li>
-                            <li>Pork belly migas master.</li>
-                            <li>Cornhole marfa williamsburg.</li>
-                            <li>Celiac farm-to-table fanny pack.</li>
-                            <li>Before they sold out.</li>
-                            <li>Wayfarers gentrify chambray seitan.</li>
-                            <li>Cleanse kickstarter sustainable.</li>
-                            <li>8-bit hammock.</li>
-                        </ul>
+                            <ul class="list-split list-split-m-2">
+                                <li>Brunch thundercats butcher.</li>
+                                <li>Semiotics shabby.</li>
+                                <li>Tilde kale chips letterpress.</li>
+                                <li>Pork belly migas master.</li>
+                                <li>Cornhole marfa williamsburg.</li>
+                                <li>Celiac farm-to-table fanny pack.</li>
+                                <li>Before they sold out.</li>
+                                <li>Wayfarers gentrify chambray seitan.</li>
+                                <li>Cleanse kickstarter sustainable.</li>
+                                <li>8-bit hammock.</li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
 
 
                 <!-- Tables -->
-                <div class="section-title">Tables</div>
-                <div class="g">
-                    <div class="gi">
-                        <div class="block-title">Full Width Table - <code>.table-full</code></div>
+                <div class="tables">
+                    <div class="section-title">Tables</div>
+                    <div class="g">
+                        <div class="gi">
+                            <div class="block-title">Full Width Table - <code>.table-full</code></div>
 
-                        <table class="table-full">
-                            <thead>
-                                <tr>
-                                    <th>Food truck</th>
-                                    <th>Street art</th>
-                                    <th>Meditation</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td>Thundercats</td>
-                                    <td>Intelligentsia listicle pug</td>
-                                    <td>Keytar tofu retro</td>
-                                </tr>
-                                <tr>
-                                    <td>Narwhal</td>
-                                    <td>Skateboard helvetica distillery</td>
-                                    <td>Tote bag</td>
-                                </tr>
-                                <tr>
-                                    <td>Aesthetic</td>
-                                    <td>Chia celiac irony</td>
-                                    <td>Bitters cold-pressed pickled listicle</td>
-                                </tr>
-                                <tr>
-                                    <td>Bicycle</td>
-                                    <td>Readymade sriracha man bun</td>
-                                    <td>Drinking vinegar venmo normcore</td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
+                            <table class="table-full">
+                                <thead>
+                                    <tr>
+                                        <th>Food truck</th>
+                                        <th>Street art</th>
+                                        <th>Meditation</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>Thundercats</td>
+                                        <td>Intelligentsia listicle pug</td>
+                                        <td>Keytar tofu retro</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Narwhal</td>
+                                        <td>Skateboard helvetica distillery</td>
+                                        <td>Tote bag</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Aesthetic</td>
+                                        <td>Chia celiac irony</td>
+                                        <td>Bitters cold-pressed pickled listicle</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Bicycle</td>
+                                        <td>Readymade sriracha man bun</td>
+                                        <td>Drinking vinegar venmo normcore</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
 
-                    <div class="gi">
-                        <div class="block-title">Alternating Rows Table - <code>.table-alt</code></div>
+                        <div class="gi">
+                            <div class="block-title">Alternating Rows Table - <code>.table-alt</code></div>
 
-                        <table class="table-alt">
-                            <thead>
-                                <tr>
-                                    <th>Food truck</th>
-                                    <th>Street art</th>
-                                    <th>Meditation</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td>Thundercats</td>
-                                    <td>Intelligentsia listicle pug</td>
-                                    <td>Keytar tofu retro</td>
-                                </tr>
-                                <tr>
-                                    <td>Narwhal</td>
-                                    <td>Skateboard helvetica distillery</td>
-                                    <td>Tote bag</td>
-                                </tr>
-                                <tr>
-                                    <td>Aesthetic</td>
-                                    <td>Chia celiac irony</td>
-                                    <td>Bitters cold-pressed pickled listicle</td>
-                                </tr>
-                                <tr>
-                                    <td>Bicycle</td>
-                                    <td>Readymade sriracha man bun</td>
-                                    <td>Drinking vinegar venmo normcore</td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
+                            <table class="table-alt">
+                                <thead>
+                                    <tr>
+                                        <th>Food truck</th>
+                                        <th>Street art</th>
+                                        <th>Meditation</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>Thundercats</td>
+                                        <td>Intelligentsia listicle pug</td>
+                                        <td>Keytar tofu retro</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Narwhal</td>
+                                        <td>Skateboard helvetica distillery</td>
+                                        <td>Tote bag</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Aesthetic</td>
+                                        <td>Chia celiac irony</td>
+                                        <td>Bitters cold-pressed pickled listicle</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Bicycle</td>
+                                        <td>Readymade sriracha man bun</td>
+                                        <td>Drinking vinegar venmo normcore</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
 
-                    <div class="gi">
-                        <div class="block-title">Hover Table - <code>.table-hover</code></div>
+                        <div class="gi">
+                            <div class="block-title">Hover Table - <code>.table-hover</code></div>
 
-                        <table class="table-hover">
-                            <thead>
-                                <tr>
-                                    <th>Food truck</th>
-                                    <th>Street art</th>
-                                    <th>Meditation</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td>Thundercats</td>
-                                    <td>Intelligentsia listicle pug</td>
-                                    <td>Keytar tofu retro</td>
-                                </tr>
-                                <tr>
-                                    <td>Narwhal</td>
-                                    <td>Skateboard helvetica distillery</td>
-                                    <td>Tote bag</td>
-                                </tr>
-                                <tr>
-                                    <td>Aesthetic</td>
-                                    <td>Chia celiac irony</td>
-                                    <td>Bitters cold-pressed pickled listicle</td>
-                                </tr>
-                                <tr>
-                                    <td>Bicycle</td>
-                                    <td>Readymade sriracha man bun</td>
-                                    <td>Drinking vinegar venmo normcore</td>
-                                </tr>
-                            </tbody>
-                        </table>
+                            <table class="table-hover">
+                                <thead>
+                                    <tr>
+                                        <th>Food truck</th>
+                                        <th>Street art</th>
+                                        <th>Meditation</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>Thundercats</td>
+                                        <td>Intelligentsia listicle pug</td>
+                                        <td>Keytar tofu retro</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Narwhal</td>
+                                        <td>Skateboard helvetica distillery</td>
+                                        <td>Tote bag</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Aesthetic</td>
+                                        <td>Chia celiac irony</td>
+                                        <td>Bitters cold-pressed pickled listicle</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Bicycle</td>
+                                        <td>Readymade sriracha man bun</td>
+                                        <td>Drinking vinegar venmo normcore</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
                     </div>
                 </div>
 
 
                 <!-- Blockquotes -->
-                <div class="section-title">Blockquotes</div>
-                <div class="block-title">Normal Blockquote</div>
+                <div class="blockquotes">
+                    <div class="section-title">Blockquotes</div>
+                    <div class="block-title">Normal Blockquote</div>
 
-                <blockquote>
-                    This is an awesome blockquote with a left border. It's just so freakin pretty! Truffaut pour-over forage everyday carry, meditation shabby chic ethical tofu flannel. Wolf moon flannel dreamcatcher, four dollar toast biodiesel seitan plaid iPhone chartreuse wayfarers.
-                </blockquote>
+                    <blockquote>
+                        This is an awesome blockquote with a left border. It's just so freakin pretty! Truffaut pour-over forage everyday carry, meditation shabby chic ethical tofu flannel. Wolf moon flannel dreamcatcher, four dollar toast biodiesel seitan plaid iPhone chartreuse wayfarers.
+                    </blockquote>
 
-                <div class="block-title">Quotes Blockquote - <code>.quotes</code></div>
+                    <div class="block-title">Quotes Blockquote - <code>.quotes</code></div>
 
-                <blockquote class="quotes">
-                    This is an awesome blockquote with quotes. Doesn't this look nice as well? Selfies irony gastropub, church-key echo park craft beer tousled. Shoreditch franzen disrupt semiotics. Ugh street art vice messenger bag cliche banh mi. Gluten-free post-ironic ennui yr cliche kogi. Synth polaroid stumptown squid, messenger bag cronut bicycle rights jean shorts.
-                </blockquote>
+                    <blockquote class="quotes">
+                        This is an awesome blockquote with quotes. Doesn't this look nice as well? Selfies irony gastropub, church-key echo park craft beer tousled. Shoreditch franzen disrupt semiotics. Ugh street art vice messenger bag cliche banh mi. Gluten-free post-ironic ennui yr cliche kogi. Synth polaroid stumptown squid, messenger bag cronut bicycle rights jean shorts.
+                    </blockquote>
+                </div>
 
 
                 <!-- Code -->
-                <div class="section-title">Code/Pre</div>
-                <div class="block-title">Inline Code</div>
+                <div class="code">
+                    <div class="section-title">Code/Pre</div>
+                    <div class="block-title">Inline Code</div>
 
-                <code>.primary { color: #A07B83; }</code>
-                <br>
-                <br>
-                <br>
+                    <code>.primary { color: #A07B83; }</code>
+                    <br>
+                    <br>
+                    <br>
 
-                <div class="block-title">Code Block</div>
+                    <div class="block-title">Code Block</div>
 
 <pre><span class="comment">// This is a code block</span>
 .secondary {
     color: #FF8B86;
 }</pre>
+                </div>
 
 
                 <!-- Buttons -->
-                <div class="section-title">Buttons</div>
-                <div class="g text-bottom">
-                    <div class="gi">
-                        <div class="block-title">Normal Button - <code>.btn</code></div>
+                <div class="buttons">
+                    <div class="section-title">Buttons</div>
+                    <div class="g text-bottom">
+                        <div class="gi">
+                            <div class="block-title">Normal Button - <code>.btn</code></div>
 
-                        <p>
-                            <a href="#" class="btn btn-large">.btn-large</a>
-                            <a href="#" class="btn">.btn</a>
-                            <a href="#" class="btn btn-outline">.btn-outline</a>
-                            <a href="#" class="btn btn-small">.btn-small</a>
-                        </p>
+                            <p>
+                                <a href="#" class="btn btn-large">.btn-large</a>
+                                <a href="#" class="btn">.btn</a>
+                                <a href="#" class="btn btn-outline">.btn-outline</a>
+                                <a href="#" class="btn btn-small">.btn-small</a>
+                            </p>
 
-                        <p>
-                            <input type="button" class="btn" value="input[type='button'])">
-                            <input type="submit" class="btn" value="input[type='submit'])">
-                            <button class="btn">button</button>
-                            <button class="btn" disabled>:disabled / .disabled</button>
-                        </p>
+                            <p>
+                                <input type="button" class="btn" value="input[type='button'])">
+                                <input type="submit" class="btn" value="input[type='submit'])">
+                                <button class="btn">button</button>
+                                <button class="btn" disabled>:disabled / .disabled</button>
+                            </p>
 
-                        <p>
-                            <a href="#" class="btn btn-full">.btn-full</a>
-                        </p>
-                    </div>
+                            <p>
+                                <a href="#" class="btn btn-full">.btn-full</a>
+                            </p>
+                        </div>
 
-                    <div class="gi">
-                        <div class="block-title">Primary Button - <code>.btn-primary</code></div>
+                        <div class="gi">
+                            <div class="block-title">Primary Button - <code>.btn-primary</code></div>
 
-                        <p>
-                            <a href="#" class="btn btn-primary btn-large">.btn-large</a>
-                            <a href="#" class="btn btn-primary">.btn</a>
-                            <a href="#" class="btn btn-primary btn-outline">.btn-outline</a>
-                            <a href="#" class="btn btn-primary btn-small">.btn-small</a>
-                        </p>
+                            <p>
+                                <a href="#" class="btn btn-primary btn-large">.btn-large</a>
+                                <a href="#" class="btn btn-primary">.btn</a>
+                                <a href="#" class="btn btn-primary btn-outline">.btn-outline</a>
+                                <a href="#" class="btn btn-primary btn-small">.btn-small</a>
+                            </p>
 
-                        <p>
-                            <input type="button" class="btn btn-primary" value="input[type='button'])">
-                            <input type="submit" class="btn btn-primary" value="input[type='submit'])">
-                            <button class="btn btn-primary">button</button>
-                            <button class="btn btn-primary" disabled>:disabled / .disabled</button>
-                        </p>
+                            <p>
+                                <input type="button" class="btn btn-primary" value="input[type='button'])">
+                                <input type="submit" class="btn btn-primary" value="input[type='submit'])">
+                                <button class="btn btn-primary">button</button>
+                                <button class="btn btn-primary" disabled>:disabled / .disabled</button>
+                            </p>
 
-                        <p>
-                            <a href="#" class="btn btn-primary btn-full">.btn-full</a>
-                        </p>
-                    </div>
+                            <p>
+                                <a href="#" class="btn btn-primary btn-full">.btn-full</a>
+                            </p>
+                        </div>
 
-                    <div class="gi">
-                        <div class="block-title">Secondary Button - <code>.btn-secondary</code></div>
+                        <div class="gi">
+                            <div class="block-title">Secondary Button - <code>.btn-secondary</code></div>
 
-                        <p>
-                            <a href="#" class="btn btn-secondary btn-large">.btn-large</a>
-                            <a href="#" class="btn btn-secondary">.btn</a>
-                            <a href="#" class="btn btn-secondary btn-outline">.btn-outline</a>
-                            <a href="#" class="btn btn-secondary btn-small">.btn-small</a>
-                        </p>
+                            <p>
+                                <a href="#" class="btn btn-secondary btn-large">.btn-large</a>
+                                <a href="#" class="btn btn-secondary">.btn</a>
+                                <a href="#" class="btn btn-secondary btn-outline">.btn-outline</a>
+                                <a href="#" class="btn btn-secondary btn-small">.btn-small</a>
+                            </p>
 
-                        <p>
-                            <input type="button" class="btn btn-secondary" value="input[type='button'])">
-                            <input type="submit" class="btn btn-secondary" value="input[type='submit'])">
-                            <button class="btn btn-secondary">button</button>
-                            <button class="btn btn-secondary" disabled>:disabled / .disabled</button>
-                        </p>
+                            <p>
+                                <input type="button" class="btn btn-secondary" value="input[type='button'])">
+                                <input type="submit" class="btn btn-secondary" value="input[type='submit'])">
+                                <button class="btn btn-secondary">button</button>
+                                <button class="btn btn-secondary" disabled>:disabled / .disabled</button>
+                            </p>
 
-                        <p>
-                            <a href="#" class="btn btn-secondary btn-full">.btn-full</a>
-                        </p>
+                            <p>
+                                <a href="#" class="btn btn-secondary btn-full">.btn-full</a>
+                            </p>
+                        </div>
                     </div>
                 </div>
 
 
+                <!-- Forms -->
+                <div class="forms">
+                    <div class="section-title">Forms</div>
+
+                    <form class="example-form">
+                        <div class="g">
+                            <div class="gi gi-m-6">
+                                <label for="first-name">First Name</label>
+                                <input id="first-name" type="text" placeholder="Kyle">
+                            </div>
+
+                            <div class="gi gi-m-6">
+                                <label for="last-name">Last Name</label>
+                                <input id="last-name" type="text" placeholder="Brumm">
+                            </div>
+
+                            <div class="gi gi-m-6">
+                                <label for="email">Email</label>
+                                <input id="email" type="email" placeholder="kyle@example.com">
+                            </div>
+
+                            <div class="gi gi-m-6">
+                                <label for="select">Select Options</label>
+                                <select id="select" name="select">
+                                    <optgroup label="Brunch gluten-free">
+                                        <option value="1-1">Brooklyn XOXO shoreditch</option>
+                                        <option value="1-2">Readymade 3 wolf moon</option>
+                                    </optgroup>
+
+                                    <optgroup label="Kale chips">
+                                        <option value="2-1">Artisan irony</option>
+                                        <option value="2-2">Fingerstache farm-to-table</option>
+                                        <option value="2-3">Organic plaid</option>
+                                        <option value="2-4">Cardigan small batch</option>
+                                    </optgroup>
+                                </select>
+                            </div>
+
+                            <div class="gi gi-m-6">
+                                <label>Radio Options</label>
+                                <label><input id="radio-1" type="radio" name="radio" value="radio-1"> Food truck</label>
+                                <label><input id="radio-2" type="radio" name="radio" value="radio-2"> Hoodie swag</label>
+                                <label><input id="radio-3" type="radio" name="radio" value="radio-3"> Food truck pop-up</label>
+                            </div>
+
+                            <div class="gi gi-m-6">
+                                <label>Checkbox Options</label>
+                                <label><input id="checkbox-1" type="checkbox" name="checkbox" value="checkbox-1"> Dreamcatcher</label>
+                                <label><input id="checkbox-2" type="checkbox" name="checkbox" value="checkbox-2"> Flexitarian small batch</label>
+                                <label><input id="checkbox-3" type="checkbox" name="checkbox" value="checkbox-3"> Pickled jean shorts</label>
+                            </div>
+
+                            <div class="gi">
+                                <label for="message">Message</label>
+                                <textarea id="message" name="message" placeholder="What can we help you with?"></textarea>
+                            </div>
+
+                            <div class="gi">
+                                <input type="submit" class="btn btn-primary btn-full" value="Submit">
+                            </div>
+                        </div>
+                    </form>
+                </div>
+
+
                 <!-- Colors -->
-                <div class="section-title">Colors</div>
+                <div class="colors">
+                    <div class="section-title">Colors</div>
 
-                <div class="g">
-                    <div class="gi gi-s-6">
-                        <div class="block-title">Primary</div>
+                    <div class="g">
+                        <div class="gi gi-s-6">
+                            <div class="block-title">Primary</div>
 
-                        <div class="g g-np g-xxs-3 colors-grid">
-                            <div class="gi"><div class="block text-white" style="background-color: #b3959c">Light</div></div>
-                            <div class="gi"><div class="block text-white" style="background-color: #A07B83">Normal</div></div>
-                            <div class="gi"><div class="block text-white" style="background-color: #806269">Dark</div></div>
+                            <div class="g g-np g-xxs-3 colors-grid">
+                                <div class="gi"><div class="block text-white" style="background-color: #b3959c">Light</div></div>
+                                <div class="gi"><div class="block text-white" style="background-color: #A07B83">Normal</div></div>
+                                <div class="gi"><div class="block text-white" style="background-color: #806269">Dark</div></div>
+                            </div>
                         </div>
-                    </div>
 
-                    <div class="gi gi-s-6">
-                        <div class="block-title">Secondary</div>
+                        <div class="gi gi-s-6">
+                            <div class="block-title">Secondary</div>
 
-                        <div class="g g-np g-xxs-3 colors-grid">
-                            <div class="gi"><div class="block" style="background-color: #ffa29e">Light</div></div>
-                            <div class="gi"><div class="block text-white" style="background-color: #FF8B86">Normal</div></div>
-                            <div class="gi"><div class="block text-white" style="background-color: #cc6f6b">Dark</div></div>
+                            <div class="g g-np g-xxs-3 colors-grid">
+                                <div class="gi"><div class="block text-white" style="background-color: #ffa29e">Light</div></div>
+                                <div class="gi"><div class="block text-white" style="background-color: #FF8B86">Normal</div></div>
+                                <div class="gi"><div class="block text-white" style="background-color: #cc6f6b">Dark</div></div>
+                            </div>
                         </div>
-                    </div>
 
-                    <div class="gi">
-                        <div class="block-title">Grays</div>
+                        <div class="gi">
+                            <div class="block-title">Grays</div>
 
-                        <div class="g g-np g-xxs-3 g-s-5 colors-grid">
-                            <div class="gi"><div class="block" style="background-color: #efefef">Ultralight</div></div>
-                            <div class="gi"><div class="block" style="background-color: #cccccc">Light</div></div>
-                            <div class="gi"><div class="block" style="background-color: #aaaaaa">Normal</div></div>
-                            <div class="gi"><div class="block text-white" style="background-color: #888888">Dark</div></div>
-                            <div class="gi"><div class="block text-white" style="background-color: #555555">Ultradark</div></div>
+                            <div class="g g-np g-xxs-3 g-s-5 colors-grid">
+                                <div class="gi"><div class="block" style="background-color: #efefef">Ultralight</div></div>
+                                <div class="gi"><div class="block" style="background-color: #cccccc">Light</div></div>
+                                <div class="gi"><div class="block" style="background-color: #aaaaaa">Normal</div></div>
+                                <div class="gi"><div class="block text-white" style="background-color: #888888">Dark</div></div>
+                                <div class="gi"><div class="block text-white" style="background-color: #555555">Ultradark</div></div>
+                            </div>
                         </div>
-                    </div>
 
-                    <div class="gi">
-                        <div class="block-title">Other</div>
+                        <div class="gi">
+                            <div class="block-title">Other</div>
 
-                        <div class="g g-np g-xxs-3 g-s-5 colors-grid">
-                            <div class="gi"><div class="block" style="background-color: #fcfcfc">White</div></div>
-                            <div class="gi"><div class="block text-white" style="background-color: #333333">Black</div></div>
-                            <div class="gi"><div class="block" style="background-color: #92F0A1">Success</div></div>
-                            <div class="gi"><div class="block" style="background-color: #F0E591">Warn</div></div>
-                            <div class="gi"><div class="block" style="background-color: #F07F82">Alert</div></div>
+                            <div class="g g-np g-xxs-3 g-s-5 colors-grid">
+                                <div class="gi"><div class="block" style="background-color: #fcfcfc">White</div></div>
+                                <div class="gi"><div class="block text-white" style="background-color: #333333">Black</div></div>
+                                <div class="gi"><div class="block" style="background-color: #92F0A1">Success</div></div>
+                                <div class="gi"><div class="block" style="background-color: #F0E591">Warn</div></div>
+                                <div class="gi"><div class="block" style="background-color: #F07F82">Alert</div></div>
+                            </div>
                         </div>
                     </div>
                 </div>
 
 
                 <!-- Utility Classes -->
-                <div class="section-title">Utility Classes</div>
+                <div class="utility-classes">
+                    <div class="section-title">Utility Classes</div>
 
-                <div class="g g-s-2 g-m-3 g-l-4">
-                    <div class="gi">
-                        <div class="block-title">Clearfix</div>
-                        <code>.cf</code>
-                    </div>
+                    <div class="g g-s-2 g-m-3 g-l-4">
+                        <div class="gi">
+                            <div class="block-title">Clearfix</div>
+                            <code>.cf</code>
+                        </div>
 
-                    <div class="gi">
-                        <div class="block-title">Hide Elements Visually</div>
-                        <code>.hide-vis</code>
-                    </div>
+                        <div class="gi">
+                            <div class="block-title">Hide Elements Visually</div>
+                            <code>.hide-vis</code>
+                        </div>
 
-                    <div class="gi">
-                        <div class="block-title">Show/Hide Elements</div>
-                        <code>.&lt;show|hide&gt;-&lt;bp&gt;&lt;-up|-down&gt;</code>
-                    </div>
+                        <div class="gi">
+                            <div class="block-title">Show/Hide Elements</div>
+                            <code>.&lt;show|hide&gt;-&lt;bp&gt;&lt;-up|-down&gt;</code>
+                        </div>
 
-                    <div class="gi">
-                        <div class="block-title">Float</div>
-                        <code>.&lt;right|left&gt;</code>
-                    </div>
+                        <div class="gi">
+                            <div class="block-title">Float</div>
+                            <code>.&lt;right|left&gt;</code>
+                        </div>
 
-                    <div class="gi">
-                        <div class="block-title">Text align</div>
-                        <code>.text-&lt;alignment&gt;</code>
-                    </div>
+                        <div class="gi">
+                            <div class="block-title">Text align</div>
+                            <code>.text-&lt;alignment&gt;</code>
+                        </div>
 
-                    <div class="gi">
-                        <div class="block-title">Text Color</div>
-                        <code>.text-&lt;color&gt;</code>
-                    </div>
+                        <div class="gi">
+                            <div class="block-title">Text Color</div>
+                            <code>.text-&lt;color&gt;</code>
+                        </div>
 
-                    <div class="gi">
-                        <div class="block-title">Responsive Video</div>
-                        <code>.responsive-video</code>
+                        <div class="gi">
+                            <div class="block-title">Responsive Video</div>
+                            <code>.responsive-video</code>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -833,6 +934,5 @@
                 }
             })(window);
         </script>
-
     </body>
 </html>
