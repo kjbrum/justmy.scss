@@ -23,6 +23,7 @@ select {
         border-color: $gray-dark
     }
 
+    &:active,
     &:focus {
         border-color: $primary;
     }
