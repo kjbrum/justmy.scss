@@ -69,6 +69,7 @@
         }
 
     }
+
     > .gi-sticky .block > :last-child {
         margin-top: auto;
     }
@@ -77,21 +78,17 @@
 // Grid item
 .gi {
     position: relative;
-    padding: 1rem;
     float: left;
+    padding: 1rem;
     width: 100%;
 
     &.gi-np {
         padding: 0;
     }
-
-    img {
-        display: block;
-    }
 }
 
 // Reversed grid
-.g-opposites {
+.g-reverse {
     &.g-flex {
         flex-flow: row-reverse wrap;
     }
@@ -108,7 +105,7 @@
             $bp-width: percentage($i/$num-columns);
             $fixed-width: ($grid-width/$num-columns);
 
-            // Add grid-block support for up to $num-columns items
+            // Add block grid support for up to $num-columns items
             .g-#{$breakpoint}-#{$i} {
                 > .gi {
                     width: percentage(1/$i);
@@ -123,34 +120,34 @@
                 }
             }
 
-            // Add grid-item support
+            // Add grid item support
             .gi-#{$breakpoint}-#{$i} {
                 width: $bp-width;
             }
 
-            // Add grid-item offset support
+            // Add grid item offset support
             .gi-offset-#{$breakpoint}-#{$i} {
                 margin-left: $bp-width;
             }
 
-            // Add grid-item push support
+            // Add grid item push support
             .gi-push-#{$breakpoint}-#{$i} {
                 left: $bp-width;
             }
 
-            // Add grid-item pull support
+            // Add grid item pull support
             .gi-pull-#{$breakpoint}-#{$i} {
                 right: $bp-width;
             }
 
-            // Add grid-item fill support
+            // Add grid item fill support
             .gi-fill-#{$breakpoint}-#{$i} {
                 float: none;
                 width: auto;
                 margin-left: $fixed-width * ($num-columns - $i);
             }
 
-            // Add grid-item fixed width support
+            // Add grid item fixed width support
             .gi-fixed-#{$breakpoint}-#{$i},
             .gi-fixed-right-#{$breakpoint}-#{$i} {
                 width: 100%;
@@ -172,34 +169,34 @@
                 $bp-fifth-width: percentage($i/5);
                 $fifth-fixed-width: ($grid-width/5);
 
-                // Add fifths grid-item support
+                // Add fifths grid item support
                 .gi-#{$breakpoint}-#{$i}-5 {
                     width: $bp-fifth-width;
                 }
 
-                // Add fifths grid-item offset support
+                // Add fifths grid item offset support
                 .gi-offset-#{$breakpoint}-#{$i}-5 {
                     margin-left: $bp-fifth-width;
                 }
 
-                // Add fifths grid-item push support
+                // Add fifths grid item push support
                 .gi-push-#{$breakpoint}-#{$i}-5 {
                     left: $bp-fifth-width;
                 }
 
-                // Add fifths grid-item pull support
+                // Add fifths grid item pull support
                 .gi-pull-#{$breakpoint}-#{$i}-5 {
                     right: $bp-fifth-width;
                 }
 
-                // Add fifths grid-item fill support
+                // Add fifths grid item fill support
                 .gi-fill-#{$breakpoint}-#{$i}-5 {
                     float: none;
                     width: auto;
                     margin-left: $fifth-fixed-width * (5 - $i);
                 }
 
-                // Add fifths grid-item fixed width support
+                // Add fifths grid item fixed width support
                 .gi-fixed-#{$breakpoint}-#{$i}-5,
                 .gi-fixed-right-#{$breakpoint}-#{$i}-5 {
                     width: 100%;
