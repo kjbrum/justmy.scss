@@ -13,6 +13,20 @@ body {
     min-width: $min-width;
 }
 
+.container {
+    max-width: $max-width;
+    margin: 0 auto;
+    padding: 1rem;
+
+    @media (min-width: $bp-m) {
+        padding: 1rem 2rem;
+    }
+
+    @media (min-width: $bp-l) {
+        padding: 1rem;
+    }
+}
+
 img {
     max-width: 100%;
 }

@@ -1,19 +1,5 @@
 // Grid
 
-.container {
-    max-width: $max-width;
-    margin: 0 auto;
-    padding: 1rem;
-
-    @media (min-width: $bp-m) {
-        padding: 1rem 2rem;
-    }
-
-    @media (min-width: $bp-l) {
-        padding: 1rem;
-    }
-}
-
 // Grid container
 .g {
     margin: 0 (-1rem);
@@ -27,6 +13,18 @@
 
     &:after {
         clear: both;
+    }
+}
+
+// Grid item
+.gi {
+    position: relative;
+    float: left;
+    padding: 1rem;
+    width: 100%;
+
+    &.gi-np {
+        padding: 0;
     }
 }
 
@@ -75,18 +73,6 @@
     }
 }
 
-// Grid item
-.gi {
-    position: relative;
-    float: left;
-    padding: 1rem;
-    width: 100%;
-
-    &.gi-np {
-        padding: 0;
-    }
-}
-
 // Reversed grid
 .g-reverse {
     &.g-flex {
@@ -101,11 +87,12 @@
 // Build the grids!
 @each $breakpoint, $widths in $breakpoints {
     @media (min-width: map-get(map-get($breakpoints, $breakpoint), min)) {
+        // Add 12-column classes
         @for $i from 1 through $num-columns {
             $bp-width: percentage($i/$num-columns);
             $fixed-width: ($grid-width/$num-columns);
 
-            // Add block grid support for up to $num-columns items
+            // Add block grids for up to $num-columns items
             .g-#{$breakpoint}-#{$i} {
                 > .gi {
                     width: percentage(1/$i);
@@ -120,34 +107,44 @@
                 }
             }
 
-            // Add grid item support
+            // Add grid item
             .gi-#{$breakpoint}-#{$i} {
                 width: $bp-width;
             }
 
-            // Add grid item offset support
+            // Add grid item first
+            .gi-first-#{$breakpoint} {
+                clear: left;
+            }
+
+            // Add grid item last
+            .gi-last-#{$breakpoint} {
+                clear: right;
+            }
+
+            // Add grid item offset
             .gi-offset-#{$breakpoint}-#{$i} {
                 margin-left: $bp-width;
             }
 
-            // Add grid item push support
+            // Add grid item push
             .gi-push-#{$breakpoint}-#{$i} {
                 left: $bp-width;
             }
 
-            // Add grid item pull support
+            // Add grid item pull
             .gi-pull-#{$breakpoint}-#{$i} {
                 right: $bp-width;
             }
 
-            // Add grid item fill support
+            // Add grid item fill
             .gi-fill-#{$breakpoint}-#{$i} {
                 float: none;
                 width: auto;
                 margin-left: $fixed-width * ($num-columns - $i);
             }
 
-            // Add grid item fixed width support
+            // Add grid item fixed width
             .gi-fixed-#{$breakpoint}-#{$i},
             .gi-fixed-right-#{$breakpoint}-#{$i} {
                 width: 100%;
@@ -164,39 +161,39 @@
                 }
             }
 
-            // Add support for fifths
+            // Add 5-column classes
             @if $i < 6 {
                 $bp-fifth-width: percentage($i/5);
                 $fifth-fixed-width: ($grid-width/5);
 
-                // Add fifths grid item support
+                // Add fifths grid item
                 .gi-#{$breakpoint}-#{$i}-5 {
                     width: $bp-fifth-width;
                 }
 
-                // Add fifths grid item offset support
+                // Add fifths grid item offset
                 .gi-offset-#{$breakpoint}-#{$i}-5 {
                     margin-left: $bp-fifth-width;
                 }
 
-                // Add fifths grid item push support
+                // Add fifths grid item push
                 .gi-push-#{$breakpoint}-#{$i}-5 {
                     left: $bp-fifth-width;
                 }
 
-                // Add fifths grid item pull support
+                // Add fifths grid item pull
                 .gi-pull-#{$breakpoint}-#{$i}-5 {
                     right: $bp-fifth-width;
                 }
 
-                // Add fifths grid item fill support
+                // Add fifths grid item fill
                 .gi-fill-#{$breakpoint}-#{$i}-5 {
                     float: none;
                     width: auto;
                     margin-left: $fifth-fixed-width * (5 - $i);
                 }
 
-                // Add fifths grid item fixed width support
+                // Add fifths grid item fixed width
                 .gi-fixed-#{$breakpoint}-#{$i}-5,
                 .gi-fixed-right-#{$breakpoint}-#{$i}-5 {
                     width: 100%;

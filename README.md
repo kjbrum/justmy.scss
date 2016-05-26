@@ -11,7 +11,7 @@ http://kylebrumm.com/justmy.css/
 ## Features
 
 - [x] Typography (Headings, paragraph, bold, italic, font-family)
-- [ ] Grids
+- [x] Grids
 - [x] Lists
 - [x] Tables
 - [x] Definition list (dl, dt, dd)
