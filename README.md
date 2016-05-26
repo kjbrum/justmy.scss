@@ -24,20 +24,15 @@ http://kylebrumm.com/justmy.css/
 - [ ] Breakpoints
 - [ ] Functions
 - [ ] Mixins
+- [ ] Add components?
 
 
 ## Issues
 
-- [ ] Add `.gi-x-first` & `gi-x-last` to the grid (used for clearing)
+- [x] Add `.gi-first-x` & `gi-last-x` to the grid (used for clearing)
 - [ ] Fix issue when using multiple `.list-split-x-x` classes (clearing gets messed up)
 - [ ] Include all the features of [Juice](https://github.com/kjbrum/juice)
 
-
-## Modules/Components
-
-- [ ] Alerts/notifications
-- [ ] Headers
-- [ ] Footers
 
 
 ## License
