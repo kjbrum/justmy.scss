@@ -83,6 +83,32 @@
                 padding: 0.5rem 0.5rem 92%;
             }
 
+            .social-share {
+                font-size: 4rem;
+                line-height: 0;
+            }
+
+            .social-share li {
+                display: inline-block;
+                transform: translateY(0);
+                transition: transform 0.3s ease-in-out;
+            }
+
+            .social-share li:hover {
+                transform: translateY(-10px);
+            }
+
+            .footer {
+                background: #A07B83;
+                color: #FDFAF5;
+            }
+
+            .footer a {
+                color: #FDFAF5;
+                font-weight: 700;
+                text-decoration: none;
+            }
+
             @media (max-width: 641px) {
                 .grid-grid .gi {
                     padding: 0.25rem 1rem;
@@ -95,6 +121,9 @@
                 .block-title code {
                     display: block;
                     margin-top: 0.5rem;
+                }
+                .social-share {
+                    font-size: 6rem;
                 }
             }
         </style>
@@ -755,9 +784,22 @@
             </div>
         </section>
 
+        <section class="section section--share">
+            <div class="container">
+                <div class="section-title">Spread the <i class="fa fa-heart"></i></div>
+
+                <ul class="social-share">
+                    <li><a href="https://twitter.com/intent/tweet?text=Another+stupid+CSS+framework,+but+it's+just+mine.&url=http://kylebrumm.com/justmy.css"><i class="fa fa-twitter-square"></i></a></li>
+                    <li><a href="http://www.facebook.com/sharer/sharer.php?u=http://kylebrumm.com/justmy.css"><i class="fa fa-facebook-square"></i></a></li>
+                    <li><a href="https://plus.google.com/share?url=http://kylebrumm.com/justmy.css"><i class="fa fa-google-plus-square"></i></a></li>
+                    <li><a href="http://pinterest.com/pin/create/button/?url=http://kylebrumm.com/justmy.css&description=Another+stupid+CSS+framework,+but+it's+just+mine.&media=http://kylebrumm.com/justmy.css/media/justmy.png"><i class="fa fa-pinterest-square"></i></a></li>
+                </ul>
+            </div>
+        </section>
+
         <footer class="footer text-center">
             <div class="container">
-                <p>Built with <i class="shake shake-constant fa fa-heart text-secondary"></i> by <a href="http://kylebrumm.com" class="text-primary" onclick="_gaq.push(['_trackEvent', 'Engagement', 'Click', 'Link to Portfolio']);">Kyle Brumm</a></p>
+                <p>Built with <i class="shake shake-constant fa fa-heart text-secondary"></i> by <a href="http://kylebrumm.com" onclick="_gaq.push(['_trackEvent', 'Engagement', 'Click', 'Link to Portfolio']);">Kyle Brumm</a></p>
             </div>
         </footer>
 
