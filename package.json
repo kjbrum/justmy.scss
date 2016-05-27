@@ -1,7 +1,7 @@
 {
-  "name": "JustMy.css",
+  "name": "JustMy.scss",
   "version": "1.0.0",
-  "description": "Another stupid CSS framework, but it's just mine.",
+  "description": "Another stupid SCSS framework, but it's just mine.",
   "scripts": {
     "browsersync": "browser-sync start --server --files 'justmy.min.css, index.html'",
     "build": "npm run css:build",
@@ -15,14 +15,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/kjbrum/justmy.css.git"
+    "url": "https://github.com/kjbrum/justmy.scss.git"
   },
   "author": "Kyle Brumm",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/kjbrum/justmy.css/issues"
+    "url": "https://github.com/kjbrum/justmy.scss/issues"
   },
-  "homepage": "https://github.com/kjbrum/justmy.css#readme",
+  "homepage": "https://github.com/kjbrum/justmy.scss#readme",
   "devDependencies": {
     "autoprefixer": "latest",
     "node-sass": "latest",

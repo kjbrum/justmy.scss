@@ -1,11 +1,11 @@
-# ![JustMy.css](https://raw.githubusercontent.com/kjbrum/justmy.css/master/media/justmy.png)
+# ![JustMy.scss](https://raw.githubusercontent.com/kjbrum/justmy.scss/master/media/justmy.png)
 
-> Another stupid CSS framework, but it's just mine.
+> Another stupid SCSS framework, but it's just mine.
 
 
 ## Documentation
 
-http://kylebrumm.com/justmy.css/
+http://kylebrumm.com/justmy.scss/
 
 
 ## Features
@@ -43,4 +43,4 @@ http://kylebrumm.com/justmy.css/
 
 ## License
 
-Copyright © [Kyle Brumm](http://kylebrumm.com). JustMy.css is free to use on whatever and may be redistributed under the terms specified in the [license](LICENSE.md).
+Copyright © [Kyle Brumm](http://kylebrumm.com). JustMy.scss is free to use on whatever and may be redistributed under the terms specified in the [license](LICENSE.md).
