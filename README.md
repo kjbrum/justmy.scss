@@ -18,7 +18,7 @@ http://kylebrumm.com/justmy.css/
 - [x] Blockquotes
 - [x] Code & pre
 - [x] Buttons
-- [ ] Forms
+- [x] Forms
 - [x] Colors
 - [x] Utility classes
 - [ ] Breakpoints
@@ -30,6 +30,8 @@ http://kylebrumm.com/justmy.css/
 ## Additions
 
 - [ ] Add custom style for radio/checkbox inputs
+- [ ] Create a Bower package
+- [ ] Create an Npm package
 
 
 ## Issues
