@@ -31,12 +31,11 @@ http://kylebrumm.com/justmy.scss/
 
 - [ ] Add custom style for radio/checkbox inputs
 - [ ] Create a Bower package
-- [ ] Create an Npm package
+- [ ] Create an npm package
 
 
 ## Issues
 
-- [x] Add `.gi-first-x` & `gi-last-x` to the grid (used for clearing)
 - [ ] Fix issue when using multiple `.list-split-x-x` classes (clearing gets messed up)
 - [ ] Include all the features of [Juice](https://github.com/kjbrum/juice)
 

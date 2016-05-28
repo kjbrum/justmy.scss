@@ -35,7 +35,7 @@
             }
 
             .section--hero {
-                padding: 7rem 0 2rem;
+                padding: 5rem 0 0;
             }
 
             .section-title {
@@ -128,6 +128,10 @@
             }
 
             @media (max-width: 641px) {
+                .section--hero h1 {
+                    font-size: 3rem;
+                }
+
                 .example-grid .gi {
                     padding: 0.25rem 1rem;
                 }
@@ -173,6 +177,25 @@
 
         <section class="section section--demo">
             <div class="container">
+                <!-- Install -->
+                <div class="section-title">Install</div>
+
+                <div class="block-title">Using Bower:</div>
+                <pre>$ bower install justmy.scss</pre>
+                <br>
+
+                <div class="block-title">Using npm:</div>
+                <pre>$ npm install justmy.scss</pre>
+                <br>
+
+                <div class="block-title">Direct (Minified CSS):</div>
+                <pre>$ curl https://git.io/vr9BE > justmy.min.css</pre>
+
+                <hr>
+
+                <a class="btn btn-primary btn-outline" href="https://github.com/kjbrum/justmy.scss/" target="_blank">View on Github</a>
+                <a class="btn btn-secondary" href="https://github.com/kjbrum/justmy.scss/archive/master.zip">Download Repo</a>
+
                 <!-- Typography -->
                 <div class="typography">
                     <div class="section-title">Typography</div>
