@@ -1,16 +1,18 @@
 // Variables
 
 // Colors
+$primary: #A07B83;
+$secondary: #FF8B86;
 $colors: (
     primary: (
-        light: mix(white, #A07B83, 20%),
-        normal: #A07B83,
-        dark: mix(black, #A07B83, 20%)
+        light: mix(white, $primary, 20%),
+        normal: $primary,
+        dark: mix(black, $primary, 20%)
     ),
     secondary: (
-        light: mix(white, #FF8B86, 20%),
-        normal: #FF8B86,
-        dark: mix(black, #FF8B86, 20%)
+        light: mix(white, $secondary, 20%),
+        normal: $secondary,
+        dark: mix(black, $secondary, 20%)
     ),
     gray: (
         ultralight: #efefef,
@@ -30,12 +32,10 @@ $colors: (
 
 // Primary
 $primary-light: map-get(map-get($colors, primary), light);
-$primary: map-get(map-get($colors, primary), normal);
 $primary-dark: map-get(map-get($colors, primary), dark);
 
 // Secondary
 $secondary-light: map-get(map-get($colors, secondary), light);
-$secondary: map-get(map-get($colors, secondary), normal);
 $secondary-dark: map-get(map-get($colors, secondary), dark);
 
 // Gray
