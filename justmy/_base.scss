@@ -6,6 +6,16 @@
     box-sizing: border-box;
 }
 
+::-moz-selection {
+    color: $secondary;
+    background: $primary;
+}
+
+::selection {
+    color: $secondary;
+    background: $primary;
+}
+
 body {
 	font: 100%/1.5 $font;
 	-webkit-text-size-adjust: 100%;
