@@ -10,34 +10,17 @@ http://kylebrumm.com/justmy.scss/
 
 ## Features
 
-- [x] Typography (Headings, paragraph, bold, italic, font-family)
-- [x] Grids
-- [x] Lists
-- [x] Tables
-- [x] Definition list (dl, dt, dd)
-- [x] Blockquotes
-- [x] Code & pre
-- [x] Buttons
-- [x] Forms
-- [x] Colors
-- [x] Utility classes
-- [ ] Breakpoints
-- [ ] Functions
-- [ ] Mixins
-- [ ] Add components?
-
-
-## Additions
-
-- [ ] Add custom style for radio/checkbox inputs
-- [ ] Create a Bower package
-- [ ] Create an npm package
-
-
-## Issues
-
-- [ ] Fix issue when using multiple `.list-split-x-x` classes (clearing gets messed up)
-- [ ] Include all the features of [Juice](https://github.com/kjbrum/juice)
+- Typography
+- Grids
+- Lists
+- Tables
+- Definition list
+- Blockquotes
+- Code & pre
+- Buttons
+- Forms
+- Colors
+- Utility classes
 
 
 ## License
