@@ -24,9 +24,10 @@ body {
 }
 
 .container {
-    max-width: $max-width;
     margin: 0 auto;
     padding: 1rem;
+    width: 100%;
+    max-width: $max-width;
 
     @media (min-width: $bp-m) {
         padding: 1rem 2rem;
