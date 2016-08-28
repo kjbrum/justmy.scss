@@ -6,9 +6,9 @@
     "browsersync": "browser-sync start --server --files 'justmy.min.css, index.html'",
     "build": "npm run css:build",
     "css": "npm run css:watch",
-    "css:autoprefix": "postcss --use autoprefixer --output justmy.min.css justmy.min.css",
+    "css:autoprefix": "postcss --use autoprefixer --output dist/justmy.css dist/justmy.css && postcss --use autoprefixer --output dist/justmy.min.css dist/justmy.min.css",
     "css:build": "npm run css:compile && npm run css:autoprefix",
-    "css:compile": "node-sass --output-style compressed justmy/justmy.scss justmy.min.css",
+    "css:compile": "node-sass justmy/justmy.scss dist/justmy.css && node-sass --output-style compressed justmy/justmy.scss dist/justmy.min.css",
     "css:watch": "watch 'npm run css:build' justmy",
     "dev": "parallelshell 'npm run watch' 'npm run browsersync'",
     "watch": "npm run css"
