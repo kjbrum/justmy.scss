@@ -25,7 +25,7 @@ $ npm install JustMy.scss
 __CDN:__
 
 ```
-<script src="https://npmcdn.com/JustMy.scss/dist/justmy.min.css"></script>
+<script src="https://unpkg.com/JustMy.scss/dist/justmy.min.css"></script>
 ```
 
 
