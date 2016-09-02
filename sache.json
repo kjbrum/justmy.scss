@@ -1,0 +1,5 @@
+{
+  "name": "JustMy.scss",
+  "description": "Another stupid SCSS framework, but it's just mine.",
+  "tags": ["typography", "grids", "lists", "tables", "blockquotes", "code", "buttons", "forms", "colors", "framework"]
+}
