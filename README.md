@@ -8,6 +8,27 @@
 http://kylebrumm.com/justmy.scss/
 
 
+## Install
+
+__Bower:__
+
+```
+$ bower install JustMy.scss
+```
+
+__npm:__
+
+```
+$ npm install JustMy.scss
+```
+
+__CDN:__
+
+```
+<script src="https://npmcdn.com/JustMy.scss/dist/justmy.min.css"></script>
+```
+
+
 ## Features
 
 - Typography

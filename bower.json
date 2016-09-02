@@ -15,6 +15,7 @@
     "node_modules",
     ".sass-cache",
     "*.log",
+    "sache.json",
     "media",
     "index.html"
   ],
