@@ -1,0 +1,29 @@
+{
+  "name": "JustMy.scss",
+  "version": "1.0.0",
+  "homepage": "http://kylebrumm.com/justmy.scss",
+  "author": "Kyle Brumm <kjbrumm@gmail.com> (http://kylebrumm.com)",
+  "description": "Another stupid SCSS framework, but it's just mine.",
+  "main": "dist/justmy.min.css",
+  "keywords": [
+    "scss",
+    "css",
+    "framework"
+  ],
+  "ignore": [
+    ".DS_Store",
+    "node_modules",
+    ".sass-cache",
+    "*.log",
+    "media",
+    "index.html"
+  ],
+  "license": "MIT",
+  "devDependencies": {
+    "autoprefixer": "latest",
+    "node-sass": "latest",
+    "parallelshell": "latest",
+    "postcss-cli": "latest",
+    "watch": "latest"
+  }
+}
