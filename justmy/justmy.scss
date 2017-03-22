@@ -1,21 +1,34 @@
-/*
- * Main Styles
+/*!
+ * JustMy.scss - Another stupid SCSS framework, but it's just mine.
+ * Version: 1.0.0
+ * Copyright (C) Kyle Brumm <http://kylebrumm.com>
  */
 
-@import "functions";
-@import "variables";
-@import "reset";
 
-@import "base";
-@import "blockquotes";
-@import "buttons";
-@import "code";
-@import "forms";
-@import "grid";
-@import "headings";
-@import "links";
-@import "lists";
-@import "media";
-@import "tables";
-@import "typography";
-@import "utility";
+// Helpers
+// ------------------------
+@import "helpers/reset";
+@import "helpers/functions";
+@import "helpers/variables";
+@import "helpers/mixins";
+@import "helpers/utility";
+
+
+// Base
+// ------------------------
+@import "base/base";
+@import "base/forms";
+@import "base/grid";
+@import "base/lists";
+@import "base/media";
+@import "base/tables";
+@import "base/typography";
+
+
+// Components
+// ------------------------
+@import "components/header";
+@import "components/footer";
+@import "components/buttons";
+@import "components/sections";
+@import "components/blocks";

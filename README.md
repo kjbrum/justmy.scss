@@ -29,19 +29,30 @@ __CDN:__
 ```
 
 
-## Features
+## Features/Structure
 
-- Typography
-- Grids
-- Lists
-- Tables
-- Definition list
-- Blockquotes
-- Code & pre
-- Buttons
-- Forms
-- Colors
-- Utility classes
+```
+|-- base
+|   |-- _base.scss
+|   |-- _forms.scss
+|   |-- _grid.scss
+|   |-- _lists.scss
+|   |-- _media.scss
+|   |-- _tables.scss
+|   `-- _typography.scss
+|-- components
+|   |-- _blocks.scss
+|   |-- _buttons.scss
+|   |-- _footer.scss
+|   |-- _header.scss
+|   `-- _sections.scss
+`-- helpers
+    |-- _functions.scss
+    |-- _mixins.scss
+    |-- _reset.scss
+    |-- _utility.scss
+    `-- _variables.scss
+```
 
 
 ## License

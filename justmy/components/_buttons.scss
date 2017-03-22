@@ -1,0 +1,133 @@
+// Buttons
+// ------------------------
+.btn,
+button,
+input[type="submit"],
+input[type="reset"],
+input[type="button"] {
+	display: inline-block;
+	color: $white;
+	line-height: 1;
+    font-size: 1rem;
+	font-weight: normal;
+	margin-bottom: 0.5rem;
+	padding: 1rem 1.5rem 0.9rem;
+	text-align: center;
+    font-family: $font;
+    cursor: pointer;
+    text-decoration: none;
+	background-color: $primary;
+	border: 1px solid $primary;
+    border-radius: 3px;
+    transition: 0.3s ease-in-out;
+
+	&:hover,
+	&:focus {
+    	text-decoration: none;
+		color: $white;
+		background-color: $primary-light;
+		border-color: $primary-light;
+		border-width: 1px;
+	}
+
+	// Secondary color button
+	&.btn--secondary {
+		background-color: $secondary;
+		border-color: $secondary;
+
+		&:hover,
+		&:focus {
+			background-color: $secondary-light;
+			border-color: $secondary-light;
+		}
+
+		&.btn--outline {
+			color: $secondary;
+			border-color: $secondary;
+
+			&:hover,
+			&:focus {
+				color: $secondary-light;
+				border-color: $secondary-light;
+			}
+		}
+	}
+}
+
+// Outlined button
+.btn--outline {
+	color: $primary;
+	background-color: transparent !important;
+
+	&:hover,
+	&:focus {
+		color: $primary-light;
+		border-color: $primary-light;
+	}
+}
+
+// Small button
+.btn--small {
+	padding: 0.5rem 1rem;
+	font-size: 0.8rem;
+}
+
+// Large button
+.btn--large {
+	padding: 1.5rem 2rem;
+	font-size: 1.4rem;
+}
+
+// Full width button
+.btn--full {
+	display: block;
+	width: 100%;
+}
+
+// Disabled button
+.btn:disabled,
+.btn--disabled {
+	color: $gray !important;
+	background-color: $gray-dark !important;
+	border-color: $gray-dark !important;
+	pointer-events: none !important;
+}
+
+// Arrow buttons
+.btn--arrow {
+	$arrow-spacing: 0.75rem;
+
+	&:before,
+	&:after {
+		display: inline-block;
+		font-family: 'FontAwesome';
+		transition: 0.3s ease-in-out;
+	}
+
+	&:after {
+		content: '\f178';
+		padding-left: $arrow-spacing;
+	}
+
+	&.btn--arrow-left {
+		&:after {
+			content: '';
+			padding: 0;
+		}
+
+		&:before {
+			content: '\f177';
+			padding-right: $arrow-spacing;
+		}
+	}
+
+	&:hover {
+		&:after {
+			@include translateX($arrow-spacing/2);
+		}
+
+		&:before {
+			@include translateX(-($arrow-spacing/2));
+		}
+	}
+}

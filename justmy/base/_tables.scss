@@ -1,0 +1,56 @@
+// Tables
+// ------------------------
+table {
+    margin-bottom: 1rem;
+
+    tr {
+        border-bottom: 1px solid $gray-ultralight;
+        transition: background 0.3s ease-in-out;
+    }
+
+    th,
+    td {
+        padding: 0.5rem 1rem;
+        text-align: left;
+    }
+
+    th {
+        font-weight: bold;
+    }
+
+}
+
+// Hover table
+.table--hover {
+    tbody {
+        tr:hover {
+            background-color: $gray-ultralight;
+        }
+    }
+}
+
+// Alternating color table
+.table--alt {
+    tr {
+        border: none;
+    }
+
+    tbody {
+        tr:nth-of-type(odd) {
+            background-color: $gray-ultralight;
+        }
+    }
+
+    &.table--hover {
+        tbody {
+            tr:hover {
+                background-color: $gray-light;
+            }
+        }
+    }
+}
+
+// Full width table
+.table--full {
+    width: 100%;
+}

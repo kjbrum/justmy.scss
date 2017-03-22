@@ -1,0 +1,269 @@
+// Mixins
+// ------------------------
+
+// Breakpoints
+// ------------------------
+@mixin bp($break, $viewport1: null) {
+    // Preset breakpoint
+    @if not $viewport1 {
+        @if map-has-key($bp-media-queries, $break) {
+            @media only screen and #{map-get($bp-media-queries, $break)} { @content; }
+        }
+        @else {
+            @warn "Couldn't find a breakpoint named #{$break}.";
+        }
+    }
+    @else {
+        // min-width breakpoint
+        @if $break == min {
+            @media screen and (min-width: $viewport1) { @content; }
+        }
+        // max-width breakpoint
+        @else if $break == max {
+            @media screen and (max-width: $viewport1) { @content; }
+        }
+        // min-width & max-width breakpoint
+        @else {
+            @media screen and (min-width: $break) and (max-width: $viewport1) { @content; }
+        }
+    }
+}
+
+// Single side border radius
+@mixin border-top-radius($radius: 3px) {
+    border-top-right-radius: $radius;
+    border-top-left-radius: $radius;
+}
+@mixin border-right-radius($radius: 3px) {
+    border-top-right-radius: $radius;
+    border-bottom-right-radius: $radius;
+}
+@mixin border-bottom-radius($radius: 3px) {
+    border-bottom-right-radius: $radius;
+    border-bottom-left-radius: $radius;
+}
+@mixin border-left-radius($radius: 3px) {
+    border-top-left-radius: $radius;
+    border-bottom-left-radius: $radius;
+}
+
+// Transforms
+@mixin transform-single($property, $value) {
+    transform: #{$property}#{unquote("(")}#{$value}#{unquote(")")};
+}
+@mixin rotate($deg) {
+    @include transform-single(rotate, $deg);
+}
+@mixin rotateX($deg) {
+    @include transform-single(rotateX, $deg);
+}
+@mixin rotateY($deg) {
+    @include transform-single(rotateY, $deg);
+}
+@mixin rotateZ($deg) {
+    @include transform-single(rotateZ, $deg);
+}
+@mixin rotate3d($x, $y, $z, $deg) {
+    $multi-var: $x, $y, $z, $deg;
+    @include transform-single(rotate3d, $multi-var);
+}
+@mixin scale($ratio) {
+    @include transform-single(scale, $ratio);
+}
+@mixin scaleX($ratio) {
+    @include transform-single(scaleX, $ratio);
+}
+@mixin scaleY($ratio) {
+    @include transform-single(scaleY, $ratio);
+}
+@mixin scaleZ($ratio) {
+    @include transform-single(scaleZ, $ratio);
+}
+@mixin scale3d($x, $y, $z) {
+    $multi-var: $x, $y, $z;
+    @include transform-single(scale3d, $multi-var);
+}
+@mixin skew($x, $y) {
+    $multi-var: $x, $y;
+    @include transform-single(skew, $multi-var);
+    backface-visibility: hidden;
+}
+@mixin skewX($deg) {
+    @include transform-single(skewX, $deg);
+    backface-visibility: hidden;
+}
+@mixin skewY($deg) {
+    @include transform-single(skewY, $deg);
+    backface-visibility: hidden;
+}
+@mixin translate($x, $y) {
+    $multi-var: $x, $y;
+    @include transform-single(translate, $multi-var);
+}
+@mixin translateX($x) {
+    @include transform-single(translateX, $x);
+}
+@mixin translateY($y) {
+    @include transform-single(translateY, $y);
+}
+@mixin translateZ($z) {
+    @include transform-single(translateZ, $z);
+}
+@mixin translate3d($x, $y, $z) {
+    $multi-var: $x, $y, $z;
+    @include transform-single(translate3d, $multi-var);
+}
+
+// Responsive Typography
+// "min-font-size-px" + ("max-font-size" - "min-font-size") * (100vw - "min-screen-size-px") / ("max-screen-size" - "min-screen-size")
+@mixin r-font-size($min-font, $max-font, $min-screen: 0, $max-screen: $bp-xl-max) {
+    font-size: rem-calc($min-font);
+    font-size: calc(#{px-calc($min-font)} + (#{strip-units(px-calc($max-font))} - #{strip-units(px-calc($min-font))}) * (100vw - #{px-calc($min-screen)}) / (#{strip-units(px-calc($max-screen))} - #{strip-units(px-calc($min-screen))}));
+
+    @include bp(min, (rem-calc($min-screen) + rem-calc($max-screen)) / 2) {
+        font-size: (rem-calc($min-font) + rem-calc($max-font)) / 2;
+        font-size: calc(#{px-calc($min-font)} + (#{strip-units(px-calc($max-font))} - #{strip-units(px-calc($min-font))}) * (100vw - #{px-calc($min-screen)}) / (#{strip-units(px-calc($max-screen))} - #{strip-units(px-calc($min-screen))}));
+    }
+
+    @include bp(min, rem-calc($max-screen)) {
+        font-size: rem-calc($max-font);
+        font-size: calc(#{px-calc($min-font)} + (#{strip-units(px-calc($max-font))} - #{strip-units(px-calc($min-font))}) * (100vw - #{px-calc($min-screen)}) / (#{strip-units(px-calc($max-screen))} - #{strip-units(px-calc($min-screen))}));
+    }
+}
+
+// Placeholder styles
+@mixin placeholder($property, $value) {
+    &::placeholder {
+        #{$property}: $value;
+    }
+}
+
+// Sizing
+@mixin size($width, $height: $width) {
+    width: $width;
+    height: $height;
+}
+
+// Normal & hover state
+@mixin hoverer($property, $normal, $hovered) {
+    #{$property}: $normal;
+    &:hover {
+        #{$property}: $hovered;
+    }
+}
+
+// Advanced positioning
+@mixin position($type, $top: null, $right: null, $bottom: null, $left: null) {
+    position: $type;
+    $allowed_types: absolute relative fixed;
+    @if not index($allowed_types, $type) {
+        @warn "Unknown position: #{$type}.";
+    }
+    @each $data in top $top, right $right, bottom $bottom, left $left {
+        #{nth($data, 1)}: nth($data, 2);
+    }
+}
+@mixin absolute($top: null, $right: null, $bottom: null, $left: null) {
+    @include position(absolute, $top, $right, $bottom, $left);
+}
+@mixin relative($top: null, $right: null, $bottom: null, $left: null) {
+    @include position(relative, $top, $right, $bottom, $left);
+}
+@mixin fixed($top: null, $right: null, $bottom: null, $left: null) {
+    @include position(fixed, $top, $right, $bottom, $left);
+}
+
+// Easily set an element's "trbl" values
+@mixin trbl($top: null, $right: null, $bottom: null, $left: null) {
+    @each $data in top $top, right $right, bottom $bottom, left $left {
+        #{nth($data, 1)}: nth($data, 2);
+    }
+}
+@mixin top-left {
+    @include trbl(0,null,null,0);
+}
+@mixin top-right {
+    @include trbl(0,0);
+}
+@mixin bottom-left {
+    @include trbl(null,null,0,0);
+}
+@mixin bottom-right {
+    @include trbl(null,0,0,null);
+}
+
+
+// Helper Mixins
+// ------------------------
+
+// Clearfix
+@mixin clearfix {
+    *zoom: 1;
+
+    &:before,
+    &:after {
+        content: " ";
+        display: table;
+    }
+
+    &:after {
+        clear: both;
+    }
+}
+
+// Center an element vertically and horizontally
+@mixin centerer {
+    @include absolute(50%, null, null, 50%);
+    @include translate(-50%, -50%);
+}
+
+// Center an element vertically
+@mixin vert-centerer {
+    @include relative(50%);
+    @include translateY(-50%);
+}
+
+// Cover everything
+@mixin coverer {
+    @include absolute(0, null, null, 0);
+    @include size(100%);
+}
+
+// Center a block level element
+@mixin center-block {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+// Clean an element
+@mixin clean {
+    margin: 0;
+    padding: 0;
+}
+
+
+// Debugging
+// ------------------------
+
+// Breakpoints
+@mixin debug-breakpoints {
+    &:before {
+        @each $breakpoint, $query in $bp-media-queries {
+            @if str-index($breakpoint, '-') == null {
+                @include bp(#{$breakpoint}) {
+                    content: '#{$breakpoint}: #{map-get(map-get($breakpoints, $breakpoint), min)} to #{map-get(map-get($breakpoints, $breakpoint), max)}';
+                    @include fixed(null, null, 0, 0);
+                    padding: 0.5rem 1rem;
+                    background-color: $white;
+                    border-top: 1px solid $black;
+                    border-right: 1px solid $black;
+                    font-family: $font;
+                    font-size: 12px;
+                    color: $black;
+                    text-align: center;
+                }
+            }
+        }
+    }
+}

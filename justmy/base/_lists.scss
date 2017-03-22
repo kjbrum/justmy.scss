@@ -1,8 +1,8 @@
 // Lists
-
+// ------------------------
 ul,
 ol {
-    margin-bottom: 1rem;
+    margin: 1rem 0;
 
     li {
         margin-bottom: 0.5rem;
@@ -10,6 +10,12 @@ ol {
         &:last-of-type {
             margin-bottom: 0;
         }
+    }
+
+    ol,
+    ul {
+        margin: 0.5rem 0 0.5rem 1.5rem;
+        font-size: 0.9rem;
     }
 }
 
@@ -27,14 +33,6 @@ ol {
     ul {
         list-style-type: circle;
     }
-}
-
-ul ul,
-ul ol,
-ol ol,
-ol ul {
-    margin: 0.5rem 0 0.5rem 1.5rem;
-    font-size: 0.9rem;
 }
 
 dl {
@@ -55,27 +53,29 @@ dl {
 }
 
 // Plain list
-.list-plain {
+.list--plain {
     list-style: none;
     padding: 0;
 }
 
 // Inline list
-.list-inline {
+.list--inline {
     list-style: none;
+    overflow: hidden;
 
-    li {
-        display: inline-block;
+    > li {
+        display: block;
+        float: left;
         margin-bottom: 0;
         padding: 0.5rem;
     }
 }
 
 // Split list
-.list-split {
+.list--split {
     list-style: none;
 
-    li {
+    > li {
         display: block;
         float: left;
         width: 100%;
@@ -87,8 +87,8 @@ dl {
 @each $breakpoint, $widths in $breakpoints {
     @media (min-width: map-get(map-get($breakpoints, $breakpoint), min)) {
         @for $i from 2 through 6 {
-            .list-split-#{$breakpoint}-#{$i} {
-                li {
+            .list--split-#{$breakpoint}-#{$i} {
+                > li {
                     width: percentage(1 / $i);
                     padding: 0 0.5rem;
 

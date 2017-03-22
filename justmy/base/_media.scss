@@ -1,10 +1,16 @@
 // Media
+// ------------------------
 
+// Images
+// ------------------------
 img {
     max-width: 100%;
 }
 
-.responsive-video {
+
+// Videos
+// ------------------------
+.video--responsive {
     position: relative;
     padding-bottom: 56.25%; /* 16:9 */
     height: 0;

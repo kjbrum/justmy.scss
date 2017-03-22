@@ -1,0 +1,192 @@
+// Typography
+// ------------------------
+
+// General
+// ------------------------
+i,
+em {
+    font-style: italic;
+}
+
+b,
+strong {
+    font-weight: 700;
+}
+
+small {
+    font-size: 0.8rem;
+}
+
+p {
+    font-weight: 300;
+    margin-bottom: 1rem;
+    @include r-font-size(0.9rem, 1.1rem);
+
+    &:last-of-type {
+        margin-bottom: 0;
+    }
+}
+
+a {
+    color: $primary;
+    text-decoration: none;
+    border-bottom: 2px solid transparent;
+    transition: color 0.3s ease-in-out,
+                border 0.3s ease-in-out;
+
+    &:hover {
+        color: $primary-dense;
+        border-bottom: 2px solid currentColor;
+    }
+}
+
+
+// Headings
+// ------------------------
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin: 0 0 0.5rem 0;
+    font-family: $font;
+    color: $black;
+    line-height: 1.2;
+}
+
+h1,
+h2,
+h3 {
+    font-weight: 200;
+}
+
+h4,
+h5,
+h6 {
+    font-weight: 600;
+}
+
+h1 {
+    @include r-font-size(2.25rem, 4.25rem);
+    letter-spacing: 4px;
+}
+
+h2 {
+    @include r-font-size(1.75rem, 3.5rem);
+    letter-spacing: 2px;
+}
+
+h3 {
+    font-size: 2.0rem;
+    letter-spacing: 2px;
+}
+
+h4 {
+    font-size: 1.5rem;
+}
+
+h5 {
+    font-size: 1.25rem;
+}
+
+h6 {
+    font-size: 1rem;
+}
+
+// Blockquotes
+// ------------------------
+q,
+blockquote {
+    display: block;
+    font-style: italic;
+    margin: 1rem 2rem;
+    padding: 1rem 1.5rem;
+    border-left: 4px solid $gray-light;
+
+    @media (min-width: $bp-s) {
+        margin: 2rem 4rem;
+        text-align: justify;
+    }
+
+    &.quotes {
+        display: inline-block;
+        position: relative;
+        border: none;
+        padding-right: 0;
+        padding-left: 0;
+
+        &:before,
+        &:after {
+            position: absolute;
+            font-family: $font;
+            font-size: 3rem;
+            line-height: 1;
+        }
+
+        &:before {
+            content: $quote-left;
+            top: -10px;
+            left: -0.25rem;
+        }
+
+        &:after {
+            content: $quote-right;
+            bottom: -10px;
+            right: 0.5rem;
+            line-height: 0;
+        }
+    }
+
+    *:last-child {
+        margin-bottom: 0;
+    }
+}
+
+
+// Code
+// ------------------------
+pre,
+code {
+    margin: 0;
+    direction: ltr;
+    font-family: $font-mono;
+    color: $gray-ultradark;
+    text-align: left;
+    font-size: 0.8rem;
+    font-weight: normal;
+    line-height: 1.5;
+    text-decoration: none;
+    white-space: pre;
+    word-spacing: normal;
+    word-break: normal;
+    word-wrap: normal;
+    tab-size: 4;
+    hyphens: none;
+    background: $gray-ultralight;
+    border-radius: 3px;
+
+    .comment {
+        color: $gray;
+    }
+}
+
+pre {
+    padding: 1rem;
+    overflow: auto;
+}
+
+:not(pre) > code {
+    padding: 0.5rem;
+    white-space: normal;
+}
+
+
+// Misc
+// ------------------------
+hr {
+    height: 1px;
+    margin: 1.25rem 0;
+    border: 0;
+    background: $gray-light;
+}

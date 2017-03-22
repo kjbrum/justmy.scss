@@ -1,0 +1,206 @@
+// Variables
+// ------------------------
+
+// Enable debugging features
+$debug: false;
+
+
+// Colors
+// ------------------------
+$primary: #A07B83;
+$secondary: #FF8B86;
+$colors: (
+    primary: (
+        light: tint($primary, 20%),
+        normal: $primary,
+        dark: shade($primary, 20%),
+    ),
+    secondary: (
+        light: tint($secondary, 20%),
+        normal: $secondary,
+        dark: shade($secondary, 10%)
+    ),
+    gray: (
+        ultralight: #eeeeee,
+        light: #cccccc,
+        normal: #9B9B9B,
+        dark: #666666,
+        ultradark: #444444
+    ),
+    other: (
+        white: #ffffff,
+        black: #222222,
+        success: #92F0A1,
+        warn: #F0E591,
+        alert: #FF676B
+    )
+);
+
+// Primary
+$primary-light: map-get(map-get($colors, primary), light);
+$primary-dark: map-get(map-get($colors, primary), dark);
+$primary-dense: map-get(map-get($colors, primary), dense);
+
+// Secondary
+$secondary-light: map-get(map-get($colors, secondary), light);
+$secondary-dark: map-get(map-get($colors, secondary), dark);
+
+// Grays
+$gray-ultralight: map-get(map-get($colors, gray), ultralight);
+$gray-light: map-get(map-get($colors, gray), light);
+$gray: map-get(map-get($colors, gray), normal);
+$gray-dark: map-get(map-get($colors, gray), dark);
+$gray-ultradark: map-get(map-get($colors, gray), ultradark);
+
+// Misc
+$white: map-get(map-get($colors, other), white);
+$black: map-get(map-get($colors, other), black);
+$success: map-get(map-get($colors, other), success);
+$warn: map-get(map-get($colors, other), warn);
+$alert: map-get(map-get($colors, other), alert);
+
+
+// Fonts
+// ------------------------
+
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:300,400,700|Roboto+Slab:300,400,700);
+
+// Primary font
+$helvetica: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+$open-sans: 'Open Sans', $helvetica;
+$font: $open-sans;
+
+// Secondary font
+$georgia: Georgia, Times, serif;
+$roboto: 'Roboto Slab', $georgia;
+$font-secondary: $roboto;
+
+// Monospaced
+$consolas: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+$font-mono: $consolas;
+
+
+// Layout/Grid
+// ------------------------
+$min-width: 20rem;
+$max-width: 87.5rem;
+
+$num-columns: 12;
+$grid-width: $max-width;
+$grid-gutter: 1rem;
+$grid-container-prefix: 'row';
+$grid-item-prefix: 'col';
+
+// Breakpoint map
+$breakpoints: (
+    xxs: (
+        min: rem-calc(0),
+        max: rem-calc(320)
+    ),
+    xs: (
+        min: rem-calc(321),
+        max: rem-calc(480)
+    ),
+    s: (
+        min: rem-calc(481),
+        max: rem-calc(640)
+    ),
+    m: (
+        min: rem-calc(641),
+        max: rem-calc(1024)
+    ),
+    l: (
+        min: rem-calc(1025),
+        max: $max-width
+    ),
+    xl: (
+        min: $max-width + rem-calc(1),
+        max: rem-calc(1920)
+    )
+);
+
+// Breakpoint variables
+$bp-xxs: map-get(map-get($breakpoints, xxs), max);
+$bp-xxs-min: map-get(map-get($breakpoints, xxs), min);
+$bp-xxs-max: map-get(map-get($breakpoints, xxs), max);
+$bp-xs: map-get(map-get($breakpoints, xs), max);
+$bp-xs-min: map-get(map-get($breakpoints, xs), min);
+$bp-xs-max: map-get(map-get($breakpoints, xs), max);
+$bp-s: map-get(map-get($breakpoints, s), max);
+$bp-s-min: map-get(map-get($breakpoints, s), min);
+$bp-s-max: map-get(map-get($breakpoints, s), max);
+$bp-m: map-get(map-get($breakpoints, m), max);
+$bp-m-min: map-get(map-get($breakpoints, m), min);
+$bp-m-max: map-get(map-get($breakpoints, m), max);
+$bp-l: map-get(map-get($breakpoints, l), max);
+$bp-l-min: map-get(map-get($breakpoints, l), min);
+$bp-l-max: map-get(map-get($breakpoints, l), max);
+$bp-xl: map-get(map-get($breakpoints, xl), max);
+$bp-xl-min: map-get(map-get($breakpoints, xl), min);
+$bp-xl-max: map-get(map-get($breakpoints, xl), max);
+
+// Media Queries
+$bp-media-queries: (
+    xxs-max: "(max-width: #{$bp-xxs-max})",
+    xxs-only: "(min-width: #{$bp-xxs-min}) and (max-width: #{$bp-xxs-max})",
+    xxs: "(min-width: #{$bp-xxs-min})",
+    xs-max: "(max-width: #{$bp-xs-max})",
+    xs-only: "(min-width: #{$bp-xs-min}) and (max-width: #{$bp-xs-max})",
+    xs: "(min-width: #{$bp-xs-min})",
+    s-max: "(max-width: #{$bp-s-max})",
+    s-only: "(min-width: #{$bp-s-min}) and (max-width: #{$bp-s-max})",
+    s: "(min-width: #{$bp-s-min})",
+    m-max: "(max-width: #{$bp-m-max})",
+    m-only: "(min-width: #{$bp-m-min}) and (max-width: #{$bp-m-max})",
+    m: "(min-width: #{$bp-m-min})",
+    l-max: "(max-width: #{$bp-l-max})",
+    l-only: "(min-width: #{$bp-l-min}) and (max-width: #{$bp-l-max})",
+    l: "(min-width: #{$bp-l-min})",
+    xl-max: "(max-width: #{$bp-xl-max})",
+    xl-only: "(min-width: #{$bp-xl-min}) and (max-width: #{$bp-xl-max})",
+    xl: "(min-width: #{$bp-xl-min})",
+);
+
+
+// Cubic-bezier timing functions
+// Credit: http://github.com/jaukia/easie
+// ------------------------
+
+// EASE IN
+$ease-in-quad: cubic-bezier(0.550,  0.085, 0.680, 0.530);
+$ease-in-cubic: cubic-bezier(0.550,  0.055, 0.675, 0.190);
+$ease-in-quart: cubic-bezier(0.895,  0.030, 0.685, 0.220);
+$ease-in-quint: cubic-bezier(0.755,  0.050, 0.855, 0.060);
+$ease-in-sine: cubic-bezier(0.470,  0.000, 0.745, 0.715);
+$ease-in-expo: cubic-bezier(0.950,  0.050, 0.795, 0.035);
+$ease-in-circ: cubic-bezier(0.600,  0.040, 0.980, 0.335);
+$ease-in-back: cubic-bezier(0.600, -0.280, 0.735, 0.045);
+
+// EASE OUT
+$ease-out-quad: cubic-bezier(0.250,  0.460, 0.450, 0.940);
+$ease-out-cubic: cubic-bezier(0.215,  0.610, 0.355, 1.000);
+$ease-out-quart: cubic-bezier(0.165,  0.840, 0.440, 1.000);
+$ease-out-quint: cubic-bezier(0.230,  1.000, 0.320, 1.000);
+$ease-out-sine: cubic-bezier(0.390,  0.575, 0.565, 1.000);
+$ease-out-expo: cubic-bezier(0.190,  1.000, 0.220, 1.000);
+$ease-out-circ: cubic-bezier(0.075,  0.820, 0.165, 1.000);
+$ease-out-back: cubic-bezier(0.175,  0.885, 0.320, 1.275);
+
+// EASE IN OUT
+$ease-in-out-quad: cubic-bezier(0.455,  0.030, 0.515, 0.955);
+$ease-in-out-cubic: cubic-bezier(0.645,  0.045, 0.355, 1.000);
+$ease-in-out-quart: cubic-bezier(0.770,  0.000, 0.175, 1.000);
+$ease-in-out-quint: cubic-bezier(0.860,  0.000, 0.070, 1.000);
+$ease-in-out-sine: cubic-bezier(0.445,  0.050, 0.550, 0.950);
+$ease-in-out-expo: cubic-bezier(1.000,  0.000, 0.000, 1.000);
+$ease-in-out-circ: cubic-bezier(0.785,  0.135, 0.150, 0.860);
+$ease-in-out-back: cubic-bezier(0.680, -0.550, 0.265, 1.550);
+
+
+// Misc
+// ------------------------
+$chevron-left: "&#x3008;";
+$chevron-right: "&#x3009;";
+$close: "&#x2715;";
+$quote-left: "\201c";
+$quote-right: "\201d";
