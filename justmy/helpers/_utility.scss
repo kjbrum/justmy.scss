@@ -119,10 +119,5 @@
         .bg-#{$unique-selector} {
             background-color: $hex;
         }
-
-        // Section background color
-        .section--#{$unique-selector} {
-            background-color: $hex;
-        }
     }
 }
