@@ -10,54 +10,54 @@ $debug: false;
 $primary: #A07B83;
 $secondary: #FF8B86;
 $colors: (
-    primary: (
-        light: tint($primary, 20%),
-        normal: $primary,
-        dark: shade($primary, 20%),
+    'primary': (
+        'light': tint($primary, 20%),
+        'normal': $primary,
+        'dark': shade($primary, 20%),
     ),
-    secondary: (
-        light: tint($secondary, 20%),
-        normal: $secondary,
-        dark: shade($secondary, 10%)
+    'secondary': (
+        'light': tint($secondary, 20%),
+        'normal': $secondary,
+        'dark': shade($secondary, 10%)
     ),
-    gray: (
-        ultralight: #eeeeee,
-        light: #cccccc,
-        normal: #9B9B9B,
-        dark: #666666,
-        ultradark: #444444
+    'gray': (
+        'ultralight': #eeeeee,
+        'light': #cccccc,
+        'normal': #9B9B9B,
+        'dark': #666666,
+        'ultradark': #444444
     ),
-    other: (
-        white: #ffffff,
-        black: #222222,
-        success: #92F0A1,
-        warn: #F0E591,
-        alert: #FF676B
+    'other': (
+        'white': #ffffff,
+        'black': #222222,
+        'success': #92F0A1,
+        'warn': #F0E591,
+        'alert': #FF676B
     )
 );
 
 // Primary
-$primary-light: map-get(map-get($colors, primary), light);
-$primary-dark: map-get(map-get($colors, primary), dark);
-$primary-dense: map-get(map-get($colors, primary), dense);
+$primary-light: map-get(map-get($colors, 'primary'), 'light');
+$primary-dark: map-get(map-get($colors, 'primary'), 'dark');
+$primary-dense: map-get(map-get($colors, 'primary'), 'dense');
 
 // Secondary
-$secondary-light: map-get(map-get($colors, secondary), light);
-$secondary-dark: map-get(map-get($colors, secondary), dark);
+$secondary-light: map-get(map-get($colors, 'secondary'), 'light');
+$secondary-dark: map-get(map-get($colors, 'secondary'), 'dark');
 
 // Grays
-$gray-ultralight: map-get(map-get($colors, gray), ultralight);
-$gray-light: map-get(map-get($colors, gray), light);
-$gray: map-get(map-get($colors, gray), normal);
-$gray-dark: map-get(map-get($colors, gray), dark);
-$gray-ultradark: map-get(map-get($colors, gray), ultradark);
+$gray-ultralight: map-get(map-get($colors, 'gray'), 'ultralight');
+$gray-light: map-get(map-get($colors, 'gray'), 'light');
+$gray: map-get(map-get($colors, 'gray'), 'normal');
+$gray-dark: map-get(map-get($colors, 'gray'), 'dark');
+$gray-ultradark: map-get(map-get($colors, 'gray'), 'ultradark');
 
 // Misc
-$white: map-get(map-get($colors, other), white);
-$black: map-get(map-get($colors, other), black);
-$success: map-get(map-get($colors, other), success);
-$warn: map-get(map-get($colors, other), warn);
-$alert: map-get(map-get($colors, other), alert);
+$white: map-get(map-get($colors, 'other'), 'white');
+$black: map-get(map-get($colors, 'other'), 'black');
+$success: map-get(map-get($colors, 'other'), 'success');
+$warn: map-get(map-get($colors, 'other'), 'warn');
+$alert: map-get(map-get($colors, 'other'), 'alert');
 
 
 // Fonts
