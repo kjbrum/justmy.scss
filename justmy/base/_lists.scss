@@ -41,6 +41,10 @@ dl {
     dt,
     dd {
         margin-bottom: 0.5rem;
+
+        &:last-of-type {
+            margin-bottom: 0;
+        }
     }
 
     dd {
