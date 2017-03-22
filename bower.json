@@ -6,8 +6,9 @@
   "description": "Another stupid SCSS framework, but it's just mine.",
   "main": "dist/justmy.min.css",
   "keywords": [
-    "scss",
     "css",
+    "sass",
+    "scss",
     "framework"
   ],
   "ignore": [

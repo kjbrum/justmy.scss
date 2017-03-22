@@ -21,8 +21,9 @@
     "url": "https://github.com/kjbrum/justmy.scss.git"
   },
   "keywords": [
-    "scss",
     "css",
+    "sass",
+    "scss",
     "framework"
   ],
   "license": "MIT",
