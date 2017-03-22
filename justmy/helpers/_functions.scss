@@ -1,0 +1,89 @@
+// Functions
+// ------------------------
+
+// Strip the units from a string
+@function strip-units($value) {
+    @return $value / ($value * 0 + 1);
+}
+
+// Calculate px from a rem/em value
+@function px-calc($rem, $base-val: 16) {
+    @if unit($rem) == px {
+        @return $rem;
+    }
+    @if not unitless($rem) {
+        $rem: strip-units($rem);
+    }
+    @if not unitless($base-val) {
+        $base-val: strip-units($base-val);
+    }
+    @return ($rem * $base-val) * 1px;
+}
+
+// Calculate rems from a px value
+@function rem-calc($px, $base-val: 16) {
+    @if unit($px) == rem {
+        @return $px;
+    }
+    @if not unitless($px) {
+        $px: strip-units($px);
+    }
+    @if not unitless($base-val) {
+        $base-val: strip-units($base-val);
+    }
+    @return ($px / $base-val) * 1rem;
+}
+
+// Calculate ems from a px value
+@function em-calc($px, $base-val: 16) {
+    @if unit($px) == em {
+        @return $px;
+    }
+    @if not unitless($px) {
+        $px: strip-units($px);
+    }
+    @if not unitless($base-val) {
+        $base-val: strip-units($base-val);
+    }
+    @return ($px / $base-val) * 1em;
+}
+
+// Mix white with another color
+@function tint($color, $percent: 15%){
+    @return mix(white, $color, $percent);
+}
+
+// Mix black with another color
+@function shade($color, $percent: 15%){
+    @return mix(black, $color, $percent);
+}
+
+// Create a random color
+@function random-color($min: 0, $max: 255, $alpha: 1) {
+    @if $min < 0 {
+        $min: -1;
+    } @else {
+        $min: $min - 1;
+    }
+    @if $max > 255 {
+        $max: 256;
+    } @else {
+        $max: $max + 1;
+    }
+    $range: $max - $min;
+    $red: random($range) + $min;
+    $green: random($range) + $min;
+    $blue: random($range) + $min;
+    @return rgba($red, $green, $blue, $alpha);
+}
+
+// Replace a string
+@function str-replace($string, $search, $replace: '') {
+    $index: str-index($string, $search);
+
+    @if $index {
+        @return str-slice($string, 1, $index - 1) + $replace + str-replace(str-slice($string, $index + str-length($search)), $search, $replace);
+    }
+
+    @return $string;
+}

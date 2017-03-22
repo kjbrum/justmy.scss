@@ -1,0 +1,288 @@
+// Grid
+// ------------------------
+
+// Grid wrapper
+.container {
+    margin: 0 auto;
+    padding: $grid-gutter;
+    width: 100%;
+    max-width: $max-width;
+    @include clearfix;
+
+    @media (min-width: $bp-m) {
+        padding: $grid-gutter $grid-gutter*2;
+    }
+
+    @media (min-width: $bp-l) {
+        padding: $grid-gutter;
+    }
+}
+
+// No padding grid wrapper
+.container-np {
+    padding: 0;
+}
+
+// Grid container
+.#{$grid-container-prefix} {
+    margin: 0 (-$grid-gutter);
+    zoom: 1;
+
+    &:before,
+    &:after {
+        content: '';
+        display: table;
+    }
+
+    &:after {
+        clear: both;
+    }
+}
+
+// Grid item
+.#{$grid-item-prefix} {
+    position: relative;
+    display: block;
+    float: left;
+    padding: $grid-gutter;
+    width: 100%;
+    vertical-align: top;
+}
+
+// No padding grid item
+.#{$grid-item-prefix}-np {
+    padding: 0;
+}
+
+// No padding grid
+.#{$grid-container-prefix}-np {
+    > .#{$grid-item-prefix} {
+        padding: 0;
+    }
+}
+
+// Center grid
+.#{$grid-container-prefix}-center {
+    text-align: center;
+    font-size: 0;
+
+    > .#{$grid-item-prefix} {
+        font-size: 1rem;
+        float: none !important;
+        display: inline-block;
+        text-align: left;
+    }
+
+    [class*='#{$grid-item-prefix}-fixed'] {
+        margin: 0 auto !important;
+    }
+
+    &.#{$grid-container-prefix}-flex {
+        justify-content: center;
+    }
+}
+
+// Flexbox grid
+.flexbox {
+    .#{$grid-container-prefix}-flex {
+        display: flex;
+        flex: 0 1 auto;
+        flex-direction: row;
+        flex-wrap: wrap;
+
+        &:before,
+        &:after {
+            content: none;
+        }
+
+        > .#{$grid-item-prefix} {
+            display: flex;
+            flex: 0 0 auto;
+            flex-direction: column;
+
+            > .block {
+                display: flex;
+                flex-direction: column;
+                flex: 1;
+            }
+        }
+
+        > .#{$grid-item-prefix}-sticky .block > :last-child {
+            margin-top: auto;
+        }
+
+        &.#{$grid-container-prefix}-v-center {
+            align-items: center;
+        }
+    }
+}
+
+// Reversed grid
+.#{$grid-container-prefix}-reverse {
+    > .#{$grid-item-prefix} {
+        float: right;
+    }
+
+    &.#{$grid-container-prefix}-flex {
+        flex-direction: reverse;
+    }
+}
+
+// Build the grids!
+@each $breakpoint, $widths in $breakpoints {
+    @media (min-width: map-get(map-get($breakpoints, $breakpoint), min)) {
+        // Add 12-column classes
+        @for $i from 1 through $num-columns {
+            $bp-width: percentage($i/$num-columns);
+            $fixed-width: ($grid-width/$num-columns);
+
+            // Add block grids for up to $num-columns items
+            .#{$grid-container-prefix}-#{$breakpoint}-#{$i} {
+                > .#{$grid-item-prefix} {
+                    width: percentage(1/$i);
+
+                    &:nth-of-type(1n) {
+                        clear: none;
+                    }
+
+                    &:nth-of-type(#{$i}n+1) {
+                        clear: both;
+                    }
+                }
+            }
+
+            // Add flexbox support
+            .flexbox {
+                .#{$grid-container-prefix}-flex {
+                    // Add block grids for up to $num-columns items
+                    &.#{$grid-container-prefix}-#{$breakpoint}-#{$i} {
+                        > .#{$grid-item-prefix} {
+                            flex-basis: percentage(1/$i);
+                            max-width: percentage(1/$i);
+                        }
+                    }
+
+                    // Add grid item
+                    .#{$grid-item-prefix}-#{$breakpoint}-#{$i} {
+                        flex-basis: $bp-width;
+                        max-width: $bp-width;
+                    }
+                }
+            }
+
+            // Add grid item
+            .#{$grid-item-prefix}-#{$breakpoint}-#{$i} {
+                width: $bp-width;
+            }
+
+            // Add grid item first
+            .#{$grid-item-prefix}-first-#{$breakpoint} {
+                clear: left;
+            }
+
+            // Add grid item last
+            .#{$grid-item-prefix}-last-#{$breakpoint} {
+                clear: right;
+            }
+
+            // Add grid item offset
+            .#{$grid-item-prefix}-offset-#{$breakpoint}-#{$i} {
+                margin-left: $bp-width;
+            }
+
+            // Add grid item push
+            .#{$grid-item-prefix}-push-#{$breakpoint}-#{$i} {
+                left: $bp-width;
+            }
+
+            // Add grid item pull
+            .#{$grid-item-prefix}-pull-#{$breakpoint}-#{$i} {
+                right: $bp-width;
+            }
+
+            // Add grid item fill
+            .#{$grid-item-prefix}-fill-#{$breakpoint}-#{$i} {
+                float: none;
+                width: auto;
+                margin-left: $fixed-width * ($num-columns - $i);
+            }
+
+            // Add grid item fixed width
+            .#{$grid-item-prefix}-fixed-#{$breakpoint}-#{$i},
+            .#{$grid-item-prefix}-fixed-right-#{$breakpoint}-#{$i} {
+                width: 100%;
+                max-width: $fixed-width * $i;
+            }
+            .#{$grid-item-prefix}-fixed-right-#{$breakpoint}-#{$i} {
+                float: right;
+            }
+
+            [class*='#{$grid-item-prefix}-fixed-right'] {
+                & + .#{$grid-item-prefix}-fill-#{$breakpoint}-#{$i} {
+                    margin-left: 0;
+                    margin-right: $fixed-width * ($num-columns - $i);
+                }
+            }
+
+            // Add 5-column classes
+            @if $i < 6 {
+                $bp-fifth-width: percentage($i/5);
+                $fifth-fixed-width: ($grid-width/5);
+
+                // Add flexbox support for fifths grid item
+                .flexbox {
+                    .#{$grid-container-prefix}-flex {
+                        &.#{$grid-item-prefix}-#{$breakpoint}-#{$i}-5 {
+                            flex-basis: $bp-fifth-width;
+                            max-width: $bp-fifth-width;
+                        }
+                    }
+                }
+
+                // Add fifths grid item
+                .#{$grid-item-prefix}-#{$breakpoint}-#{$i}-5 {
+                    width: $bp-fifth-width;
+                }
+
+                // Add fifths grid item offset
+                .#{$grid-item-prefix}-offset-#{$breakpoint}-#{$i}-5 {
+                    margin-left: $bp-fifth-width;
+                }
+
+                // Add fifths grid item push
+                .#{$grid-item-prefix}-push-#{$breakpoint}-#{$i}-5 {
+                    left: $bp-fifth-width;
+                }
+
+                // Add fifths grid item pull
+                .#{$grid-item-prefix}-pull-#{$breakpoint}-#{$i}-5 {
+                    right: $bp-fifth-width;
+                }
+
+                // Add fifths grid item fill
+                .#{$grid-item-prefix}-fill-#{$breakpoint}-#{$i}-5 {
+                    float: none;
+                    width: auto;
+                    margin-left: $fifth-fixed-width * (5 - $i);
+                }
+
+                // Add fifths grid item fixed width
+                .#{$grid-item-prefix}-fixed-#{$breakpoint}-#{$i}-5,
+                .#{$grid-item-prefix}-fixed-right-#{$breakpoint}-#{$i}-5 {
+                    width: 100%;
+                    max-width: $fifth-fixed-width * $i;
+                }
+                .#{$grid-item-prefix}-fixed-right-#{$breakpoint}-#{$i}-5 {
+                    float: right;
+                }
+
+                [class*='#{$grid-item-prefix}-fixed-right'] {
+                    & + .#{$grid-item-prefix}-fill-#{$breakpoint}-#{$i}-5 {
+                        margin-left: 0;
+                        margin-right: $fifth-fixed-width * (5 - $i);
+                    }
+                }
+            }
+        }
+    }
+}

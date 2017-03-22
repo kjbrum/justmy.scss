@@ -1,0 +1,12 @@
+.section {
+}
+
+.section--spaced {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+
+    @include bp(m) {
+        padding-top: 4rem;
+        padding-bottom: 4rem;
+    }
+}
