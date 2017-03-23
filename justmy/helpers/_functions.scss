@@ -59,7 +59,7 @@
 }
 
 // Create a random color
-@function random-color($min: 0, $max: 255, $alpha: 1) {
+@function random-color($min: 0, $max: 255, $alpha: 1, $red: null, $green: null, $blue: null) {
     @if $min < 0 {
         $min: -1;
     } @else {
@@ -70,10 +70,13 @@
     } @else {
         $max: $max + 1;
     }
+
     $range: $max - $min;
-    $red: random($range) + $min;
-    $green: random($range) + $min;
-    $blue: random($range) + $min;
+
+    @if not $red { $red: random($range) + $min; }
+    @if not $green { $green: random($range) + $min; }
+    @if not $blue { $blue: random($range) + $min; }
+
     @return rgba($red, $green, $blue, $alpha);
 }
 
