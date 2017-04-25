@@ -135,6 +135,7 @@
         @for $i from 1 through $num-columns {
             $bp-width: percentage($i/$num-columns);
             $fixed-width: ($grid-width/$num-columns);
+            $half-col: percentage(1/$num-columns) / 2;
 
             // Add block grids for up to $num-columns items
             .#{$grid-container-prefix}-#{$breakpoint}-#{$i} {
@@ -190,14 +191,29 @@
                 margin-left: $bp-width;
             }
 
+            // Add grid item offset (w/half column)
+            .#{$grid-item-prefix}-offset-#{$breakpoint}-#{$i}-half {
+                margin-left: $bp-width + $half-col;
+            }
+
             // Add grid item push
             .#{$grid-item-prefix}-push-#{$breakpoint}-#{$i} {
                 left: $bp-width;
             }
 
+            // Add grid item push (w/half column)
+            .#{$grid-item-prefix}-push-#{$breakpoint}-#{$i}-half {
+                left: $bp-width + $half-col;
+            }
+
             // Add grid item pull
             .#{$grid-item-prefix}-pull-#{$breakpoint}-#{$i} {
                 right: $bp-width;
+            }
+
+            // Add grid item pull (w/half column)
+            .#{$grid-item-prefix}-pull-#{$breakpoint}-#{$i}-half {
+                right: $bp-width + $half-col;
             }
 
             // Add grid item fill
@@ -228,6 +244,7 @@
             @if $i < 6 {
                 $bp-fifth-width: percentage($i/5);
                 $fifth-fixed-width: ($grid-width/5);
+                $fifth-half-col: percentage(1/5) / 2;
 
                 // Add flexbox support for fifths grid item
                 .flexbox {
@@ -249,14 +266,29 @@
                     margin-left: $bp-fifth-width;
                 }
 
+                // Add fifths grid item offset (w/half column)
+                .#{$grid-item-prefix}-offset-#{$breakpoint}-#{$i}-5-half {
+                    margin-left: $bp-fifth-width + $fifth-half-col;
+                }
+
                 // Add fifths grid item push
                 .#{$grid-item-prefix}-push-#{$breakpoint}-#{$i}-5 {
                     left: $bp-fifth-width;
                 }
 
+                // Add fifths grid item push (w/half column)
+                .#{$grid-item-prefix}-push-#{$breakpoint}-#{$i}-5-half {
+                    left: $bp-fifth-width + $fifth-half-col;
+                }
+
                 // Add fifths grid item pull
                 .#{$grid-item-prefix}-pull-#{$breakpoint}-#{$i}-5 {
                     right: $bp-fifth-width;
+                }
+
+                // Add fifths grid item pull (w/half column)
+                .#{$grid-item-prefix}-pull-#{$breakpoint}-#{$i}-5-half {
+                    right: $bp-fifth-width + $fifth-half-col;
                 }
 
                 // Add fifths grid item fill
