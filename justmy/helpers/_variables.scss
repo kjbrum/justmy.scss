@@ -21,14 +21,14 @@ $colors: (
         'dark': shade($secondary, 10%)
     ),
     'gray': (
-        'ultralight': #eeeeee,
-        'light': #cccccc,
+        'ultralight': #EEEEEE,
+        'light': #CCCCCC,
         'normal': #9B9B9B,
         'dark': #666666,
         'ultradark': #444444
     ),
     'other': (
-        'white': #ffffff,
+        'white': #FFFFFF,
         'black': #222222,
         'success': #92F0A1,
         'warn': #F0E591,
@@ -81,8 +81,8 @@ $font-mono: $consolas;
 
 // Layout/Grid
 // ------------------------
-$min-width: 20rem;
-$max-width: 87.5rem;
+$min-width: rem-calc(320);
+$max-width: rem-calc(1400);
 
 $num-columns: 12;
 $grid-width: $max-width;
