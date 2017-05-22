@@ -240,6 +240,42 @@
     padding: 0;
 }
 
+// Add a box fade (image fade)
+@mixin box-fade($side: both, $color: #000000, $size: 100px) {
+    position: relative;
+    z-index: -1;
+
+    > * {
+        position: relative;
+        z-index: 1;
+    }
+
+    $selector: '&:before, &:after';
+    $top: 0;
+    @if $side == top {
+        $selector: '&:before';
+    } @else if $side == bottom {
+        $selector: '&:after';
+        $top: 100%;
+    }
+
+    #{$selector} {
+        content: '';
+        position: absolute;
+        top: $top;
+        left: 0;
+        width: 100%;
+        height: 0;
+        box-shadow: 0 0 $size $size*0.75 #{$color};
+    }
+
+    @if $side == both {
+        &:after {
+            top: 100%;
+        }
+    }
+}
+
 
 // Debugging
 // ------------------------
