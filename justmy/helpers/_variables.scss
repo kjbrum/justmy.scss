@@ -39,7 +39,6 @@ $colors: (
 // Primary
 $primary-light: map-get(map-get($colors, 'primary'), 'light');
 $primary-dark: map-get(map-get($colors, 'primary'), 'dark');
-$primary-dense: map-get(map-get($colors, 'primary'), 'dense');
 
 // Secondary
 $secondary-light: map-get(map-get($colors, 'secondary'), 'light');
