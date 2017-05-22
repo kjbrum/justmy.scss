@@ -100,14 +100,14 @@
 // Color styling classes
 @each $color, $types in $colors {
     @each $type, $hex in $types {
-        $unique-selector: #{$color}-#{$type};
+        $unique-selector: '#{$color}-#{$type}';
 
         @if $type == normal {
-            $unique-selector: #{$color};
+            $unique-selector: '#{$color}';
         }
 
         @if $color == other {
-            $unique-selector: #{$type};
+            $unique-selector: '#{$type}';
         }
 
         // Text color
