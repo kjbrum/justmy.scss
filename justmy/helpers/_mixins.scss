@@ -240,6 +240,13 @@
     padding: 0;
 }
 
+// Full background
+@mixin full-bg($size: 'cover', $position: 'center center', $repeat: 'no-repeat') {
+    background-size: #{$size};
+    background-repeat: #{$repeat};
+    background-position: #{$position};
+}
+
 // Add a box fade (image fade)
 @mixin box-fade($side: both, $color: #000000, $size: 100px) {
     position: relative;
