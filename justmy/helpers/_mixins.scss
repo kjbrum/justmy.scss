@@ -116,18 +116,16 @@
 
 // Responsive Typography
 // "min-font-size-px" + ("max-font-size" - "min-font-size") * (100vw - "min-screen-size-px") / ("max-screen-size" - "min-screen-size")
-@mixin r-font-size($min-font, $max-font, $min-screen: 0, $max-screen: $bp-xl-max) {
+@mixin r-font-size($min-font, $max-font, $min-screen: $min-width, $max-screen: $max-width) {
     font-size: rem-calc($min-font);
-    font-size: calc(#{px-calc($min-font)} + (#{strip-units(px-calc($max-font))} - #{strip-units(px-calc($min-font))}) * (100vw - #{px-calc($min-screen)}) / (#{strip-units(px-calc($max-screen))} - #{strip-units(px-calc($min-screen))}));
 
-    @include bp(min, (rem-calc($min-screen) + rem-calc($max-screen)) / 2) {
+    @include bp($min-screen, $max-screen) {
         font-size: (rem-calc($min-font) + rem-calc($max-font)) / 2;
         font-size: calc(#{px-calc($min-font)} + (#{strip-units(px-calc($max-font))} - #{strip-units(px-calc($min-font))}) * (100vw - #{px-calc($min-screen)}) / (#{strip-units(px-calc($max-screen))} - #{strip-units(px-calc($min-screen))}));
     }
 
     @include bp(min, rem-calc($max-screen)) {
         font-size: rem-calc($max-font);
-        font-size: calc(#{px-calc($min-font)} + (#{strip-units(px-calc($max-font))} - #{strip-units(px-calc($min-font))}) * (100vw - #{px-calc($min-screen)}) / (#{strip-units(px-calc($max-screen))} - #{strip-units(px-calc($min-screen))}));
     }
 }
 
