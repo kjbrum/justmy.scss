@@ -18,9 +18,9 @@ small {
 }
 
 p {
-    font-weight: 300;
     margin-bottom: 1rem;
-    @include r-font-size(0.9rem, 1.1rem);
+    @include r-font-size(0.8rem, 1rem);
+    font-weight: 300;
 
     &:last-of-type {
         margin-bottom: 0;
@@ -30,13 +30,10 @@ p {
 a {
     color: $primary;
     text-decoration: none;
-    border-bottom: 2px solid transparent;
-    transition: color 0.3s ease-in-out,
-                border 0.3s ease-in-out;
+    transition: color 0.3s ease-in-out;
 
     &:hover {
         color: $primary-light;
-        border-bottom: 2px solid currentColor;
     }
 }
 
@@ -58,7 +55,7 @@ h6, .h6 {
 h1, .h1,
 h2, .h2,
 h3, .h3 {
-    font-weight: 200;
+    font-weight: 400;
 }
 
 h4, .h4,

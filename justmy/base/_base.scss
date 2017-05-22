@@ -7,7 +7,7 @@
 }
 
 ::selection {
-    color: $white;
+    color: $secondary;
     background-color: $primary;
 }
 
@@ -18,9 +18,9 @@ html {
 }
 
 body {
-	font: 100%/1.5 $font;
-	-webkit-text-size-adjust: 100%;
-	color: $gray-dark;
-    min-width: $min-width;
     overflow-x: hidden;
+    min-width: $min-width;
+    font: 100%/1.5 $font;
+    -webkit-text-size-adjust: 100%;
+    color: $black;
 }
