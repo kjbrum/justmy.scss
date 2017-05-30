@@ -198,8 +198,9 @@ $ease-in-out-back: cubic-bezier(0.680, -0.550, 0.265, 1.550);
 
 // Misc
 // ------------------------
-$chevron-left: "&#x3008;";
-$chevron-right: "&#x3009;";
-$close: "&#x2715;";
+$chevron-left: "\2039";
+$chevron-right: "\203A";
+$close: "\00D7";
 $quote-left: "\201c";
 $quote-right: "\201d";
+$arrow: "\279D"
