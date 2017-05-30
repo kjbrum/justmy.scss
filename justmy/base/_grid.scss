@@ -3,18 +3,14 @@
 
 // Grid wrapper
 .container {
-    margin: 0 auto;
-    padding: $grid-gutter;
     width: 100%;
     max-width: $max-width;
+    margin: 0 auto;
+    padding: $grid-gutter;
     @include clearfix;
 
-    @media (min-width: $bp-m) {
+    @include bp(l-only) {
         padding: $grid-gutter $grid-gutter*2;
-    }
-
-    @media (min-width: $bp-l) {
-        padding: $grid-gutter;
     }
 }
 
@@ -25,8 +21,12 @@
 
 // Grid container
 .#{$grid-container-prefix} {
-    margin: 0 (-$grid-gutter);
+    margin: 0 -($grid-gutter);
     zoom: 1;
+
+    @include bp(l-only) {
+        margin: 0 -($grid-gutter*2);
+    }
 
     &:before,
     &:after {
@@ -43,9 +43,9 @@
 .#{$grid-item-prefix} {
     position: relative;
     display: block;
-    float: left;
-    padding: $grid-gutter;
     width: 100%;
+    padding: $grid-gutter;
+    float: left;
     vertical-align: top;
 }
 
@@ -67,9 +67,9 @@
     font-size: 0;
 
     > .#{$grid-item-prefix} {
-        font-size: 1rem;
-        float: none !important;
         display: inline-block;
+        float: none !important;
+        font-size: 1rem;
         text-align: left;
     }
 
@@ -158,15 +158,15 @@
                     // Add block grids for up to $num-columns items
                     &.#{$grid-container-prefix}-#{$breakpoint}-#{$i} {
                         > .#{$grid-item-prefix} {
-                            flex-basis: percentage(1/$i);
                             max-width: percentage(1/$i);
+                            flex-basis: percentage(1/$i);
                         }
                     }
 
                     // Add grid item
                     .#{$grid-item-prefix}-#{$breakpoint}-#{$i} {
-                        flex-basis: $bp-width;
                         max-width: $bp-width;
+                        flex-basis: $bp-width;
                     }
                 }
             }
@@ -235,8 +235,8 @@
 
             [class*='#{$grid-item-prefix}-fixed-right'] {
                 & + .#{$grid-item-prefix}-fill-#{$breakpoint}-#{$i} {
-                    margin-left: 0;
                     margin-right: $fixed-width * ($num-columns - $i);
+                    margin-left: 0;
                 }
             }
 
@@ -310,8 +310,8 @@
 
                 [class*='#{$grid-item-prefix}-fixed-right'] {
                     & + .#{$grid-item-prefix}-fill-#{$breakpoint}-#{$i}-5 {
-                        margin-left: 0;
                         margin-right: $fifth-fixed-width * (5 - $i);
+                        margin-left: 0;
                     }
                 }
             }
