@@ -21,11 +21,11 @@
 
 // Grid container
 .#{$grid-container-prefix} {
-    margin: 0 -($grid-gutter);
+    margin: 0 (-$grid-gutter);
     zoom: 1;
 
     @include bp(l-only) {
-        margin: 0 -($grid-gutter*2);
+        margin: 0 (-$grid-gutter*2);
     }
 
     &:before,
