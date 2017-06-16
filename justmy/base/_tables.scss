@@ -2,6 +2,8 @@
 // ------------------------
 table {
     margin-bottom: 1rem;
+    border: solid $gray-ultralight;
+    border-width: 1px 1px 0;
 
     tr {
         border-bottom: 1px solid $gray-ultralight;
@@ -17,7 +19,19 @@ table {
     th {
         font-weight: bold;
     }
+}
 
+// Responsive table wrap
+.table--responsive {
+    overflow: scroll;
+    margin-bottom: 1rem;
+    border: solid $gray-ultralight;
+    border-width: 1px 1px 0;
+
+    table {
+        margin-bottom: 0;
+        border: none;
+    }
 }
 
 // Hover table
